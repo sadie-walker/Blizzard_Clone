@@ -11,6 +11,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 ul {
@@ -27,7 +28,6 @@ a {
   display: flex;
   background-color: #0b0d12;
   padding: 0 20rem;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 #main-nav-left, #main-nav-right {
@@ -82,5 +82,79 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+#main-hero {
+  width: 100%;
+}
+
+#main-hero-slider {
+  background: url(https://images.blz-contentstack.com/v3/assets/blte0bbc3c063f45866/blt60051dbb0985b20f/5fab4db5a9e913483b74d202/OW_2020_Symmetra_sRestorationChallenge_Blizzard.comBanner_2500x514_MB01.webp?auto=webp&amp;format=pjpg);
+  background-position: center;
+  height: 51.5rem;
+}
+
+#main-hero-slider-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 70%;
+  padding: 3rem 25rem 5rem;
+}
+
+#main-hero-slider-content img {
+  width: 26rem;
+}
+
+#main-hero-slider-content h2 {
+  font-size: 7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0rem 1rem 2rem #535353;
+}
+
+#main-hero-slider-content a {
+  background-color: #006fb2;
+  width: 20rem;
+  height: 4.5rem;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 1.9rem;
+}
+
+#main-hero #transition-bar {
+  height: 2.5rem;
+  background-color: #0b0d12;
+}
+
+#main-hero #transition-bar-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#main-hero #transition-bar-items .transition-bar-item {
+  width: 10rem;
+  height: 0.7rem;
+  background-color: #858689;
 }
 /*# sourceMappingURL=style.css.map */
