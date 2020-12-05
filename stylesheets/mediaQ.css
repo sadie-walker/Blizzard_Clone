@@ -1,0 +1,23 @@
+@media only screen and (max-width: 1600px) {
+  #main-nav {
+    padding: 0 2rem;
+  }
+  #main-hero-slider-content {
+    width: 100%;
+    padding: 3rem 10rem 5rem;
+  }
+  #main-hero #transition-bar-items {
+    width: 42%;
+  }
+  #games-section-content #games-list {
+    margin: 0 20rem;
+  }
+  #games-section-content #games-list-items .games-list-item {
+    width: 15rem;
+    height: 20rem;
+  }
+  #careers-section-content {
+    padding: 5rem;
+  }
+}
+/*# sourceMappingURL=mediaQ.css.map */

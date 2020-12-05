@@ -141,14 +141,13 @@ a {
 
 #games-section {
 	background-color: #002650;
-	height: 62rem;
 	color: #fff;
 
 	&-content {
 		background: url(/images/backgrounds/background-generic-landscape-short.jpg);
 		background-position: top center;
 		background-repeat: no-repeat;
-		height: 43rem;
+		// height: 43rem;
 
 		#games-list {
 			margin: 0 35rem;
@@ -294,6 +293,7 @@ a {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			margin-bottom:  2.5rem;
 
 			svg {
 				height: 3rem;
@@ -314,6 +314,7 @@ a {
 		#footer-logo {
 			display: flex;
 			flex-direction: column;
+			margin-bottom: 1rem;
 
 			&-blizz {
 				height: 7rem;
