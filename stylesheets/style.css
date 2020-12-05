@@ -90,8 +90,10 @@ a {
 
 #main-hero-slider {
   background: url(https://images.blz-contentstack.com/v3/assets/blte0bbc3c063f45866/blt60051dbb0985b20f/5fab4db5a9e913483b74d202/OW_2020_Symmetra_sRestorationChallenge_Blizzard.comBanner_2500x514_MB01.webp?auto=webp&amp;format=pjpg);
+  background: url(/images/hero-banner/hero-banner-4.jpg);
   background-position: center;
   height: 51.5rem;
+  height: 51rem;
 }
 
 #main-hero-slider-content {
@@ -155,6 +157,7 @@ a {
 #main-hero #transition-bar-items .transition-bar-item {
   width: 10rem;
   height: 0.7rem;
+  height: 0.6rem;
   background-color: #858689;
 }
 /*# sourceMappingURL=style.css.map */
