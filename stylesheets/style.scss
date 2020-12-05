@@ -136,3 +136,88 @@
 		}
 	}
 }
+
+#main-footer {
+	height: 42rem;
+	background: url(/images/backgrounds/footer-bg-lg.jpg);
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		height: 100%;
+		color: #fff;
+
+		#location-selection {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			svg {
+				height: 3rem;
+			}
+
+			form {
+				select {
+					width: 10rem;
+					background: none;
+					border: none;
+					color: #fff;
+					cursor: pointer;
+					outline: none;
+				}
+			}
+		}
+
+		#footer-logo {
+			display: flex;
+			flex-direction: column;
+
+			&-blizz {
+				height: 7rem;
+			}
+
+			&-enter {
+				height: 3rem;
+			}
+		}
+
+		.footer-link {
+			font-size: 1.6rem;
+			padding: 0 1.5rem;
+			border-right: 0.1rem solid #fff;
+
+			a {
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+
+			&:last-of-type {
+				border: none;
+			}
+		}
+
+		#primary-footer-links,
+		#secondary-footer-links {
+			display: flex;
+			justify-content: center;
+		}
+
+		#primary-footer-links {
+			margin-bottom: 2rem;
+		}
+
+		#trademark {
+			margin-bottom: 2rem;
+			font-size: 1.3rem;
+			line-height: 2rem;
+		}
+
+		#secondary-footer-links {
+			a {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
