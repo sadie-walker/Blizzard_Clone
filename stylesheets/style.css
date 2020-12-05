@@ -75,6 +75,11 @@ a {
   text-transform: uppercase;
 }
 
+#main-nav-left #main-nav-logo {
+  width: 10rem;
+  height: 4rem;
+}
+
 #main-nav-right {
   -webkit-box-flex: 1;
       -ms-flex: auto;
