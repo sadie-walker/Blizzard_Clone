@@ -52,3 +52,51 @@
 		}
 	}
 }
+
+#app-connectivity {
+	background-color: #002650;
+	display: flex;
+	justify-content: center;
+	border-top: 0.1rem solid #535353;
+	padding: 1.2rem;
+
+	&-desktop,
+	&-app {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		color: #a9b2c0;
+		font-size: 1.7rem;
+
+		p {
+			margin-right: 0.5rem;
+		}
+
+		a {
+			color: #00aeff;
+
+			i {
+				margin-right: 0.5rem;
+			}
+		}
+	}
+
+	&-desktop {
+		border-right: 0.1rem solid #858689;
+		padding-right: 2rem;
+
+		#battle-net-logo {
+			display: flex;
+
+			svg {
+				height: 3rem;
+				// width: 2rem;
+			}
+		}
+	}
+
+	&-app {
+		padding-left: 2rem;
+	}
+}
+

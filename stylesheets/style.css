@@ -227,4 +227,61 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+#app-connectivity {
+  background-color: #002650;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 0.1rem solid #535353;
+  padding: 1.2rem;
+}
+
+#app-connectivity-desktop, #app-connectivity-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a9b2c0;
+  font-size: 1.7rem;
+}
+
+#app-connectivity-desktop p, #app-connectivity-app p {
+  margin-right: 0.5rem;
+}
+
+#app-connectivity-desktop a, #app-connectivity-app a {
+  color: #00aeff;
+}
+
+#app-connectivity-desktop a i, #app-connectivity-app a i {
+  margin-right: 0.5rem;
+}
+
+#app-connectivity-desktop {
+  border-right: 0.1rem solid #858689;
+  padding-right: 2rem;
+}
+
+#app-connectivity-desktop #battle-net-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#app-connectivity-desktop #battle-net-logo svg {
+  height: 3rem;
+}
+
+#app-connectivity-app {
+  padding-left: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
