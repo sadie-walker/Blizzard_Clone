@@ -1,3 +1,144 @@
+$primary-color: #002650;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+#main-nav {
+	display: flex;
+	background-color: #0b0d12;
+	padding: 0 20rem;
+
+	&-left,
+	&-right {
+		display: flex;
+		align-items: center;
+
+		li {
+			height: 100%;
+			padding: 0.8rem 2rem;
+			display: flex;
+
+			a {
+				align-self: center;
+				display: flex;
+				color: #9a9a9c;
+				font-weight: 500;
+
+				img {
+					width: 8rem;
+					height: 4rem;
+				}
+
+				i {
+					margin-left: 0.5rem;
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+
+	&-left {
+		width: 50%;
+
+		li {
+			a {
+				text-transform: uppercase;
+			}
+		}
+
+		#main-nav-logo {
+			width: 10rem;
+			height: 4rem;
+		}
+	}
+
+	&-right {
+		flex: auto;
+		justify-content: flex-end;
+	}
+}
+
+#main-hero {
+	width: 100%;
+
+	&-slider {
+		background: url(/images/hero-banner/hero-banner-4.jpg);
+		background-position: center;
+		height: 51rem;
+
+		&-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			width: 70%;
+			padding: 3rem 25rem 5rem;
+
+			img {
+				width: 26rem;
+			}
+
+			h2 {
+				font-size: 7rem;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: #fff;
+				text-shadow: 0rem 1rem 2rem #535353;
+			}
+
+			a {
+				background-color: #006fb2;
+				width: 20rem;
+				height: 4.5rem;
+				color: #fff;
+				text-align: center;
+				padding: 1.2rem;
+				font-size: 1.9rem;
+			}
+		}
+	}
+
+	#transition-bar {
+		height: 2.5rem;
+		background-color: #0b0d12;
+
+		&-items {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 35%;
+			height: 100%;
+			margin: 0 auto;
+
+			.transition-bar-item {
+				width: 10rem;
+				height: 0.6rem;
+				background-color: #858689;
+			}
+		}
+	}
+}
+
 #games-section {
 	background-color: #002650;
 	height: 62rem;
