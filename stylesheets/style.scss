@@ -100,3 +100,39 @@
 	}
 }
 
+#careers-section {
+	background: url(/images/careers-banner/careers-1.jpeg);
+	height: 40rem;
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		padding: 5rem 18rem 5rem;
+		color: #fff;
+
+		h2 {
+			font-size: 4rem;
+			font-weight: 200;
+			margin-bottom: 1rem;
+		}
+
+		h3 {
+			font-size: 2.5rem;
+			font-weight: 300;
+			margin-bottom: 3rem;
+		}
+
+		a {
+			background-color: #006fb2;
+			width: 23rem;
+			height: 4.5rem;
+			color: #fff;
+			text-align: center;
+			padding: 1.2rem;
+			font-size: 1.9rem;
+			border: 0.1rem solid #00aeff;
+		}
+	}
+}
