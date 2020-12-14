@@ -270,13 +270,25 @@ a {
   padding-right: 2rem;
 }
 
-#app-connectivity-desktop #battle-net-logo {
+#app-connectivity-desktop #desktop-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#app-connectivity-desktop #battle-net-logo svg {
+#app-connectivity-desktop #desktop-link #battle-net-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app-connectivity-desktop #desktop-link #battle-net-logo svg {
   height: 3rem;
 }
 
@@ -417,6 +429,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  line-height: 0.8rem;
 }
 
 #main-footer-content #primary-footer-links {
@@ -424,7 +437,7 @@ a {
 }
 
 #main-footer-content #trademark {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-size: 1.3rem;
   line-height: 2rem;
 }

@@ -147,7 +147,6 @@ a {
 		background: url(/images/backgrounds/background-generic-landscape-short.jpg);
 		background-position: top center;
 		background-repeat: no-repeat;
-		// height: 43rem;
 
 		#games-list {
 			margin: 0 35rem;
@@ -225,12 +224,17 @@ a {
 		border-right: 0.1rem solid #858689;
 		padding-right: 2rem;
 
-		#battle-net-logo {
+		#desktop-link {
 			display: flex;
+			align-items: center;
 
-			svg {
-				height: 3rem;
-				// width: 2rem;
+			#battle-net-logo {
+				display: flex;
+				align-items: center;
+
+				svg {
+					height: 3rem;
+				}
 			}
 		}
 	}
@@ -344,6 +348,7 @@ a {
 		#secondary-footer-links {
 			display: flex;
 			justify-content: center;
+			line-height: 0.8rem;
 		}
 
 		#primary-footer-links {
@@ -351,7 +356,7 @@ a {
 		}
 
 		#trademark {
-			margin-bottom: 2rem;
+			margin-bottom: 0.5rem;
 			font-size: 1.3rem;
 			line-height: 2rem;
 		}

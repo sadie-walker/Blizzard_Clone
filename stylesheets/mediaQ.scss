@@ -1,4 +1,5 @@
-@media only screen and (max-width: 1600px){
+// SMALL SCREEN / LAPTOP SCREEN
+@media only screen and (min-width: 770px) and (max-width: 1600px){
     #main-nav {
         padding: 0 2rem;
     }
@@ -33,6 +34,79 @@
     }
 
     #careers-section {
+        &-content {
+            padding: 5rem;
+        }
+    }
+}
+
+// IPAD
+@media only screen and (max-width: 770px){
+    #main-hero {
+        &-slider-content {
+            padding: 5rem;
+            height: 95%;
+
+            img {
+                width: 24rem;
+            }
+
+            h2 {
+                font-size: 5rem;
+            }
+        }
+
+        #transition-bar {
+            &-items {
+                width: 50%;
+
+                .transition-bar-item {
+                    width: 6rem;
+                }
+            }
+        }
+    }
+
+    #games-section {
+        &-content {
+            #games-list {
+                margin: 0 8rem;
+
+                &-header {
+                    padding: 0 2rem;
+                }
+            }
+        }
+    }
+
+    #app-connectivity {
+        flex-direction: column;
+        padding: 0;
+        border-top: 0.1rem solid #535353;
+        border-bottom: 0.1rem solid #535353;
+        
+        &-desktop,
+        &-app {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1rem 2rem;
+            border: none;
+            // font-size: 1.6rem;
+            line-height: 2.5rem;
+        }
+
+        &-app {
+            border-top: 0.1rem solid #535353;
+
+            a {
+                padding-left: 1rem;
+            }
+        }
+    }
+
+    #careers-section {
+        height: 30rem;
+        
         &-content {
             padding: 5rem;
         }
