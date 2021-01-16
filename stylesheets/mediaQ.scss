@@ -1,5 +1,5 @@
 // SMALL SCREEN / LAPTOP SCREEN
-@media only screen and (min-width: 770px) and (max-width: 1600px){
+@media only screen and (min-width: 1200px) and (max-width: 1600px){
     #main-nav {
         padding: 0 2rem;
     }
@@ -12,7 +12,7 @@
 
         #transition-bar {
             &-items {
-                width: 42%;
+                width: 65rem;
             }
         }
     }
@@ -41,7 +41,7 @@
 }
 
 // IPAD
-@media only screen and (max-width: 770px){
+@media only screen and (max-width: 1200px){
     #main-hero {
         &-slider-content {
             padding: 5rem;
@@ -58,7 +58,7 @@
 
         #transition-bar {
             &-items {
-                width: 50%;
+                width: 40rem;
 
                 .transition-bar-item {
                     width: 6rem;
@@ -106,7 +106,7 @@
 
     #careers-section {
         height: 30rem;
-        
+
         &-content {
             padding: 5rem;
         }

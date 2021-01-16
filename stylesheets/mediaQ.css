@@ -1,4 +1,4 @@
-@media only screen and (min-width: 770px) and (max-width: 1600px) {
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
   #main-nav {
     padding: 0 2rem;
   }
@@ -7,7 +7,7 @@
     padding: 3rem 10rem 5rem;
   }
   #main-hero #transition-bar-items {
-    width: 42%;
+    width: 65rem;
   }
   #games-section-content #games-list {
     margin: 0 20rem;
@@ -21,7 +21,7 @@
   }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 1200px) {
   #main-hero-slider-content {
     padding: 5rem;
     height: 95%;
@@ -33,7 +33,7 @@
     font-size: 5rem;
   }
   #main-hero #transition-bar-items {
-    width: 50%;
+    width: 40rem;
   }
   #main-hero #transition-bar-items .transition-bar-item {
     width: 6rem;
