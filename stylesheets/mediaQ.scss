@@ -157,10 +157,11 @@
 
 			&-items {
 				width: 100%;
+				justify-content: space-around;
 
 				.transition-bar-item {
-					width: 7.5rem;
-					height: 0.4rem;
+					width: 16%;
+					height: 0.3rem;
 				}
 			}
 		}
