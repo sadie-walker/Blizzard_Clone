@@ -92,7 +92,7 @@ a {
 			justify-content: space-between;
 			height: 100%;
 			width: 70%;
-			padding: 3rem 25rem 5rem;
+			padding: 10rem 25rem 5rem;
 			text-transform: uppercase;
 
 			img {
@@ -143,6 +143,7 @@ a {
 #games-section {
 	background-color: #002650;
 	color: #fff;
+	padding-bottom: 1rem;
 
 	&-content {
 		background: url(/images/backgrounds/background-generic-landscape-short.jpg);
@@ -198,7 +199,7 @@ a {
 	display: flex;
 	justify-content: center;
 	border-top: 0.1rem solid #535353;
-	padding: 1.7rem;
+	padding: 1.5rem;
 
 	&-desktop,
 	&-app {
