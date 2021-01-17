@@ -35,7 +35,7 @@ a {
 
 		li {
 			height: 100%;
-			padding: 0.8rem 2rem;
+			padding: 0.8rem 1.5rem;
 			display: flex;
 
 			a {
@@ -44,9 +44,8 @@ a {
 				color: #9a9a9c;
 				font-weight: 500;
 
-				img {
-					width: 8rem;
-					height: 4rem;
+				svg {
+					fill: #009ae4;
 				}
 
 				i {
@@ -65,10 +64,11 @@ a {
 				text-transform: uppercase;
 			}
 		}
-
 		#main-nav-logo {
-			width: 10rem;
-			height: 4rem;
+			&-svg {
+				width: 10rem;
+				height: 4rem;
+			}
 		}
 	}
 
@@ -197,7 +197,7 @@ a {
 	display: flex;
 	justify-content: center;
 	border-top: 0.1rem solid #535353;
-	padding: 1.2rem;
+	padding: 1.7rem;
 
 	&-desktop,
 	&-app {
@@ -206,6 +206,10 @@ a {
 		align-items: center;
 		color: #a9b2c0;
 		font-size: 1.7rem;
+
+		svg {
+			fill: #00aeff;
+		}
 
 		p {
 			margin-right: 0.5rem;
@@ -297,10 +301,11 @@ a {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-bottom:  2.5rem;
+			margin-bottom: 2.5rem;
 
 			svg {
 				height: 3rem;
+				fill: #00aeff;
 			}
 
 			form {
@@ -322,6 +327,7 @@ a {
 
 			&-blizz {
 				height: 7rem;
+				fill: #00aeff;
 			}
 
 			&-enter {
