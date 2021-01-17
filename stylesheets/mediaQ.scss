@@ -85,7 +85,6 @@
 			align-items: flex-start;
 			padding: 1rem 2rem;
 			border: none;
-			// font-size: 1.6rem;
 			line-height: 2.5rem;
 		}
 
@@ -194,6 +193,10 @@
 
 		&-content {
 			align-items: center;
+
+			#footer-logo {
+				width: 15rem;
+			}
 
 			#primary-footer-links {
 				width: 35rem;
