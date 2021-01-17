@@ -337,16 +337,19 @@ a {
 
 		.footer-link {
 			font-size: 1.6rem;
-			padding: 0 1.5rem;
-			border-right: 0.1rem solid #fff;
 
 			a {
 				text-transform: uppercase;
 				cursor: pointer;
 			}
 
-			&:last-of-type {
-				border: none;
+			& + li::before {
+				content: " ";
+				display: inline-block;
+				height: 1rem;
+				width: 1rem;
+				margin-right: 1rem;
+				border-right: 0.1rem solid #fff;
 			}
 		}
 
@@ -354,7 +357,6 @@ a {
 		#secondary-footer-links {
 			display: flex;
 			justify-content: center;
-			line-height: 0.8rem;
 		}
 
 		#primary-footer-links {
