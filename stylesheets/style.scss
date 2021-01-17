@@ -151,23 +151,27 @@ a {
 		background-repeat: no-repeat;
 
 		#games-list {
-			margin: 0 35rem;
+			width: 120rem;
+			max-width: 120rem;
+			margin: 0 auto;
 			padding-top: 3rem;
 
 			&-header {
 				display: flex;
 				justify-content: space-between;
-				align-items: center;
 				margin-bottom: 2rem;
+				padding: 0 2rem;
 
 				h2 {
 					font-size: 4.5rem;
 					font-weight: 100;
+					align-self: center;
 				}
 
 				a {
 					color: #00aeff;
 					font-size: 1.7rem;
+					align-self: flex-end;
 				}
 			}
 

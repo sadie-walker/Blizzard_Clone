@@ -15,7 +15,13 @@
 	#games-section {
 		&-content {
 			#games-list {
-				margin: 0 20rem;
+				// margin: 0 20rem;
+				width: 110rem;
+				max-width: 110rem;
+
+				&-header {
+					padding: 0 4rem;
+				}
 
 				&-items {
 					.games-list-item {
@@ -64,10 +70,17 @@
 	#games-section {
 		&-content {
 			#games-list {
-				margin: 0 8rem;
+				width: 70rem;
 
 				&-header {
-					padding: 0 2rem;
+					padding: 0 6rem;
+				}
+
+				&-items {
+					.games-list-item {
+						width: 17.5rem;
+						height: 23rem;
+					}
 				}
 			}
 		}
@@ -169,8 +182,22 @@
 	#games-section {
 		&-content {
 			#games-list {
-				margin: 0 2rem;
+				width: 50rem;
+
+				&-items {
+					justify-items: left;
+
+					.games-list-item {
+						justify-self: left;
+					}
+				}
 			}
+		}
+	}
+
+	#app-connectivity {
+		& > div {
+			padding: 1.7rem 1.5rem;
 		}
 	}
 
