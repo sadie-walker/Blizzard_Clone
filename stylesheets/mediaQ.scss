@@ -1,114 +1,210 @@
 // SMALL SCREEN / LAPTOP SCREEN
-@media only screen and (min-width: 1200px) and (max-width: 1600px){
-    #main-nav {
-        padding: 0 2rem;
-    }
+@media only screen and (max-width: 1600px) {
+	#main-nav {
+		padding: 0 1rem;
+	}
 
-    #main-hero {
-        &-slider-content{
-            width: 100%;
-            padding: 3rem 10rem 5rem;
-        }
+	#main-hero {
+		#transition-bar {
+			&-items {
+				width: 65rem;
+			}
+		}
+	}
 
-        #transition-bar {
-            &-items {
-                width: 65rem;
-            }
-        }
-    }
+	#games-section {
+		&-content {
+			#games-list {
+				margin: 0 20rem;
 
-    #games-section {
-        &-content {
+				&-items {
+					.games-list-item {
+						width: 15rem;
+						height: 20rem;
+					}
+				}
+			}
+		}
+	}
 
-            #games-list {
-                margin: 0 20rem;
-
-                &-items {
-                    .games-list-item {
-                        width: 15rem;
-                        height: 20rem;
-                    }
-                }
-            }
-        }
-    }
-
-    #careers-section {
-        &-content {
-            padding: 5rem;
-        }
-    }
+	#careers-section {
+		&-content {
+			padding: 5rem;
+		}
+	}
 }
 
-// IPAD
-@media only screen and (max-width: 1200px){
-    #main-hero {
-        &-slider-content {
-            padding: 5rem;
-            height: 95%;
+// Tablets
+@media only screen /*and (min-width: 760px) */ and (max-width: 1200px) {
+	#main-hero {
+		&-slider-content {
+			padding: 5rem;
+			height: 95%;
 
-            img {
-                width: 24rem;
-            }
+			img {
+				width: 24rem;
+			}
 
-            h2 {
-                font-size: 5rem;
-            }
-        }
+			h2 {
+				font-size: 5rem;
+			}
+		}
 
-        #transition-bar {
-            &-items {
-                width: 40rem;
+		#transition-bar {
+			&-items {
+				width: 40rem;
 
-                .transition-bar-item {
-                    width: 6rem;
-                }
-            }
-        }
-    }
+				.transition-bar-item {
+					width: 6rem;
+				}
+			}
+		}
+	}
 
-    #games-section {
-        &-content {
-            #games-list {
-                margin: 0 8rem;
+	#games-section {
+		&-content {
+			#games-list {
+				margin: 0 8rem;
 
-                &-header {
-                    padding: 0 2rem;
-                }
-            }
-        }
-    }
+				&-header {
+					padding: 0 2rem;
+				}
+			}
+		}
+	}
 
-    #app-connectivity {
-        flex-direction: column;
-        padding: 0;
-        border-top: 0.1rem solid #535353;
-        border-bottom: 0.1rem solid #535353;
-        
-        &-desktop,
-        &-app {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 1rem 2rem;
-            border: none;
-            // font-size: 1.6rem;
-            line-height: 2.5rem;
-        }
+	#app-connectivity {
+		flex-direction: column;
+		padding: 0;
+		border-top: 0.1rem solid #535353;
+		border-bottom: 0.1rem solid #535353;
 
-        &-app {
-            border-top: 0.1rem solid #535353;
+		&-desktop,
+		&-app {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 1rem 2rem;
+			border: none;
+			// font-size: 1.6rem;
+			line-height: 2.5rem;
+		}
 
-            a {
-                padding-left: 1rem;
-            }
-        }
-    }
+		&-app {
+			border-top: 0.1rem solid #535353;
 
-    #careers-section {
-        height: 30rem;
+			a {
+				padding-left: 1rem;
+			}
+		}
+	}
 
-        &-content {
-            padding: 5rem;
-        }
-    }
+	#careers-section {
+		height: 30rem;
+
+		&-content {
+			padding: 5rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	#main-nav {
+		li {
+			padding: 0.8rem 1.8rem 0.8rem 0;
+		}
+
+		#main-nav-left {
+			#main-nav-logo {
+				padding: 0.8rem 0;
+			}
+		}
+
+		svg {
+			transform: scale(0.8);
+		}
+	}
+}
+
+// Mobile Phones
+@media only screen and (max-width: 760px) {
+	#main-hero {
+		height: 41.5rem;
+
+		&-slider {
+			height: 40rem;
+			background-size: cover;
+			background-position-x: 100rem;
+
+			&-content {
+				height: 40rem;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto;
+
+				& > * {
+					margin-bottom: 1.5rem;
+				}
+
+				h2 {
+					text-align: center;
+				}
+			}
+		}
+
+		#transition-bar {
+			height: 1.5rem;
+
+			&-items {
+				width: 100%;
+
+				.transition-bar-item {
+					width: 7.5rem;
+					height: 0.4rem;
+				}
+			}
+		}
+	}
+
+	#games-section {
+		&-content {
+			#games-list {
+				margin: 0 2rem;
+			}
+		}
+	}
+
+	#careers-section {
+		height: 38rem;
+
+		&-content {
+			padding: 2rem;
+			justify-content: flex-end;
+			align-items: center;
+
+			h3 {
+				text-align: center;
+			}
+		}
+	}
+
+	#main-footer {
+		padding: 2rem;
+
+		&-content {
+			align-items: center;
+
+			#primary-footer-links {
+				width: 35rem;
+				font-size: 1.4rem;
+				flex-wrap: wrap;
+				line-height: 2.2rem;
+				border-right: none;
+
+				.footer-link:nth-of-type(4)::before {
+					content: none;
+				}
+			}
+		}
+	}
 }
