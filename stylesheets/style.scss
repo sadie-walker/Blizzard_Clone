@@ -24,57 +24,61 @@ a {
 }
 
 #main-nav {
-	display: flex;
 	background-color: #0b0d12;
-	padding: 0 20rem;
 
-	&-left,
-	&-right {
+	&-content {
+		max-width: 1600px;
+		margin: 0 auto;
 		display: flex;
-		align-items: center;
 
-		li {
-			height: 100%;
-			padding: 0.8rem 1.5rem;
+		&-left,
+		&-right {
 			display: flex;
+			align-items: center;
 
-			a {
-				align-self: center;
+			li {
+				height: 100%;
+				padding: 0.8rem 1.5rem;
 				display: flex;
-				color: #9a9a9c;
-				font-weight: 500;
 
-				svg {
-					fill: #009ae4;
+				a {
+					align-self: center;
+					display: flex;
+					color: #9a9a9c;
+					font-weight: 500;
+
+					svg {
+						fill: #009ae4;
+					}
+
+					i {
+						margin-left: 0.5rem;
+						font-size: 1.4rem;
+					}
 				}
+			}
+		}
 
-				i {
-					margin-left: 0.5rem;
-					font-size: 1.4rem;
+		&-left {
+			width: 50%;
+
+			li {
+				a {
+					text-transform: uppercase;
+				}
+			}
+			#main-nav-logo {
+				&-svg {
+					width: 10rem;
+					height: 4rem;
 				}
 			}
 		}
-	}
 
-	&-left {
-		width: 50%;
-
-		li {
-			a {
-				text-transform: uppercase;
-			}
+		&-right {
+			flex: auto;
+			justify-content: flex-end;
 		}
-		#main-nav-logo {
-			&-svg {
-				width: 10rem;
-				height: 4rem;
-			}
-		}
-	}
-
-	&-right {
-		flex: auto;
-		justify-content: flex-end;
 	}
 }
 
