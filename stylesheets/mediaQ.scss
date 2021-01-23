@@ -38,18 +38,15 @@
 	}
 }
 
-@media only screen /*and (min-width: 760px) */ and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
 	#main-hero {
 		&-slider-content {
-			padding: 5rem;
-			height: 95%;
-
 			img {
 				width: 24rem;
 			}
 
 			h2 {
-				font-size: 5rem;
+				font-size: 6rem;
 			}
 		}
 
@@ -156,6 +153,8 @@
 
 				h2 {
 					text-align: center;
+					font-size: 5rem;
+					width: 40rem;
 				}
 			}
 		}
@@ -181,8 +180,6 @@
 				width: 50rem;
 
 				&-items {
-					justify-items: left;
-
 					.games-list-item {
 						justify-self: left;
 					}
@@ -235,4 +232,37 @@
 		}
 	}
 }
+
 // Mobile Phones
+@media only screen and (max-width: 480px) {
+	#main-hero {
+		&-slider-content {
+			img {
+				width: 18rem;
+			}
+
+			h2 {
+				font-size: 4.5rem;
+			}
+		}
+	}
+
+	#games-section {
+		#games-list {
+			width: 35rem;
+
+			&-header {
+				padding: 0 2rem;
+				margin-bottom: 1rem;
+			}
+
+			&-items {
+				.games-list-item {
+					width: 15rem;
+					height: 20rem;
+					margin: 0 0.25rem 0.5rem;
+				}
+			}
+		}
+	}
+}
