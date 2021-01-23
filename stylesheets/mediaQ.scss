@@ -1,3 +1,4 @@
+// Laptops
 @media only screen and (max-width: 1600px) {
 	#main-nav {
 		padding: 0 1rem;
@@ -38,6 +39,7 @@
 	}
 }
 
+// Small laptops
 @media only screen and (max-width: 1200px) {
 	#main-hero {
 		&-slider-content {
@@ -113,6 +115,7 @@
 	}
 }
 
+// Tablets
 @media only screen and (max-width: 960px) {
 	#main-nav {
 		li {
@@ -131,6 +134,7 @@
 	}
 }
 
+// Small Tablets
 @media only screen and (max-width: 760px) {
 	#main-hero {
 		height: 41.5rem;
@@ -202,8 +206,13 @@
 			justify-content: flex-end;
 			align-items: center;
 
+			h2 {
+				font-size: 3rem;
+			}
+
 			h3 {
 				text-align: center;
+				margin-bottom: 2rem;
 			}
 		}
 	}
