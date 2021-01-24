@@ -191,11 +191,20 @@
 	}
 
 	#careers-section {
-		height: 38rem;
+		height: 50rem;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		background: linear-gradient(rgba(0, 0, 0, 0) 48%, rgb(29, 22, 14) 65%),
+			url(/images/careers-banner/careers-1.jpeg);
+		background-size: 120rem;
+		background-repeat: no-repeat;
+		background-position: top center;
 
 		&-content {
-			padding: 2rem;
-			justify-content: flex-end;
+			height: 18rem;
+			width: 100%;
+			padding: 0 2rem;
 			align-items: center;
 
 			h2 {

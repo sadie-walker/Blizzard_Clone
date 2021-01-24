@@ -258,8 +258,9 @@ a {
 }
 
 #careers-section {
-	background: url(/images/careers-banner/careers-1.jpeg);
 	height: 40rem;
+	background-image: url(/images/careers-banner/careers-1.jpeg);
+	background-position: top center;
 
 	&-content {
 		display: flex;
