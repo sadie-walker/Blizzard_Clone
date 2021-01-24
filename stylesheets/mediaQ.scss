@@ -134,23 +134,40 @@
 		&-slider {
 			height: 40rem;
 			background-size: cover;
-			background-position-x: 100rem;
+			// background-position-x: 100rem;
+			background: linear-gradient(
+					rgba(0, 0, 0, 0) 0%,
+					rgb(56, 24, 13) 80%
+				),
+				url(/images/hero-banner/hero-banner-4.jpg);
+			background-size: 160rem;
+			background-repeat: no-repeat;
+			background-position: 75% 0%;
+			background-attachment: local;
 
 			&-content {
 				height: 40rem;
 				width: 100%;
 				align-items: center;
-				justify-content: center;
+				justify-content: end;
 				margin: 0 auto;
 
 				& > * {
-					margin-bottom: 1.5rem;
+					margin-bottom: 2rem;
+				}
+
+				img {
+					width: 18rem;
 				}
 
 				h2 {
 					text-align: center;
-					font-size: 5rem;
+					font-size: 4.5rem;
 					width: 40rem;
+				}
+
+				a {
+					font-size: 1.8rem;
 				}
 			}
 		}
