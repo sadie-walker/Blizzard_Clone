@@ -110,24 +110,27 @@
 // Tablets
 @media only screen and (max-width: 960px) {
 	#main-nav {
-		li {
+		li,
+		#main-nav-logo {
 			padding: 0.8rem 1.8rem 0.8rem 0;
 		}
 
-		#main-nav-left {
-			#main-nav-logo {
-				padding: 0.8rem 0;
-			}
-		}
-
-		svg {
-			transform: scale(0.8);
+		#main-nav-logo {
+			width: 9.5rem;
 		}
 	}
 }
 
 // Small Tablets
 @media only screen and (max-width: 760px) {
+	#main-nav {
+		display: none;
+	}
+
+	#mobile-main-nav {
+		display: block;
+	}
+
 	#main-hero {
 		height: 41.5rem;
 
