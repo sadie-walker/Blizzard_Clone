@@ -58,6 +58,8 @@ svg {
 					color: #9a9a9c;
 
 					i {
+						display: flex;
+						align-items: center;
 						margin-left: 0.5rem;
 						font-size: 1.4rem;
 					}
@@ -87,8 +89,120 @@ svg {
 			justify-content: flex-end;
 		}
 	}
+
+	&-games {
+		position: absolute;
+		top: 6rem;
+		left: 0;
+		background-color: rgba(18, 24, 34, 0.986);
+		display: flex;
+		width: 100%;
+		height: 38rem;
+		flex-wrap: wrap;
+		visibility: hidden;
+		z-index: 10;
+
+		&-content {
+			display: flex;
+			width: 160rem;
+			height: 33rem;
+			margin: 0 auto;
+			padding: 2rem 1.5rem;
+
+			&-blizzard,
+			&-activision {
+				padding: 0 2rem;
+
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					padding-top: 2rem;
+					height: 100%;
+				}
+			}
+
+			&-blizzard {
+				flex-basis: 82%;
+				border-right: 0.1rem solid #a2a5aa3a;
+
+				.main-nav-games-item {
+					flex-basis: 11.1%;
+				}
+			}
+
+			&-activision {
+				flex-basis: 28%;
+
+				.main-nav-games-item {
+					flex-basis: 33.3%;
+				}
+			}
+
+			.main-nav-games-title {
+				width: 100%;
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: 1.4rem;
+				color: #a2a5aa;
+			}
+
+			.main-nav-games-item {
+				a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					font-size: 1.1rem;
+					width: 6.6rem;
+					height: 11rem;
+					margin: 0 auto;
+					color: #a2a5aa;
+					text-align: center;
+					line-height: 1.5rem;
+
+					img {
+						width: 6.4rem;
+					}
+				}
+			}
+		}
+
+		&-footer {
+			border-top: 0.1rem solid #a2a5aa3a;
+			border-bottom: 0.1rem solid #a2a5aa70;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 5rem;
+
+			ul {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 60rem;
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				color: #a2a5aa;
+
+				#main-nav-battlenet-logo {
+					width: 2rem;
+					margin-right: 0.2rem;
+				}
+
+				i {
+					margin-right: 0.5rem;
+					color: #00aeff;
+				}
+			}
+		}
+	}
 }
 
+// MOBILE NAV
 #mobile-main-nav {
 	display: none;
 	background-color: #0b0d12;
@@ -218,9 +332,11 @@ svg {
 	}
 }
 
-#mobile-navbars-overlay {
+#menu-background-overlay {
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100vw;
 	height: 100vh;
 	z-index: 4;

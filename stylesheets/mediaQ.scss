@@ -33,6 +33,26 @@
 
 // Small laptops
 @media only screen and (max-width: 1200px) {
+	#main-nav {
+		&-games {
+			height: 36.5rem;
+
+			&-content {
+				&-blizzard {
+					flex-basis: 70%;
+
+					.main-nav-games-item {
+						flex-basis: 14%;
+					}
+				}
+
+				&-activision {
+					flex-basis: 30%;
+				}
+			}
+		}
+	}
+
 	#main-hero {
 		&-slider-content {
 			img {
@@ -110,13 +130,57 @@
 // Tablets
 @media only screen and (max-width: 960px) {
 	#main-nav {
-		li,
+		.main-nav-item,
 		#main-nav-logo {
 			padding: 0.8rem 1.8rem 0.8rem 0;
 		}
 
 		#main-nav-logo {
 			width: 9.5rem;
+		}
+
+		&-games-content {
+			.main-nav-games-item {
+				a {
+					width: 5.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 840px) {
+	#main-nav {
+		&-games {
+			height: 48rem;
+
+			&-content {
+				height: 43rem;
+
+				&-blizzard {
+					flex-basis: 63%;
+
+					.main-nav-games-item {
+						flex-basis: 20%;
+
+						&:nth-of-type(n + 10) {
+							flex-basis: 21%;
+						}
+					}
+				}
+
+				&-activision {
+					flex-basis: 37%;
+
+					ul {
+						height: auto;
+
+						.main-nav-games-item {
+							margin-bottom: 1.5rem;
+						}
+					}
+				}
+			}
 		}
 	}
 }
