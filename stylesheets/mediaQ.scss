@@ -1,12 +1,12 @@
 // Laptops
 @media only screen and (max-width: 1600px) {
-	#main-nav {
+	.main-nav {
 		padding: 0 1rem;
 	}
 
-	#games-section {
+	.games-section {
 		&-content {
-			#games-list {
+			.games-list {
 				width: 110rem;
 				max-width: 110rem;
 
@@ -24,7 +24,7 @@
 		}
 	}
 
-	#careers-section {
+	.careers-section {
 		&-content {
 			padding: 5rem;
 		}
@@ -33,7 +33,7 @@
 
 // Small laptops
 @media only screen and (max-width: 1200px) {
-	#main-nav {
+	.main-nav {
 		&-games {
 			height: 36.5rem;
 
@@ -53,7 +53,7 @@
 		}
 	}
 
-	#main-hero {
+	.main-hero {
 		&-slider-content {
 			img {
 				width: 24rem;
@@ -64,7 +64,7 @@
 			}
 		}
 
-		#transition-bar {
+		.transition-bar {
 			&-items {
 				width: 40rem;
 
@@ -75,9 +75,9 @@
 		}
 	}
 
-	#games-section {
+	.games-section {
 		&-content {
-			#games-list {
+			.games-list {
 				width: 70rem;
 
 				&-header {
@@ -94,7 +94,7 @@
 		}
 	}
 
-	#app-connectivity {
+	.app-connectivity {
 		flex-direction: column;
 		padding: 0;
 		border-top: 0.1rem solid #535353;
@@ -118,7 +118,7 @@
 		}
 	}
 
-	#careers-section {
+	.careers-section {
 		height: 30rem;
 
 		&-content {
@@ -129,7 +129,7 @@
 
 // Tablets
 @media only screen and (max-width: 960px) {
-	#main-nav {
+	.main-nav {
 		.main-nav-item,
 		#main-nav-logo {
 			padding: 0.8rem 1.8rem 0.8rem 0;
@@ -150,7 +150,7 @@
 }
 
 @media only screen and (max-width: 840px) {
-	#main-nav {
+	.main-nav {
 		&-games {
 			height: 48rem;
 
@@ -187,15 +187,15 @@
 
 // Small Tablets
 @media only screen and (max-width: 760px) {
-	#main-nav {
+	.main-nav {
 		display: none;
 	}
 
-	#mobile-main-nav {
+	.mobile-main-nav {
 		display: block;
 	}
 
-	#main-hero {
+	.main-hero {
 		height: 41.5rem;
 
 		&-slider {
@@ -239,7 +239,7 @@
 			}
 		}
 
-		#transition-bar {
+		.transition-bar {
 			height: 1.5rem;
 
 			&-items {
@@ -254,9 +254,9 @@
 		}
 	}
 
-	#games-section {
+	.games-section {
 		&-content {
-			#games-list {
+			.games-list {
 				width: 50rem;
 
 				&-items {
@@ -268,13 +268,13 @@
 		}
 	}
 
-	#app-connectivity {
+	.app-connectivity {
 		& > div {
 			padding: 1.7rem 1.5rem;
 		}
 	}
 
-	#careers-section {
+	.careers-section {
 		height: 50rem;
 		display: flex;
 		justify-content: center;
@@ -302,7 +302,7 @@
 		}
 	}
 
-	#main-footer {
+	.main-footer {
 		padding: 2rem;
 
 		&-content {
@@ -312,7 +312,7 @@
 				width: 15rem;
 			}
 
-			#primary-footer-links {
+			.primary-footer-links {
 				width: 35rem;
 				font-size: 1.4rem;
 				flex-wrap: wrap;
@@ -329,7 +329,7 @@
 
 // Mobile Phones
 @media only screen and (max-width: 480px) {
-	#main-hero {
+	.main-hero {
 		&-slider-content {
 			img {
 				width: 18rem;
@@ -341,8 +341,8 @@
 		}
 	}
 
-	#games-section {
-		#games-list {
+	.games-section {
+		.games-list {
 			width: 35rem;
 
 			&-header {

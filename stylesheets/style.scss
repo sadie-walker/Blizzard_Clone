@@ -31,7 +31,7 @@ svg {
 	transform: rotate(180deg);
 }
 
-#main-nav {
+.main-nav {
 	background-color: #0b0d12;
 	height: 6rem;
 
@@ -207,7 +207,7 @@ svg {
 }
 
 // MOBILE NAV
-#mobile-main-nav {
+.mobile-main-nav {
 	display: none;
 	background-color: #0b0d12;
 	height: 4.8rem;
@@ -231,8 +231,8 @@ svg {
 		padding: 0.5rem;
 	}
 
-	#mobile-hamburger-nav,
-	#mobile-account-nav {
+	.mobile-hamburger-nav,
+	.mobile-account-nav {
 		// display: none;
 		background: #151a23;
 		position: absolute;
@@ -265,7 +265,7 @@ svg {
 		}
 	}
 
-	#mobile-hamburger-nav {
+	.mobile-hamburger-nav {
 		left: -35rem;
 		transition: left 0.15s ease-in;
 
@@ -308,7 +308,7 @@ svg {
 		}
 	}
 
-	#mobile-account-nav {
+	.mobile-account-nav {
 		right: -35rem;
 		transition: right 0.15s ease-in;
 
@@ -347,7 +347,7 @@ svg {
 	visibility: hidden;
 }
 
-#main-hero {
+.main-hero {
 	width: 100%;
 
 	&-slider {
@@ -387,7 +387,7 @@ svg {
 		}
 	}
 
-	#transition-bar {
+	.transition-bar {
 		height: 2.5rem;
 		background-color: #0b0d12;
 
@@ -408,7 +408,8 @@ svg {
 	}
 }
 
-#games-section {
+// GAMMES SECTION
+.games-section {
 	background-color: #002650;
 	color: #fff;
 	padding-bottom: 1rem;
@@ -418,7 +419,7 @@ svg {
 		background-position: top center;
 		background-repeat: no-repeat;
 
-		#games-list {
+		.games-list {
 			width: 120rem;
 			max-width: 120rem;
 			margin: 0 auto;
@@ -466,7 +467,8 @@ svg {
 	}
 }
 
-#app-connectivity {
+// APP CONNECTIVITY
+.app-connectivity {
 	background-color: #002650;
 	display: flex;
 	justify-content: center;
@@ -518,7 +520,7 @@ svg {
 	}
 }
 
-#careers-section {
+.careers-section {
 	height: 40rem;
 	background-image: url(/images/careers-banner/careers-1.jpeg);
 	background-position: top center;
@@ -556,7 +558,7 @@ svg {
 	}
 }
 
-#main-footer {
+.main-footer {
 	height: 42rem;
 	background: url(/images/backgrounds/footer-bg-lg.jpg);
 
@@ -624,13 +626,13 @@ svg {
 			}
 		}
 
-		#primary-footer-links,
-		#secondary-footer-links {
+		.primary-footer-links,
+		.secondary-footer-links {
 			display: flex;
 			justify-content: center;
 		}
 
-		#primary-footer-links {
+		.primary-footer-links {
 			margin-bottom: 2rem;
 		}
 
@@ -640,10 +642,14 @@ svg {
 			line-height: 2rem;
 		}
 
-		#secondary-footer-links {
+		.footer-links {
 			a {
 				font-size: 1.2rem;
 			}
 		}
 	}
+}
+
+.toggle-visibility {
+	visibility: visible;
 }
