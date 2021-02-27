@@ -719,6 +719,26 @@ svg {
 	}
 }
 
+// DOM STYLES
+
 .toggle-visibility {
 	visibility: visible;
+}
+
+.navbar-arrow-rotation {
+	transform: rotate(180deg);
+}
+
+.hmbg-mobile-menu-open {
+	visibility: visible;
+	left: 0;
+}
+
+.acc-mobile-menu-open {
+	visibility: visible;
+	right: 0;
+}
+
+.nav-overlay {
+	filter: brightness(50%);
 }
