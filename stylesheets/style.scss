@@ -92,6 +92,7 @@ svg {
 	}
 }
 
+// games sub menu
 .main-nav-games {
 	position: absolute;
 	top: 6rem;
@@ -203,6 +204,7 @@ svg {
 	}
 }
 
+// esports sub menu
 .main-nav-esports {
 	position: absolute;
 	top: 6rem;
@@ -217,12 +219,13 @@ svg {
 
 		&-competitions {
 			display: flex;
+			width: 100rem;
 			margin: 0 auto;
-			width: 65%;
+			padding: 1rem;
 
-			
 			li {
 				flex-basis: 20%;
+				display: flex;
 
 				a {
 					display: flex;
@@ -235,7 +238,7 @@ svg {
 					padding-bottom: 3rem;
 
 					img {
-						width: 20rem;
+						width: 19rem;
 					}
 				}
 			}
@@ -280,12 +283,11 @@ svg {
 			padding: 0.5rem;
 			cursor: pointer;
 		}
-		
+
 		#mobile-main-nav-logo {
 			width: 6.5rem;
 		}
 	}
-	
 }
 
 // hamburger & account navs
