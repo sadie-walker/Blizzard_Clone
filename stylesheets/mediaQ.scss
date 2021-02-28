@@ -70,15 +70,15 @@
 			padding: 0;
 
 			&-competitions {
-				width: 82rem;
+				width: 85rem;
 				padding: 0;
 
 				li {
 					a {
-						padding: 1rem;
+						padding-bottom: 1rem;
 
 						img {
-							width: 16rem;
+							width: 14rem;
 						}
 					}
 				}
@@ -172,10 +172,27 @@
 			width: 9.5rem;
 		}
 
-		&-games-content {
-			.main-nav-games-item {
-				a {
-					width: 5.5rem;
+	}
+
+	.main-nav-games-content {
+		.main-nav-games-item {
+			a {
+				width: 5.5rem;
+			}
+		}
+	}
+
+	
+	.main-nav-esports {
+		&-content {
+			&-competitions {
+				width: 75rem;
+				li {
+					a {
+						img {
+							width: 13rem;
+						}
+					}
 				}
 			}
 		}
@@ -183,34 +200,46 @@
 }
 
 @media only screen and (max-width: 840px) {
-	.main-nav {
-		&-games {
-			height: 48rem;
+	.main-nav-games {
+		height: 48rem;
 
-			&-content {
-				height: 43rem;
+		&-content {
+			height: 43rem;
 
-				&-blizzard {
-					flex-basis: 63%;
+			&-blizzard {
+				flex-basis: 63%;
 
-					.main-nav-games-item {
-						flex-basis: 20%;
+				.main-nav-games-item {
+					flex-basis: 20%;
 
-						&:nth-of-type(n + 10) {
-							flex-basis: 21%;
-						}
+					&:nth-of-type(n + 10) {
+						flex-basis: 21%;
 					}
 				}
+			}
 
-				&-activision {
-					flex-basis: 37%;
+			&-activision {
+				flex-basis: 37%;
 
-					ul {
-						height: auto;
+				ul {
+					height: auto;
 
-						.main-nav-games-item {
-							margin-bottom: 1.5rem;
-						}
+					.main-nav-games-item {
+						margin-bottom: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	.main-nav-esports {
+		&-content-competitions{
+			width: 62rem;
+
+			li{
+				a{
+					img{
+						width: 11rem;
 					}
 				}
 			}
