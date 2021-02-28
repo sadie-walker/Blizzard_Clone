@@ -2,7 +2,7 @@
 let body = document.querySelector("body");
 
 // Navbars
-let mainNav = document.querySelector(".main-nav");
+let mainNavLinks = document.querySelectorAll(".main-nav li");
 let mainNavGamesMenu = document.querySelector(".main-nav-games");
 let mainNavEsportsMenu = document.querySelector(".main-nav-esports");
 let mobileMainNav = document.querySelector(".mobile-main-nav");
@@ -55,16 +55,27 @@ function toggleMainSubMenus(e){
     e.target.firstElementChild.classList.toggle("navbar-arrow-rotation")
     console.log("WE'RE IN");
     if(e.target.id === "games-menu-button"){
-        mainNav.classList.toggle("nav-overlay");
+        navOverlay(e);
         mainNavGamesMenu.classList.toggle("toggle-visibility");
         mainNavEsportsMenu.classList.remove("toggle-visibility")
         mainNavEsportsBtn.firstElementChild.classList.remove("navbar-arrow-rotation");
     } else if (e.target.id === "esports-menu-button"){
         console.log("ESPORTS!");
+        navOverlay(e);
         mainNavEsportsMenu.classList.toggle("toggle-visibility")
         mainNavGamesMenu.classList.remove("toggle-visibility");
-        mainNavEsportsBtn.firstElementChild.classList.remove("navbar-arrow-rotation");
+        mainNavGamesBtn.firstElementChild.classList.remove("navbar-arrow-rotation");
     } else {
         mainNavAccMenu.classList.toggle("toggle-visibility");
+    }
+}
+
+function navOverlay(e){
+    for(let i = mainNavLinks.length-1; i >= 0; i--){
+        if(mainNavLinks[i].firstElementChild === e.target){
+            continue;
+        } else {
+            mainNavLinks[i].classList.toggle("nav-overlay");
+        }
     }
 }
