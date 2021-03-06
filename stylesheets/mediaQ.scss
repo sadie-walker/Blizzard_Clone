@@ -45,24 +45,25 @@
 
 // Small laptops
 @media only screen and (max-width: 1200px) {
-	.main-nav {
-		&-games {
-			height: 36.5rem;
+	.main-nav-games {
+		height: 36.5rem;
 
-			&-content {
-				&-blizzard {
-					flex-basis: 70%;
+		&-content {
+			height: 31rem;
 
-					.main-nav-games-item {
-						flex-basis: 14%;
-					}
-				}
+			&-blizzard {
+				flex-basis: 70%;
 
-				&-activision {
-					flex-basis: 30%;
+				.main-nav-games-item {
+					flex-basis: 14%;
 				}
 			}
+
+			&-activision {
+				flex-basis: 30%;
+			}
 		}
+		
 	}
 
 	.main-nav-esports {
