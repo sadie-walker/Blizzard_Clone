@@ -727,10 +727,6 @@ svg {
 	visibility: visible;
 }
 
-.navbar-arrow-rotation {
-	transform: rotate(180deg);
-}
-
 .hmbg-mobile-menu-open {
 	visibility: visible;
 	left: 0;
@@ -743,4 +739,11 @@ svg {
 
 .nav-overlay {
 	filter: brightness(50%);
+}
+
+.active-link {
+
+	i {
+		transform: rotate(180deg);
+	}
 }
