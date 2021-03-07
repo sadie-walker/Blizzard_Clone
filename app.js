@@ -59,13 +59,13 @@ function toggleMainSubMenus(e){
     for(let i = mainNavLinks.length-1; i >= 0; i--){
         if(e.target.classList.contains("active-link")){
             if(mainNavLinks[i].firstElementChild === e.target){
-                mainNavLinks[i].classList.remove("nav-overlay");
+                mainNavLinks[i].firstElementChild.classList.remove("nav-overlay");
             } else {
-                mainNavLinks[i].classList.add("nav-overlay");
+                mainNavLinks[i].firstElementChild.classList.add("nav-overlay");
                 mainNavLinks[i].firstElementChild.classList.remove("active-link");
             }
         } else {
-                mainNavLinks[i].classList.remove("nav-overlay");
+                mainNavLinks[i].firstElementChild.classList.remove("nav-overlay");
         }
     }
 

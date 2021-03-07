@@ -58,6 +58,10 @@ svg {
 					font-weight: 500;
 					color: #9a9a9c;
 
+					&:hover {
+						color: #fff;
+					}
+
 					i {
 						display: flex;
 						align-items: center;
