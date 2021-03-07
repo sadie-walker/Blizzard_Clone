@@ -58,6 +58,7 @@ function toggleMainSubMenus(e){
     // Add or remove incative link overlay
     for(let i = mainNavLinks.length-1; i >= 0; i--){
         if(e.target.classList.contains("active-link")){
+            menuBgOverlay.classList.add("toggle-visibility");
             if(mainNavLinks[i].firstElementChild === e.target){
                 mainNavLinks[i].firstElementChild.classList.remove("nav-overlay");
             } else {
@@ -65,6 +66,7 @@ function toggleMainSubMenus(e){
                 mainNavLinks[i].firstElementChild.classList.remove("active-link");
             }
         } else {
+                menuBgOverlay.classList.remove("toggle-visibility");   
                 mainNavLinks[i].firstElementChild.classList.remove("nav-overlay");
         }
     }

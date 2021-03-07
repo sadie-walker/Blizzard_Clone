@@ -218,6 +218,7 @@ svg {
 	width: 100%;
 	visibility: hidden;
 	border-top: 0.1rem solid #363c46;
+	z-index: 10;
 
 	&-content {
 		padding: 1rem;
