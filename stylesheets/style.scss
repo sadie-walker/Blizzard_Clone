@@ -271,6 +271,47 @@ svg {
 	}
 }
 
+// account sub menu
+.main-nav-account{
+	position: absolute;
+	width: 32.5rem;
+	background-color: rgba(26,32,43,255);
+	top: 6rem;
+	right: 2rem;
+	visibility: hidden;
+
+	&-content {
+		&-items{
+			li {
+				border-bottom: 0.1rem solid #363c46;
+				padding: 1.5rem 2rem;
+				display: flex;
+
+				a {
+					color: #afb2b6;
+
+					i {
+						color: #00aeff;
+						margin-right: 0.5rem;
+					}
+				}
+
+				&:first-of-type{
+					padding: 2rem;
+				}
+
+				#log-in-button{
+					border: 0.1rem solid #00aeff;
+					background-color: #006fb2;
+					padding: 1rem;
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
 // MOBILE NAVS
 // main
 .mobile-main-nav {
