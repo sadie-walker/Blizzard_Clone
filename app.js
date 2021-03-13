@@ -5,6 +5,7 @@ let body = document.querySelector("body");
 let mainNavLinks = document.querySelectorAll(".main-nav li");
 let mainNavGamesMenu = document.querySelector(".main-nav-games");
 let mainNavEsportsMenu = document.querySelector(".main-nav-esports");
+let mainNavAccMenu = document.querySelector(".main-nav-account");
 let mobileMainNav = document.querySelector(".mobile-main-nav");
 let hamburgerMenu = document.querySelector(".mobile-hamburger-nav");
 let mobileAccMenu = document.querySelector(".mobile-account-nav");
@@ -15,6 +16,7 @@ let menuBgOverlay = document.querySelector(".background-overlay");
 // Buttons
 let mainNavGamesBtn = document.getElementById("games-menu-button");
 let mainNavEsportsBtn = document.getElementById("esports-menu-button");
+let mainNavAccBtn = document.getElementById("account-menu-button");
 let hamburgerBtn = document.getElementById("main-hamburger-button");
 let mobileAccBtn = document.getElementById("mobile-account-button");
 let hamburgerCloseBtn = document.getElementById("mobile-hamburger-close-button");
@@ -29,6 +31,7 @@ const esportsNavFooter = document.querySelector(".main-nav-esports-footer");
 // Event Listeners
 mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
 mainNavEsportsBtn.addEventListener("click", toggleMainSubMenus);
+mainNavAccBtn.addEventListener("click", toggleMainSubMenus);
 hamburgerBtn.addEventListener("click", toggleSideMenu);
 mobileAccBtn.addEventListener("click", toggleSideMenu);
 hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
@@ -60,7 +63,7 @@ function toggleSideMenu(e) {
 //Open or close games, esports or account menus 
 function toggleMainSubMenus(e){
     // Make selected link active
-    if(e.target.id === "games-menu-button" || e.target.id === "esports-menu-button"){
+    if(e.target.id === "games-menu-button" || e.target.id === "esports-menu-button" || e.target.id === "account-menu-button"){
         e.target.classList.toggle("active-link");
     } else {
         e.target.parentElement.classList.toggle("active-link");
@@ -73,6 +76,7 @@ function toggleMainSubMenus(e){
     if(e.target.id === "games-menu-button" || e.target.parentElement.id === "games-menu-button"){
         mainNavGamesMenu.classList.toggle("toggle-visibility");
         mainNavEsportsMenu.classList.remove("toggle-visibility");
+        mainNavAccMenu.classList.remove("toggle-visibility");
         if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
             removeAnimation(esportsNavItems, esportsNavFooter);
             navItemAnimation(e);
@@ -82,6 +86,7 @@ function toggleMainSubMenus(e){
     } else if (e.target.id === "esports-menu-button"|| e.target.parentElement.id === "esports-menu-button"){
         mainNavEsportsMenu.classList.toggle("toggle-visibility");
         mainNavGamesMenu.classList.remove("toggle-visibility");
+        mainNavAccMenu.classList.remove("toggle-visibility");
         if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
             removeAnimation(gamesNavItems, gamesNavFooter);
             navItemAnimation(e);
@@ -90,8 +95,8 @@ function toggleMainSubMenus(e){
         }
     } else {
         mainNavAccMenu.classList.toggle("toggle-visibility");
-        removeAnimation(esportsNavItems, esportsNavFooter);
-        removeAnimation(gamesNavItems, gamesNavFooter);
+        mainNavGamesMenu.classList.remove("toggle-visibility");
+        mainNavEsportsMenu.classList.remove("toggle-visibility");
     }
 }
 

@@ -279,6 +279,7 @@ svg {
 	top: 6rem;
 	right: 2rem;
 	visibility: hidden;
+	z-index: 10;
 
 	&-content {
 		&-items{
