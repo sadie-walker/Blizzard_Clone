@@ -20,6 +20,12 @@ let mobileAccBtn = document.getElementById("mobile-account-button");
 let hamburgerCloseBtn = document.getElementById("mobile-hamburger-close-button");
 let mobileAccCloseBtn = document.getElementById("mobile-account-close-button");
 
+// Lists & footers
+const gamesNavItems = document.querySelectorAll(".main-nav-games-item");
+const gamesNavFooter = document.querySelector(".main-nav-games-footer"); 
+const esportsNavItems = document.querySelectorAll(".main-nav-esports-content-competitions li");
+const esportsNavFooter = document.querySelector(".main-nav-esports-footer"); 
+
 // Event Listeners
 mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
 mainNavEsportsBtn.addEventListener("click", toggleMainSubMenus);
@@ -28,7 +34,7 @@ mobileAccBtn.addEventListener("click", toggleSideMenu);
 hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
 mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
 
-// Open Menus
+// Open mobile modal menus (hamburger or account menu)
 function toggleSideMenu(e) {
     body.style.overflowY = "hidden";
     menuBgOverlay.classList.add("toggle-visibility");
@@ -51,34 +57,83 @@ function toggleSideMenu(e) {
     }
 }
 
+//Open or close games, esports or account menus 
 function toggleMainSubMenus(e){
     // Make selected link active
     e.target.classList.toggle("active-link");
-    
-    // Add or remove incative link overlay
-    for(let i = mainNavLinks.length-1; i >= 0; i--){
-        if(e.target.classList.contains("active-link")){
-            menuBgOverlay.classList.add("toggle-visibility");
-            if(mainNavLinks[i].firstElementChild === e.target){
-                mainNavLinks[i].firstElementChild.classList.remove("nav-overlay");
-            } else {
-                mainNavLinks[i].firstElementChild.classList.add("nav-overlay");
-                mainNavLinks[i].firstElementChild.classList.remove("active-link");
-            }
-        } else {
-                menuBgOverlay.classList.remove("toggle-visibility");   
-                mainNavLinks[i].firstElementChild.classList.remove("nav-overlay");
-        }
-    }
+
+    // Add overlay to inactive links
+    navOverlay(e);
 
     // Open Submenus
     if(e.target.id === "games-menu-button"){
         mainNavGamesMenu.classList.toggle("toggle-visibility");
-        mainNavEsportsMenu.classList.remove("toggle-visibility")
+        mainNavEsportsMenu.classList.remove("toggle-visibility");
+        if(e.target.classList.contains("active-link")){
+            removeAnimation(esportsNavItems, esportsNavFooter);
+            navItemAnimation(e);
+        }else {
+            removeAnimation(gamesNavItems, gamesNavFooter);
+        }
     } else if (e.target.id === "esports-menu-button"){
-        mainNavEsportsMenu.classList.toggle("toggle-visibility")
+        mainNavEsportsMenu.classList.toggle("toggle-visibility");
         mainNavGamesMenu.classList.remove("toggle-visibility");
+        if(e.target.classList.contains("active-link")){
+            removeAnimation(gamesNavItems, gamesNavFooter);
+            navItemAnimation(e);
+        } else {
+            removeAnimation(esportsNavItems, esportsNavFooter);
+        }
     } else {
         mainNavAccMenu.classList.toggle("toggle-visibility");
+        removeAnimation(esportsNavItems, esportsNavFooter);
+        removeAnimation(gamesNavItems, gamesNavFooter);
     }
 }
+
+// Add or remove incative link overlay
+const navOverlay = e => {
+    mainNavLinks.forEach(link => {
+        if(e.target.classList.contains("active-link")){
+            // Add BG overlay
+            menuBgOverlay.classList.add("toggle-visibility");
+            if(link.firstElementChild === e.target){
+                // Remove overlay from active link
+                link.firstElementChild.classList.remove("nav-overlay");
+            } else {
+                // Add overlay to all inactive links
+                link.firstElementChild.classList.add("nav-overlay");
+                link.firstElementChild.classList.remove("active-link");
+            }
+        } else {
+                // Remove all overlays
+                menuBgOverlay.classList.remove("toggle-visibility");   
+                link.firstElementChild.classList.remove("nav-overlay");
+        }
+    });
+}
+
+// games & esport nav item animation
+const navItemAnimation = e => {
+    if(e.target.id === "games-menu-button"){
+        gamesNavItems.forEach((item, index) => {
+            item.style.animation = `navImageFade 0.2s ease-out ${index / 20}s forwards`;
+        })
+        gamesNavFooter.style.animation = `navImageFade 0.2s ease-out 0.9s forwards`;
+    } else {
+        esportsNavItems.forEach((item, index) => {
+            item.style.animation = `navImageFade 0.2s ease-out ${index / 12.5}s forwards`;
+        })
+        esportsNavFooter.style.animation = `navImageFade 0.2s ease-out 0.5s forwards`;
+    }
+}
+
+const removeAnimation = (itemList, footer) => {
+    console.log(itemList);
+    itemList.forEach(item => {
+        item.style.animation = null;
+    })
+    footer.style.animation = null;
+}
+
+
