@@ -60,25 +60,29 @@ function toggleSideMenu(e) {
 //Open or close games, esports or account menus 
 function toggleMainSubMenus(e){
     // Make selected link active
-    e.target.classList.toggle("active-link");
+    if(e.target.id === "games-menu-button" || e.target.id === "esports-menu-button"){
+        e.target.classList.toggle("active-link");
+    } else {
+        e.target.parentElement.classList.toggle("active-link");
+    }
 
     // Add overlay to inactive links
     navOverlay(e);
 
     // Open Submenus
-    if(e.target.id === "games-menu-button"){
+    if(e.target.id === "games-menu-button" || e.target.parentElement.id === "games-menu-button"){
         mainNavGamesMenu.classList.toggle("toggle-visibility");
         mainNavEsportsMenu.classList.remove("toggle-visibility");
-        if(e.target.classList.contains("active-link")){
+        if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
             removeAnimation(esportsNavItems, esportsNavFooter);
             navItemAnimation(e);
-        }else {
+        } else {
             removeAnimation(gamesNavItems, gamesNavFooter);
         }
-    } else if (e.target.id === "esports-menu-button"){
+    } else if (e.target.id === "esports-menu-button"|| e.target.parentElement.id === "esports-menu-button"){
         mainNavEsportsMenu.classList.toggle("toggle-visibility");
         mainNavGamesMenu.classList.remove("toggle-visibility");
-        if(e.target.classList.contains("active-link")){
+        if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
             removeAnimation(gamesNavItems, gamesNavFooter);
             navItemAnimation(e);
         } else {
@@ -94,10 +98,10 @@ function toggleMainSubMenus(e){
 // Add or remove incative link overlay
 const navOverlay = e => {
     mainNavLinks.forEach(link => {
-        if(e.target.classList.contains("active-link")){
+        if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
             // Add BG overlay
             menuBgOverlay.classList.add("toggle-visibility");
-            if(link.firstElementChild === e.target){
+            if(link.firstElementChild === e.target || link.firstElementChild === e.target.parentElement){
                 // Remove overlay from active link
                 link.firstElementChild.classList.remove("nav-overlay");
             } else {
@@ -115,7 +119,7 @@ const navOverlay = e => {
 
 // games & esport nav item animation
 const navItemAnimation = e => {
-    if(e.target.id === "games-menu-button"){
+    if(e.target.id === "games-menu-button" || e.target.parentElement.id === "games-menu-button"){
         gamesNavItems.forEach((item, index) => {
             item.style.animation = `navImageFade 0.2s ease-out ${index / 20}s forwards`;
         })
@@ -128,8 +132,7 @@ const navItemAnimation = e => {
     }
 }
 
-const removeAnimation = (itemList, footer) => {
-    console.log(itemList);
+const removeAnimation = (itemList, footer) => { 
     itemList.forEach(item => {
         item.style.animation = null;
     })
