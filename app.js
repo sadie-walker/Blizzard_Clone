@@ -132,6 +132,12 @@ const removeAnimation = (itemList, footer) => {
     footer.style.animation = null;
 }
 
+const closeSubMenus = () => {
+    subMenus.forEach(menu => {
+        menu.classList.remove("toggle-visibility");
+    })
+    navOverlay();
+}
 
 // Open mobile modal menus (hamburger or account menu)
 function toggleSideMenu(e) {
@@ -164,4 +170,5 @@ hamburgerBtn.addEventListener("click", toggleSideMenu);
 mobileAccBtn.addEventListener("click", toggleSideMenu);
 hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
 mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
+window.addEventListener("resize", closeSubMenus);
 
