@@ -28,76 +28,64 @@ const gamesNavFooter = document.querySelector(".main-nav-games-footer");
 const esportsNavItems = document.querySelectorAll(".main-nav-esports-content-competitions li");
 const esportsNavFooter = document.querySelector(".main-nav-esports-footer"); 
 
-// Event Listeners
-mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
-mainNavEsportsBtn.addEventListener("click", toggleMainSubMenus);
-mainNavAccBtn.addEventListener("click", toggleMainSubMenus);
-hamburgerBtn.addEventListener("click", toggleSideMenu);
-mobileAccBtn.addEventListener("click", toggleSideMenu);
-hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
-mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
-
-// Open mobile modal menus (hamburger or account menu)
-function toggleSideMenu(e) {
-    body.style.overflowY = "hidden";
-    menuBgOverlay.classList.add("toggle-visibility");
-        
-    if(e.target.id === "main-hamburger-button"){
-        mobileMainNav.classList.add("nav-overlay");
-        hamburgerMenu.classList.add("hmbg-mobile-menu-open");
-        mobileAccMenu.classList.remove("acc-mobile-menu-open");
-    } else if(e.target.id === "mobile-account-button"){
-        mobileMainNav.classList.add("nav-overlay");
-        mobileAccMenu.classList.add("acc-mobile-menu-open");
-        hamburgerMenu.classList.remove("hmbg-mobile-menu-open"); 
-    } else {
-        hamburgerMenu.classList.remove("hmbg-mobile-menu-open");
-        mobileAccMenu.classList.remove("acc-mobile-menu-open");
-        mobileMainNav.classList.remove("nav-overlay");
-        menuBgOverlay.classList.remove("toggle-visibility");
-
-        body.style.overflowY = "visible";
-    }
-}
-
 //Open or close games, esports or account menus 
-function toggleMainSubMenus(e){
-    // Make selected link active
+const toggleMainSubMenus = e => {
     if(e.target.id === "games-menu-button" || e.target.id === "esports-menu-button" || e.target.id === "account-menu-button"){
+        // Make selected link active
         e.target.classList.toggle("active-link");
-    } else {
+        // Add overlay to inactive links
+        navOverlay(e);
+    } else if(e.target.parentElement.id === "games-menu-button" || e.target.parentElement.id === "esports-menu-button" || e.target.parentElement.id === "account-menu-button"){
+        // Make selected link active
         e.target.parentElement.classList.toggle("active-link");
+        // Add overlay to inactive links
+        navOverlay(e);
     }
-
-    // Add overlay to inactive links
-    navOverlay(e);
 
     // Open Submenus
     if(e.target.id === "games-menu-button" || e.target.parentElement.id === "games-menu-button"){
-        mainNavGamesMenu.classList.toggle("toggle-visibility");
-        mainNavEsportsMenu.classList.remove("toggle-visibility");
-        mainNavAccMenu.classList.remove("toggle-visibility");
+        // Toggle visibility of games menu
+        toggleVisibility(mainNavGamesMenu, mainNavEsportsMenu, mainNavAccMenu);
+        // Add animation to menu items
         if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
             removeAnimation(esportsNavItems, esportsNavFooter);
             navItemAnimation(e);
         } else {
             removeAnimation(gamesNavItems, gamesNavFooter);
         }
+
     } else if (e.target.id === "esports-menu-button"|| e.target.parentElement.id === "esports-menu-button"){
-        mainNavEsportsMenu.classList.toggle("toggle-visibility");
-        mainNavGamesMenu.classList.remove("toggle-visibility");
-        mainNavAccMenu.classList.remove("toggle-visibility");
+        // Toggle visibility of esports menu
+        toggleVisibility(mainNavEsportsMenu, mainNavGamesMenu, mainNavAccMenu);
+        // Add animation to menu items
         if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
             removeAnimation(gamesNavItems, gamesNavFooter);
             navItemAnimation(e);
         } else {
             removeAnimation(esportsNavItems, esportsNavFooter);
         }
+
+    } else if (e.target.id === "account-menu-button" || e.target.parentElement.id === "account-menu-button"){
+        // Toggle visibility of account menu
+        toggleVisibility(mainNavAccMenu, mainNavGamesMenu, mainNavEsportsMenu);
+
     } else {
-        mainNavAccMenu.classList.toggle("toggle-visibility");
+        // Background or navbar selected - close all menus
         mainNavGamesMenu.classList.remove("toggle-visibility");
+        mainNavGamesBtn.classList.remove("active-link");
         mainNavEsportsMenu.classList.remove("toggle-visibility");
+        mainNavEsportsBtn.classList.remove("active-link");
+        mainNavAccMenu.classList.remove("toggle-visibility");
+        mainNavAccBtn.classList.remove("active-link");
+        menuBgOverlay.classList.remove("toggle-visibility");
+        navOverlay(e);
     }
+}
+
+const toggleVisibility = (menuOn, menuOff1, menuOff2) => {
+    menuOn.classList.toggle("toggle-visibility");
+    menuOff1.classList.remove("toggle-visibility");
+    menuOff2.classList.remove("toggle-visibility");
 }
 
 // Add or remove incative link overlay
@@ -144,4 +132,36 @@ const removeAnimation = (itemList, footer) => {
     footer.style.animation = null;
 }
 
+
+// Open mobile modal menus (hamburger or account menu)
+function toggleSideMenu(e) {
+    body.style.overflowY = "hidden";
+    menuBgOverlay.classList.add("toggle-visibility");
+        
+    if(e.target.id === "main-hamburger-button"){
+        mobileMainNav.classList.add("nav-overlay");
+        hamburgerMenu.classList.add("hmbg-mobile-menu-open");
+        mobileAccMenu.classList.remove("acc-mobile-menu-open");
+    } else if(e.target.id === "mobile-account-button"){
+        mobileMainNav.classList.add("nav-overlay");
+        mobileAccMenu.classList.add("acc-mobile-menu-open");
+        hamburgerMenu.classList.remove("hmbg-mobile-menu-open"); 
+    } else {
+        hamburgerMenu.classList.remove("hmbg-mobile-menu-open");
+        mobileAccMenu.classList.remove("acc-mobile-menu-open");
+        mobileMainNav.classList.remove("nav-overlay");
+        menuBgOverlay.classList.remove("toggle-visibility");
+
+        body.style.overflowY = "visible";
+    }
+}
+
+// Event Listeners
+mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
+mainNavEsportsBtn.addEventListener("click", toggleMainSubMenus);
+mainNavAccBtn.addEventListener("click", toggleMainSubMenus);
+hamburgerBtn.addEventListener("click", toggleSideMenu);
+mobileAccBtn.addEventListener("click", toggleSideMenu);
+hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
+mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
 
