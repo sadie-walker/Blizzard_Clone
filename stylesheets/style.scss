@@ -41,30 +41,44 @@ sup {
 	background-color: #0b0d12;
 	height: 6rem;
 	border-bottom: 0.1rem solid #2f3135;
+	padding: 1rem;
 
 	&-content {
 		max-width: 1600px;
+		height: 100%;
 		margin: 0 auto;
 		display: flex;
+		align-items: center;
 
 		#main-nav-logo {
-			padding: 0.8rem 1.5rem;
-			width: 11rem;
+			height: 100%;
+			margin-right: 3rem;
+			display: flex;
+			align-items: center;
+
+			svg {
+				width: 8rem;
+				height: 4rem;
+			}
 		}
 
 		&-left,
 		&-right {
 			display: flex;
 			align-items: center;
+			height: 100%;
+			font-size: 2rem;
 
 			li {
 				height: 100%;
-				padding: 0.8rem 1.5rem;
 				display: flex;
+				align-items: center;
+				margin-right: 3rem;
 
 				a {
-					align-self: center;
 					display: flex;
+					align-items: center;
+					height: 100%;
 					font-weight: 500;
 					color: #9a9a9c;
 
@@ -143,7 +157,7 @@ sup {
 	border-top: 0.1rem solid #363c46;
 
 	.main-nav-sub-menu-arrow{
-		left: 19.6rem;
+		left: 21.5rem;
 	}
 
 	&-content {
@@ -270,7 +284,7 @@ sup {
 	z-index: 10;
 
 	.main-nav-sub-menu-arrow{
-		left: 47.3rem;
+		left: 53.5rem;
 	}
 
 	&-content {
@@ -337,7 +351,7 @@ sup {
 	z-index: 10;
 	
 	.main-nav-sub-menu-arrow{
-		right: 0.4rem;
+		right: 3.8rem;
 	}
 
 	&-content {

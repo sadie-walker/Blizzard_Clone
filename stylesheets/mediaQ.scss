@@ -1,7 +1,7 @@
 // Laptops
 @media only screen and (max-width: 1600px) {
 	.main-nav {
-		padding: 0 1rem;
+		padding: 0 3rem;
 	}
 
 	.main-nav-esports {
@@ -46,6 +46,13 @@
 
 // Small laptops
 @media only screen and (max-width: 1200px) {
+	.main-nav{
+		&-content{
+			&-left, &-right{
+				font-size: 1.7rem;
+			}
+		}
+	}
 	.main-nav-games {
 		height: 36.5rem;
 
@@ -64,7 +71,6 @@
 				flex-basis: 30%;
 			}
 		}
-		
 	}
 
 	.main-nav-esports {
@@ -166,21 +172,24 @@
 // Tablets
 @media only screen and (max-width: 960px) {
 	.main-nav {
-		.main-nav-item,
-		#main-nav-logo {
-			padding: 0.8rem 1.8rem 0.8rem 0;
-		}
+		
+		&-content {
+			li{
+				margin-right: 1.5rem;
+			}
 
-		#main-nav-logo {
-			width: 9.5rem;
+			#main-nav-logo {
+				width: 6.5rem;
+				height: 3rem;
+				margin-right: 1.5rem;
+			}
 		}
-
 	}
 
 	.main-nav-games{
 
 		.main-nav-sub-menu-arrow{
-			left: 16.6rem;
+			left: 17rem;
 		}
 
 		.main-nav-games-content{
@@ -195,7 +204,7 @@
 	
 	.main-nav-esports {
 		.main-nav-sub-menu-arrow{
-			left: 40.7rem;
+			left: 40.3rem;
 		}
 
 		&-content {
