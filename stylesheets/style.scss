@@ -40,6 +40,7 @@ sup {
 .main-nav {
 	background-color: #0b0d12;
 	height: 6rem;
+	border-bottom: 0.1rem solid #2f3135;
 
 	&-content {
 		max-width: 1600px;
@@ -577,6 +578,7 @@ sup {
 	.transition-bar {
 		height: 2.5rem;
 		background-color: #0b0d12;
+		border-bottom: 0.1rem solid #2f3135;
 
 		&-items {
 			display: flex;
@@ -731,6 +733,7 @@ sup {
 	height: 40rem;
 	background-image: url(/images/careers-banner/careers-1.jpeg);
 	background-position: top center;
+	border-bottom: 0.1rem solid #1b3b61;
 
 	&-content {
 		display: flex;
