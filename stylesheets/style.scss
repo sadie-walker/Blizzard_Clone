@@ -105,6 +105,28 @@ sup {
 	}
 }
 
+.main-nav-sub-menu-arrow {
+	position: absolute;
+	top: -0.8rem;
+	width: 0; 
+  	height: 0; 
+  	border-left: 0.8rem solid transparent;
+ 	border-right: 0.8rem solid transparent;
+  	border-bottom: 0.8rem solid #363c46;
+
+	  &::after{
+		content: "";
+		position: absolute;
+		top: 0.15rem;
+		left: -0.7rem;
+		width: 0; 
+		height: 0;
+		border-left: 0.7rem solid transparent;
+		border-right: 0.7rem solid transparent;
+		border-bottom: 0.7rem solid rgba(26,32,43,255);
+	  }
+}
+
 // games sub menu
 .main-nav-games {
 	position: absolute;
@@ -118,6 +140,10 @@ sup {
 	visibility: hidden;
 	z-index: 10;
 	border-top: 0.1rem solid #363c46;
+
+	.main-nav-sub-menu-arrow{
+		left: 19.6rem;
+	}
 
 	&-content {
 		display: flex;
@@ -242,6 +268,10 @@ sup {
 	border-top: 0.1rem solid #363c46;
 	z-index: 10;
 
+	.main-nav-sub-menu-arrow{
+		left: 47.3rem;
+	}
+
 	&-content {
 		padding: 1rem;
 		border-bottom: 0.1rem solid #363c469f;
@@ -304,6 +334,10 @@ sup {
 	right: 2rem;
 	visibility: hidden;
 	z-index: 10;
+	
+	.main-nav-sub-menu-arrow{
+		right: 0.4rem;
+	}
 
 	&-content {
 		&-items{

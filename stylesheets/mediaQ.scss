@@ -177,16 +177,27 @@
 
 	}
 
-	.main-nav-games-content {
-		.main-nav-games-item {
-			a {
-				width: 5.5rem;
+	.main-nav-games{
+
+		.main-nav-sub-menu-arrow{
+			left: 16.6rem;
+		}
+
+		.main-nav-games-content{
+			.main-nav-games-item {
+				a {
+					width: 5.5rem;
+				}
 			}
 		}
-	}
 
+	}
 	
 	.main-nav-esports {
+		.main-nav-sub-menu-arrow{
+			left: 40.7rem;
+		}
+
 		&-content {
 			&-competitions {
 				width: 75rem;
