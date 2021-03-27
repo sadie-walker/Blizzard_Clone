@@ -20,8 +20,7 @@
 	.games-section {
 		&-content {
 			.games-list {
-				width: 110rem;
-				max-width: 110rem;
+				width: 118rem;
 
 				&-header {
 					padding: 0 4rem;
@@ -29,8 +28,8 @@
 
 				&-items {
 					.games-list-item {
-						width: 15rem;
-						height: 20rem;
+						width: 21.5rem;
+						height: 28rem;
 					}
 				}
 			}
@@ -46,9 +45,10 @@
 
 // Small laptops
 @media only screen and (max-width: 1200px) {
-	.main-nav{
-		&-content{
-			&-left, &-right{
+	.main-nav {
+		&-content {
+			&-left,
+			&-right {
 				font-size: 1.7rem;
 			}
 		}
@@ -128,8 +128,8 @@
 
 				&-items {
 					.games-list-item {
-						width: 17.5rem;
-						height: 23rem;
+						width: 18rem;
+						height: 24rem;
 					}
 				}
 			}
@@ -172,9 +172,8 @@
 // Tablets
 @media only screen and (max-width: 960px) {
 	.main-nav {
-		
 		&-content {
-			li{
+			li {
 				margin-right: 1.5rem;
 			}
 
@@ -186,24 +185,22 @@
 		}
 	}
 
-	.main-nav-games{
-
-		.main-nav-sub-menu-arrow{
+	.main-nav-games {
+		.main-nav-sub-menu-arrow {
 			left: 17rem;
 		}
 
-		.main-nav-games-content{
+		.main-nav-games-content {
 			.main-nav-games-item {
 				a {
 					width: 5.5rem;
 				}
 			}
 		}
-
 	}
-	
+
 	.main-nav-esports {
-		.main-nav-sub-menu-arrow{
+		.main-nav-sub-menu-arrow {
 			left: 40.3rem;
 		}
 
@@ -257,12 +254,12 @@
 	}
 
 	.main-nav-esports {
-		&-content-competitions{
+		&-content-competitions {
 			width: 62rem;
 
-			li{
-				a{
-					img{
+			li {
+				a {
+					img {
 						width: 11rem;
 					}
 				}
