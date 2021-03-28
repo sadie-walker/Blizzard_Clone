@@ -702,64 +702,109 @@ sup {
 
 // APP CONNECTIVITY
 .app-connectivity {
-	background-color: #002650;
-	display: flex;
-	justify-content: center;
-	border-top: 0.1rem solid #535353;
-	padding: 1.5rem;
+	background-image: url(/images/backgrounds/DesktopBG_Image.webp);
+	background-size: cover;
+	height: 46rem;
+	border-top: 0.1rem solid #00aeff4d;
+	border-bottom: 0.1rem solid #00aeff4d;
+	padding: 7rem 5rem 5rem;
+	color: #d0d0d2;
+	position: relative;
 
-	&-desktop,
-	&-app {
+	#battle-net-logo-bg {
+		position: absolute;
+		top: 28%;
+		left: 52%;
+		height: 25rem;
+		opacity: 40%;
+		z-index: 1;
+	}
+
+	&-content {
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		color: #a9b2c0;
-		font-size: 1.7rem;
+		justify-content: space-between;
+		max-width: 160rem;
+		margin: 0 auto;
 
-		p {
-			margin-right: 0.5rem;
-		}
-
-		a {
-			color: #00aeff;
-
-			&:hover {
-				color: #fff;
-			}
-
-			i {
-				margin-right: 0.5rem;
-			}
-		}
-	}
-
-	&-desktop {
-		border-right: 0.1rem solid #858689;
-		padding-right: 2rem;
-
-		#desktop-link {
+		.battle-net-download {
 			display: flex;
-			align-items: center;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
 
-			#battle-net-logo {
-				display: flex;
-				align-items: center;
+			h2 {
+				color: #fdfdfd;
+				font-size: 4.5rem;
+				font-weight: 200;
+			}
 
-				svg {
-					height: 3rem;
+			p:first-of-type {
+				font-size: 2.5rem;
+			}
+
+			ul {
+				li {
+					line-height: 4rem;
+					font-size: 2.5rem;
+					i {
+						margin-right: 1.5rem;
+						color: #0099ff;
+						font-size: 2rem;
+					}
 				}
 			}
 
-			&:hover{
-				svg {
-					fill: #fff;
+			a {
+				color: #00acfc;
+				border-bottom: 0.1rem solid #00acfc;
+			}
+
+			&-links {
+				display: flex;
+				margin: 1.5rem 0 2.5rem;
+
+				a {
+					border: 0.1rem solid #00aeff;
+					padding: 1.2rem 1.5rem;
+					text-decoration: none;
+					font-size: 1.9rem;
+
+					&:first-of-type {
+						margin-right: 2rem;
+						padding: 0.8rem 5rem;
+						color: #f7fafd;
+						background-color: #006fb2;
+
+						i {
+							color: #f7fafd;
+							margin-left: 1rem;
+							font-size: 2.5rem;
+						}
+					}
 				}
 			}
 		}
-	}
 
-	&-app {
-		padding-left: 2rem;
+		#battle-net-screen-shot,
+		#battle-net-screen-shot-mobile {
+			z-index: 2;
+			width: 59rem;
+			height: 33rem;
+		}
+
+		#battle-net-screen-shot-mobile {
+			display: none;
+			align-self: center;
+		}
+
+		#app-connectivity-mobile-btn {
+			color: #fff;
+			background-color: #006fb2;
+			border: 0.1rem solid #00aeff;
+			width: 20rem;
+			padding: 1.2rem;
+			align-self: center;
+		}
 	}
 }
 
@@ -800,7 +845,7 @@ sup {
 			font-size: 1.9rem;
 			border: 0.1rem solid #00aeff;
 
-			&:hover{
+			&:hover {
 				filter: brightness(110%);
 			}
 		}
@@ -876,7 +921,7 @@ sup {
 				border-right: 0.1rem solid #fff;
 			}
 
-			&:hover{
+			&:hover {
 				filter: brightness(100%);
 			}
 		}
@@ -895,7 +940,7 @@ sup {
 			margin-bottom: 0.5rem;
 			font-size: 1.3rem;
 			line-height: 2rem;
-			
+
 			p {
 				filter: brightness(70%);
 
@@ -903,7 +948,6 @@ sup {
 					font-weight: bold;
 				}
 			}
-
 		}
 
 		.footer-links {
@@ -935,20 +979,19 @@ sup {
 }
 
 .active-link {
-
 	i {
 		transform: rotate(180deg);
 	}
 }
 
 // Animations
-@keyframes navImageFade{
-	from{
+@keyframes navImageFade {
+	from {
 		opacity: 0;
 		transform: translateY(-15px);
 	}
-	to{
+	to {
 		opacity: 1;
-		transform: translateY(0px)
+		transform: translateY(0px);
 	}
 }
