@@ -752,9 +752,16 @@ sup {
 				}
 			}
 
+			p a{
+				border-bottom: 0.1rem solid #00acfc;
+				&:hover{
+					color: #f7fafd;
+					border-bottom: 0.1rem solid #f7fafd;
+				}
+			}
+
 			a {
 				color: #00acfc;
-				border-bottom: 0.1rem solid #00acfc;
 			}
 
 			&-links {
@@ -767,6 +774,10 @@ sup {
 					text-decoration: none;
 					font-size: 1.9rem;
 
+					&:hover{
+						filter: brightness(105%);
+					}
+
 					&:first-of-type {
 						margin-right: 2rem;
 						padding: 0.8rem 5rem;
@@ -777,6 +788,13 @@ sup {
 							color: #f7fafd;
 							margin-left: 1rem;
 							font-size: 2.5rem;
+						}
+					}
+
+					&:last-of-type{
+						&:hover{
+							color: #f7fafd;
+							background-color: #006fb2;
 						}
 					}
 				}
