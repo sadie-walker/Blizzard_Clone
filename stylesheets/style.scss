@@ -628,8 +628,6 @@ sup {
 		background-repeat: no-repeat;
 
 		.games-list {
-			// width: 120rem;
-			// max-width: 120rem;
 			width: 132rem;
 			margin: 0 auto;
 			padding-top: 3rem;
@@ -798,6 +796,7 @@ sup {
 		}
 
 		#app-connectivity-mobile-btn {
+			display: none;
 			color: #fff;
 			background-color: #006fb2;
 			border: 0.1rem solid #00aeff;
