@@ -137,25 +137,44 @@
 	}
 
 	.app-connectivity {
-		flex-direction: column;
-		padding: 0;
-		border-top: 0.1rem solid #535353;
-		border-bottom: 0.1rem solid #535353;
+		height: 78rem;
+		background-position: top;
+		padding: 4rem;
 
-		&-desktop,
-		&-app {
-			flex-direction: column;
-			align-items: flex-start;
-			padding: 1rem 2rem;
-			border: none;
-			line-height: 2.5rem;
+		#battle-net-logo-bg {
+			display: none;
 		}
 
-		&-app {
-			border-top: 0.1rem solid #535353;
+		&-content {
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			height: 100%;
 
-			a {
-				padding-left: 1rem;
+			h2 {
+				margin-bottom: -1.5rem;
+			}
+
+			ul {
+				margin-top: -2rem;
+			}
+
+			.battle-net-download {
+				&-links {
+					display: none;
+				}
+			}
+
+			#battle-net-screen-shot {
+				display: none;
+			}
+
+			#battle-net-screen-shot-mobile {
+				display: block;
+			}
+
+			#app-connectivity-mobile-btn {
+				display: block;
 			}
 		}
 	}
@@ -352,8 +371,19 @@
 	}
 
 	.app-connectivity {
-		& > div {
-			padding: 1.7rem 1.5rem;
+		height: 60rem;
+		background-position: center;
+
+		&-content {
+			.battle-net-download {
+				h2 {
+					font-size: 3rem;
+				}
+			}
+		}
+		#battle-net-screen-shot-mobile {
+			width: 33rem;
+			height: 18rem;
 		}
 	}
 
