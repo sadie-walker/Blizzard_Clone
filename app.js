@@ -195,7 +195,7 @@ let slideIndex = 0;
 
 const showSlideshow = n => {
     let i;
-    const slides = document.querySelectorAll(".main-hero-slider-content");
+    const slides = document.querySelectorAll(".main-hero-slide");
 
     slides.forEach(slide => {
         slide.style.display = "none";
@@ -207,10 +207,10 @@ const showSlideshow = n => {
     if(slideIndex > slides.length -1){
         slideIndex = 0;
     }
-    setTimeout(showSlideshow, 2000);
+    setTimeout(showSlideshow, 6000);
 }
 
-showSlideshow(slideIndex);
+window.onload = showSlideshow(slideIndex);
 
 
 // Event Listeners
