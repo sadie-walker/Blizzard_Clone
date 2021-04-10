@@ -544,7 +544,7 @@ sup {
 	width: 100%;
 
 	&-slider {
-		background: url(/images/hero-banner/hero-banner-4.jpg);
+		background: url(/images/hero-banner/hero-banner-1.jpeg);
 		background-position: center;
 		height: 51rem;
 
@@ -555,6 +555,7 @@ sup {
 			height: 100%;
 			padding: 8rem 10%;
 			text-transform: uppercase;
+			display: none;
 
 			* {
 				cursor: pointer;
