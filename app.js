@@ -30,6 +30,8 @@ const esportsNavFooter = document.querySelector(".main-nav-esports-footer");
 
 // Variables
 const subMenus = [mainNavGamesMenu, mainNavEsportsMenu, mainNavAccMenu];
+let slideshowCounter = 0;
+
 
 //Open or close games, esports or account menus 
 const toggleMainSubMenus = e => {
@@ -170,6 +172,46 @@ function toggleSideMenu(e) {
         body.style.overflowY = "visible";
     }
 }
+
+// const careerSlideshow = () => {
+//     console.log(slideshowCounter);
+//     const careerSection = document.querySelector(".careers-section");
+//     const careerImages = ["careers-1", "careers-2", "careers-3", "careers-4", "careers-5"];
+
+//     careerSection.style.background = `url(/images/careers-banner/${careerImages[slideshowCounter]}.jpeg`;
+    
+//     if(slideshowCounter < (careerImages.length - 1)){
+//         slideshowCounter++;
+//     } else {
+//         slideshowCounter = 0;
+//     }
+
+//     setTimeout("careerSlideshow()", 3000);
+// }
+
+// window.onload =  careerSlideshow;
+
+let slideIndex = 0;
+
+const showSlideshow = n => {
+    let i;
+    const slides = document.querySelectorAll(".main-hero-slider-content");
+
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    })
+
+    slides[slideIndex].style.display = "block";
+    console.log(slideIndex);
+    slideIndex++;
+    if(slideIndex > slides.length -1){
+        slideIndex = 0;
+    }
+    setTimeout(showSlideshow, 2000);
+}
+
+showSlideshow(slideIndex);
+
 
 // Event Listeners
 mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
