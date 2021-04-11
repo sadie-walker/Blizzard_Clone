@@ -202,6 +202,14 @@ const showSlideshow = n => {
     })
 
     slides[slideIndex].style.display = "block";
+    slides[slideIndex].firstElementChild.classList.add("hero-img-animation");
+
+    const childArry = Array.from(slides[slideIndex].lastElementChild.children)
+    childArry.forEach((child, index) => {
+        child.style.animation = `heroTextAnimation 6s ${index / 2.25}s forwards`;
+        child.classList.add("hero-text-fade-out");
+    })
+    
     console.log(slideIndex);
     slideIndex++;
     if(slideIndex > slides.length -1){

@@ -548,6 +548,7 @@ sup {
 
 		.main-hero-slide {
 			height: inherit;
+			background-color: black;
 
 			.hero-banner-bg-img {
 				max-height: 100%;
@@ -565,6 +566,7 @@ sup {
 				margin: 1rem 0 5rem;
 				position: absolute;
 				top: 6rem;
+				visibility: hidden;
 
 				* {
 					cursor: pointer;
@@ -1014,6 +1016,14 @@ sup {
 	}
 }
 
+.hero-img-animation {
+	animation: heroImgAnimation ease-out 6s;
+}
+
+.hero-text-fade-out {
+	animation: heroTextFadeOut ease-in 6s;
+}
+
 // Animations
 @keyframes navImageFade {
 	from {
@@ -1023,5 +1033,58 @@ sup {
 	to {
 		opacity: 1;
 		transform: translateY(0px);
+	}
+}
+
+@keyframes heroImgAnimation {
+	0% {
+		object-position: 0rem bottom;
+		opacity: 0;
+	}
+
+	5% {
+		opacity: 1;
+	}
+
+	10% {
+		object-position: -25rem bottom;
+	}
+
+	95% {
+		opacity: 1;
+	}
+
+	100% {
+		object-position: -30rem bottom;
+	}
+}
+
+@keyframes heroTextAnimation {
+	0% {
+		transform: translateX(5rem);
+		opacity: 0;
+	}
+
+	25% {
+		transform: translateX(0rem);
+		opacity: 1;
+	}
+
+	95% {
+		opacity: 1;
+	}
+
+	to {
+		visibility: visible;
+	}
+}
+
+@keyframes heroTextFadeOut {
+	95% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }
