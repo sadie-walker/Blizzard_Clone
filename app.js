@@ -193,33 +193,73 @@ function toggleSideMenu(e) {
 
 let slideIndex = 0;
 
-const showSlideshow = n => {
-    let i;
-    const slides = document.querySelectorAll(".main-hero-slide");
+const plusSlides = n => {
+    showSlideshow(slideIndex+n, true);
+    clearTimeout(slideshowTimeout);
+}
 
+const currentSlide = n => {
+    showSlideshow(slideIndex = n, true);
+    clearTimeout(slideshowTimeout);
+}
+
+const showSlideshow = (n, slideSelected) => {
+    const slides = document.querySelectorAll(".main-hero-slide");
+    const barItems = document.querySelectorAll(".transition-bar-item");
+    console.log(n, slideIndex, slideSelected);
+
+    // Hide All Slides
     slides.forEach(slide => {
         slide.style.display = "none";
     })
 
+    // Remove Active Class from all items on the transition bar
+    barItems.forEach(bar => {
+        if(bar.classList.contains("active-trans-bar")){
+            bar.classList.remove("active-trans-bar");
+            bar.style.animation = "closeBar 0.5s"
+            setTimeout(function(){
+                bar.style.animation = "";
+            },1000)
+        }
+    })
+
+    // Change Slide Index for start & end of list
+    if(n > slides.length-1){
+        slideIndex = 0;
+        n = 0;
+    } else if (n < 0){
+        slideIndex = slides.length-1;
+        n = slides.length-1;
+    }
+
+    // Set Slide Index
+    if(slideSelected === false){
+        // Recall showSlideshow for continous loop
+        slideshowTimeout = setTimeout(function() {
+            slideIndex++;
+            showSlideshow(slideIndex, false);
+        }, 6000);
+    } else {
+        slideIndex = n;
+    }
+
+    // Display Active Slide & Add Animation
     slides[slideIndex].style.display = "block";
     slides[slideIndex].firstElementChild.classList.add("hero-img-animation");
+    console.log(barItems);
+    console.log(barItems[slideIndex]);
+    barItems[slideIndex].classList.add("active-trans-bar");
 
+    // Add Animation to Slide Text
     const childArry = Array.from(slides[slideIndex].lastElementChild.children)
     childArry.forEach((child, index) => {
         child.style.animation = `heroTextAnimation 6s ${index / 2.25}s forwards`;
         child.classList.add("hero-text-fade-out");
     })
-    
-    console.log(slideIndex);
-    slideIndex++;
-    if(slideIndex > slides.length -1){
-        slideIndex = 0;
-    }
-    setTimeout(showSlideshow, 6000);
 }
 
-window.onload = showSlideshow(slideIndex);
-
+window.onload = showSlideshow(slideIndex, false);
 
 // Event Listeners
 mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);

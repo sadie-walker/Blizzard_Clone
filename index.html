@@ -193,6 +193,7 @@
         <!-- HERO -->
         <header class="main-hero">
             <div class="main-hero-slider">
+                <a href="#" class="hero-arrow prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
                 <div class="main-hero-slide">
                     <img class="hero-banner-bg-img" src="/images/hero-banner/hero-banner-1.jpeg" alt="">
                     <div class="main-hero-slide-content">
@@ -249,15 +250,17 @@
                         <a href="#">Buy Now</a> 
                     </div>
                 </div>
+                <a href="#" class="hero-arrow next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
             </div>
             <div class="transition-bar">
                 <div class="transition-bar-items">
-                    <div class="transition-bar-item"></div>
-                    <div class="transition-bar-item"></div>
-                    <div class="transition-bar-item"></div>
-                    <div class="transition-bar-item"></div>
-                    <div class="transition-bar-item"></div>
-                    <div class="transition-bar-item"></div>
+                    <div class="transition-bar-item" onclick="currentSlide(0)"></div>
+                    <div class="transition-bar-item" onclick="currentSlide(1)"></div>
+                    <div class="transition-bar-item" onclick="currentSlide(2)"></div>
+                    <div class="transition-bar-item" onclick="currentSlide(3)"></div>
+                    <div class="transition-bar-item" onclick="currentSlide(4)"></div>
+                    <div class="transition-bar-item" onclick="currentSlide(5)"></div>
+                    <div class="transition-bar-item" onclick="currentSlide(6)"></div>
                 </div>
             </div>
         </header>
