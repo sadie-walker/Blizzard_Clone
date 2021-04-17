@@ -30,6 +30,10 @@
 					.games-list-item {
 						width: 21.5rem;
 						height: 28rem;
+
+						&:last-of-type {
+							margin-right: 71.5rem;
+						}
 					}
 				}
 			}
@@ -130,6 +134,10 @@
 					.games-list-item {
 						width: 18rem;
 						height: 24rem;
+
+						&:last-of-type {
+							margin-right: auto;
+						}
 					}
 				}
 			}
@@ -362,8 +370,8 @@
 				width: 50rem;
 
 				&-items {
-					.games-list-item {
-						justify-self: left;
+					&:last-of-type {
+						margin-right: auto;
 					}
 				}
 			}

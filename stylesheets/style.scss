@@ -595,7 +595,6 @@ sup {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
-				width: 60%;
 				height: 45rem;
 				padding: 0 10%;
 				margin: 1rem 0 5rem;
@@ -717,6 +716,10 @@ sup {
 					margin: 0 1rem 2rem;
 					position: relative;
 					box-shadow: 0.5rem 1rem 1rem #0000003b;
+
+					&:last-of-type {
+						margin-right: 79rem;
+					}
 
 					&:after {
 						content: " ";
