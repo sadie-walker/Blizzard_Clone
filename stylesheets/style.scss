@@ -614,6 +614,7 @@ sup {
 				h2 {
 					font-size: 6.5rem;
 					font-weight: 700;
+					max-width: 90rem;
 					color: #fff;
 					text-shadow: 0.5rem 2rem 2rem #1e120e;
 					text-transform: uppercase;
@@ -709,6 +710,7 @@ sup {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
+				padding: 5rem;
 
 				.games-list-item {
 					width: 24rem;
@@ -1138,12 +1140,12 @@ sup {
 
 @keyframes openBar {
 	to {
-		height: 1.2rem;
+		height: 1rem;
 	}
 }
 
 @keyframes closeBar {
 	from {
-		height: 1.2rem;
+		height: 1rem;
 	}
 }

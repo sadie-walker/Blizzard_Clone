@@ -100,19 +100,33 @@
 	}
 
 	.main-hero {
-		&-slider-content {
-			img {
-				width: 24rem;
+		&-slider {
+			.hero-arrow {
+				&.prev {
+					left: 2%;
+				}
+				&.next {
+					right: 2%;
+				}
 			}
 
-			h2 {
-				font-size: 6rem;
+			.main-hero-slide {
+				&-content {
+					padding: 0 6%;
+					img {
+						width: 24rem;
+					}
+
+					h2 {
+						font-size: 6.4rem;
+					}
+				}
 			}
 		}
 
 		.transition-bar {
 			&-items {
-				width: 40rem;
+				width: 50rem;
 
 				.transition-bar-item {
 					width: 6rem;
@@ -293,6 +307,18 @@
 			}
 		}
 	}
+
+	.main-hero {
+		&-slider {
+			.main-hero-slide {
+				&-content {
+					h2 {
+						font-size: 5.5rem;
+					}
+				}
+			}
+		}
+	}
 }
 
 // Small Tablets
@@ -310,41 +336,45 @@
 
 		&-slider {
 			height: 40rem;
-			background-size: cover;
-			// background-position-x: 100rem;
-			background: linear-gradient(
-					rgba(0, 0, 0, 0) 0%,
-					rgb(56, 24, 13) 80%
-				),
-				url(/images/hero-banner/hero-banner-4.jpg);
-			background-size: 160rem;
-			background-repeat: no-repeat;
-			background-position: 75% 0%;
-			background-attachment: local;
 
-			&-content {
-				height: 40rem;
-				width: 100%;
-				align-items: center;
-				justify-content: end;
-				margin: 0 auto;
+			.hero-arrow {
+				top: 19rem;
+				padding: 2.25rem 0.8rem;
 
-				& > * {
-					margin-bottom: 2rem;
+				i {
+					font-size: 2.4rem;
 				}
+			}
 
-				img {
-					width: 18rem;
-				}
+			.main-hero-slide {
+				// .hero-banner-bg-img {
+				// }
 
-				h2 {
-					text-align: center;
-					font-size: 4.5rem;
-					width: 40rem;
-				}
+				&-content {
+					height: 38.5rem;
+					width: 100%;
+					align-items: center;
+					margin: 0 auto;
+					padding: 3% 6%;
 
-				a {
-					font-size: 1.8rem;
+					& > * {
+						margin-bottom: 2rem;
+					}
+
+					img {
+						width: 18rem;
+					}
+
+					h2 {
+						text-align: center;
+						font-size: 4.6rem;
+						width: 52rem;
+					}
+
+					a {
+						font-size: 1.8rem;
+						align-self: center;
+					}
 				}
 			}
 		}
@@ -353,12 +383,15 @@
 			height: 1.5rem;
 
 			&-items {
+				justify-content: space-between;
 				width: 100%;
-				justify-content: space-around;
+				margin: 0;
 
 				.transition-bar-item {
-					width: 16%;
+					width: auto;
+					flex-basis: 15%;
 					height: 0.3rem;
+					margin: 0 0.25rem;
 				}
 			}
 		}
@@ -444,6 +477,18 @@
 					content: none;
 				}
 			}
+		}
+	}
+
+	@keyframes openBar {
+		to {
+			height: 0.5rem;
+		}
+	}
+
+	@keyframes closeBar {
+		from {
+			height: 0.5rem;
 		}
 	}
 }
