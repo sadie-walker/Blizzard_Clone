@@ -317,6 +317,16 @@ sup {
 					img {
 						width: 19rem;
 					}
+
+					&:hover {
+						img {
+							filter: brightness(115%);
+						}
+
+						span {
+							filter: brightness(200%);
+						}
+					}
 				}
 			}
 		}
