@@ -1,5 +1,44 @@
+// Variables
 $primary-color: #002650;
 
+// Fonts
+@font-face {
+	font-family: "Open Sans";
+	src: url("/fonts/open-sans.regular.21437303dbf7e1b4a100b97f955a0f90.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Blizzard";
+	src: url("/fonts/blizzard.regular.6374a0ee3086c5564095947a6f8c475d.woff")
+		format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Blizzard";
+	src: url("/fonts/blizzard.bold.8cc5a1ab5901a473ebcbd4d4391a1d2a.woff")
+		format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Blizzard";
+	src: url("/fonts/blizzard.light.5d1ab6b16926061ac39ebf53561f2f31.woff")
+		format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Styling
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -14,7 +53,7 @@ html {
 
 body {
 	font-size: 1.6rem;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Blizzard", Helvetica, sans-serif;
 	overflow-x: hidden;
 	height: 100%;
 }
@@ -32,8 +71,6 @@ svg {
 }
 
 sup {
-	// vertical-align: top;
-
 	font-size: 0.8rem;
 }
 
@@ -117,8 +154,6 @@ sup {
 			flex: auto;
 			justify-content: flex-end;
 		}
-	}
-}
 
 .main-nav-sub-menu-arrow {
 	position: absolute;
@@ -768,10 +803,10 @@ sup {
 .app-connectivity {
 	background-image: url(/images/backgrounds/DesktopBG_Image.webp);
 	background-size: cover;
-	height: 46rem;
+	height: 45rem;
 	border-top: 0.1rem solid #00aeff4d;
 	border-bottom: 0.1rem solid #00aeff4d;
-	padding: 7rem 5rem 5rem;
+	padding: 5rem;
 	color: #d0d0d2;
 	position: relative;
 
@@ -787,6 +822,7 @@ sup {
 	&-content {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		max-width: 160rem;
 		margin: 0 auto;
 
@@ -798,36 +834,36 @@ sup {
 
 			h2 {
 				color: #fdfdfd;
-				font-size: 4.5rem;
-				font-weight: 200;
-			}
-
-			p:first-of-type {
-				font-size: 2.5rem;
+				font-size: 4.4rem;
+				font-weight: 500;
+				margin-bottom: 1rem;
 			}
 
 			ul {
 				li {
 					line-height: 4rem;
-					font-size: 2.5rem;
+					font-size: 2.4rem;
 					i {
-						margin-right: 1.5rem;
+						margin-right: 1rem;
 						color: #0099ff;
-						font-size: 2rem;
+						font-size: 2.4rem;
 					}
-				}
-			}
-
-			p a {
-				border-bottom: 0.1rem solid #00acfc;
-				&:hover {
-					color: #f7fafd;
-					border-bottom: 0.1rem solid #f7fafd;
 				}
 			}
 
 			a {
 				color: #00acfc;
+			}
+
+			p {
+				font-size: 1.7rem;
+				a {
+					border-bottom: 0.1rem solid #00acfc;
+					&:hover {
+						color: #f7fafd;
+						border-bottom: 0.1rem solid #f7fafd;
+					}
+				}
 			}
 
 			&-links {
@@ -906,16 +942,20 @@ sup {
 		padding: 5rem 18rem 5rem;
 		color: #fff;
 
+		h2,
+		h3 {
+			font-weight: 500;
+		}
+
 		h2 {
 			font-size: 4rem;
-			font-weight: 200;
 			margin-bottom: 1rem;
 		}
 
 		h3 {
 			font-size: 2.5rem;
-			font-weight: 300;
-			margin-bottom: 3rem;
+			margin-bottom: 2rem;
+			color: #d8d6d5;
 		}
 
 		a {
@@ -924,7 +964,7 @@ sup {
 			height: 4.5rem;
 			color: #fff;
 			text-align: center;
-			padding: 1.2rem;
+			padding: 1rem;
 			font-size: 1.9rem;
 			border: 0.1rem solid #00aeff;
 
@@ -1031,6 +1071,7 @@ sup {
 			align-items: center;
 			justify-content: center;
 			margin-bottom: 2rem;
+			color: #c7c8c9;
 
 			a {
 				display: flex;
