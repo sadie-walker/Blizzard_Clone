@@ -1,5 +1,8 @@
 // Variables
-$primary-color: #002650;
+$primary-color: rgb(0,174,255);
+$secondary-color: rgb(0,111,178);
+$light-color: rgb(154,154,156);
+
 
 // Fonts
 @font-face {
@@ -117,7 +120,7 @@ sup {
 					align-items: center;
 					height: 100%;
 					font-weight: 500;
-					color: #9a9a9c;
+					color: $light-color;
 
 					&:hover {
 						color: #fff;
@@ -154,6 +157,8 @@ sup {
 			flex: auto;
 			justify-content: flex-end;
 		}
+	}
+}
 
 .main-nav-sub-menu-arrow {
 	position: absolute;
@@ -301,7 +306,7 @@ sup {
 
 			i {
 				margin-right: 0.5rem;
-				color: #00aeff;
+				color: $primary-color;
 			}
 		}
 	}
@@ -378,7 +383,7 @@ sup {
 			color: lightgrey;
 
 			i {
-				color: #00aeff;
+				color: $primary-color;
 				margin-right: 0.5rem;
 			}
 		}
@@ -410,7 +415,7 @@ sup {
 					color: #afb2b6;
 
 					i {
-						color: #00aeff;
+						color: $primary-color;
 						margin-right: 0.5rem;
 					}
 				}
@@ -420,8 +425,8 @@ sup {
 				}
 
 				#log-in-button {
-					border: 0.1rem solid #00aeff;
-					background-color: #006fb2;
+					border: 0.1rem solid $primary-color;
+					background-color: $secondary-color;
 					padding: 1rem;
 					width: 100%;
 					text-align: center;
@@ -446,7 +451,7 @@ sup {
 		padding: 0 1rem;
 
 		i {
-			color: #00aeff;
+			color: $primary-color;
 			align-self: center;
 			font-size: 2rem;
 			padding: 0.5rem;
@@ -471,11 +476,11 @@ sup {
 	z-index: 10;
 
 	a {
-		color: #9a9a9c;
+		color: $light-color;
 	}
 
 	i {
-		color: #00aeff;
+		color: $primary-color;
 		align-self: center;
 		font-size: 2rem;
 		padding: 0.5rem;
@@ -515,7 +520,7 @@ sup {
 			padding: 0;
 
 			svg {
-				fill: #00aeff;
+				fill: $primary-color;
 			}
 		}
 
@@ -526,7 +531,7 @@ sup {
 				text-transform: uppercase;
 
 				i {
-					color: #9a9a9c;
+					color: $light-color;
 				}
 			}
 
@@ -566,8 +571,8 @@ sup {
 			a {
 				display: flex;
 				justify-content: center;
-				border: 0.1rem solid #00aeff;
-				background-color: #006fb2;
+				border: 0.1rem solid $primary-color;
+				background-color: $secondary-color;
 				color: #fff;
 			}
 		}
@@ -600,7 +605,7 @@ sup {
 		.hero-arrow {
 			visibility: hidden;
 			background-color: rgba(0, 0, 0, 0.6);
-			color: #00aeff;
+			color: $primary-color;
 			border: 0.1rem solid #263945;
 			position: absolute;
 			top: 29rem;
@@ -667,8 +672,8 @@ sup {
 				}
 
 				a {
-					background-color: #006fb2;
-					border: 0.1rem solid #00aeff;
+					background-color: $secondary-color;
+					border: 0.1rem solid $primary-color;
 					align-self: flex-start;
 					height: 4.5rem;
 					color: #fff;
@@ -741,7 +746,7 @@ sup {
 				}
 
 				a {
-					color: #00aeff;
+					color: $primary-color;
 					font-size: 1.7rem;
 					align-self: flex-end;
 
@@ -783,7 +788,8 @@ sup {
 						filter: brightness(110%);
 
 						&:after {
-							border: solid 0.1rem #00aeff8e;
+							// border: solid 0.1rem #00aeff8e;
+							border: solid 0.1rem rgba($primary-color, 0.6);
 						}
 					}
 
@@ -871,7 +877,7 @@ sup {
 				margin: 1.5rem 0 2.5rem;
 
 				a {
-					border: 0.1rem solid #00aeff;
+					border: 0.1rem solid $primary-color;
 					padding: 1.2rem 1.5rem;
 					text-decoration: none;
 					font-size: 1.9rem;
@@ -884,7 +890,7 @@ sup {
 						margin-right: 2rem;
 						padding: 0.8rem 5rem;
 						color: #f7fafd;
-						background-color: #006fb2;
+						background-color: $secondary-color;
 
 						i {
 							color: #f7fafd;
@@ -896,7 +902,7 @@ sup {
 					&:last-of-type {
 						&:hover {
 							color: #f7fafd;
-							background-color: #006fb2;
+							background-color: $secondary-color;
 						}
 					}
 				}
@@ -918,8 +924,8 @@ sup {
 		#app-connectivity-mobile-btn {
 			display: none;
 			color: #fff;
-			background-color: #006fb2;
-			border: 0.1rem solid #00aeff;
+			background-color: $secondary-color;
+			border: 0.1rem solid $primary-color;
 			width: 20rem;
 			padding: 1.2rem;
 			align-self: center;
@@ -959,14 +965,14 @@ sup {
 		}
 
 		a {
-			background-color: #006fb2;
+			background-color: $secondary-color;
 			width: 23rem;
 			height: 4.5rem;
 			color: #fff;
 			text-align: center;
 			padding: 1rem;
 			font-size: 1.9rem;
-			border: 0.1rem solid #00aeff;
+			border: 0.1rem solid $primary-color;
 
 			&:hover {
 				filter: brightness(110%);
@@ -1018,7 +1024,7 @@ sup {
 
 			&-blizz {
 				height: 7rem;
-				fill: #00aeff;
+				fill: $primary-color;
 			}
 
 			&-enter {
@@ -1076,7 +1082,7 @@ sup {
 			a {
 				display: flex;
 				align-items: flex-end;
-				color: #00aeff;
+				color: $primary-color;
 
 				svg {
 					width: 2rem;
@@ -1138,10 +1144,10 @@ sup {
 }
 
 .active-trans-bar {
-	background-color: #00aeff;
+	background-color: $primary-color;
 	animation: openBar 0.5s ease-in-out forwards;
 	&:hover {
-		background-color: #00aeff;
+		background-color: $primary-color;
 	}
 }
 
