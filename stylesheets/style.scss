@@ -1104,9 +1104,14 @@ sup {
 			p {
 				color: #959697;
 
-				span {
+				a {
 					font-weight: bold;
 					color: #fff;
+					filter: brightness(70%);
+
+					&:hover {
+						filter: brightness(100%);
+					}
 				}
 
 				&:first-of-type {
