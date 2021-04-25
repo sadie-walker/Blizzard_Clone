@@ -51,9 +51,11 @@
 @media only screen and (max-width: 1200px) {
 	.main-nav {
 		&-content {
-			&-left,
-			&-right {
+			&-left {
 				font-size: 1.7rem;
+			}
+			&-right {
+				font-size: 1.6rem;
 			}
 		}
 	}

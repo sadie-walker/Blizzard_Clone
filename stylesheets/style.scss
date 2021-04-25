@@ -107,7 +107,6 @@ sup {
 			display: flex;
 			align-items: center;
 			height: 100%;
-			font-size: 2rem;
 
 			li {
 				height: 100%;
@@ -119,11 +118,12 @@ sup {
 					display: flex;
 					align-items: center;
 					height: 100%;
-					font-weight: 500;
-					color: $light-color;
+					// color: $light-color;
+					color: #f6f6f6;
+					filter: brightness(70%);
 
 					&:hover {
-						color: #fff;
+						filter: brightness(100%);
 					}
 
 					i {
@@ -131,6 +131,7 @@ sup {
 						align-items: center;
 						margin-left: 0.5rem;
 						font-size: 1.4rem;
+						color: #6c6d70;
 					}
 				}
 			}
@@ -138,6 +139,7 @@ sup {
 
 		&-left {
 			width: 50%;
+			font-size: 2rem;
 
 			li {
 				a {
@@ -156,6 +158,7 @@ sup {
 		&-right {
 			flex: auto;
 			justify-content: flex-end;
+			font-size: 1.7rem;
 		}
 	}
 }
@@ -408,15 +411,21 @@ sup {
 		&-items {
 			li {
 				border-bottom: 0.1rem solid #363c46;
-				padding: 1.5rem 2rem;
+				padding: 1rem 2rem;
 				display: flex;
 
 				a {
-					color: #afb2b6;
+					color: #f6f6f6;
+					filter: brightness(80%);
+					font-size: 1.6rem;
 
 					i {
 						color: $primary-color;
 						margin-right: 0.5rem;
+					}
+
+					&:hover {
+						filter: brightness(100%);
 					}
 				}
 
@@ -427,9 +436,14 @@ sup {
 				#log-in-button {
 					border: 0.1rem solid $primary-color;
 					background-color: $secondary-color;
+					filter: brightness(100%);
 					padding: 1rem;
 					width: 100%;
 					text-align: center;
+
+					&:hover {
+						filter: brightness(110%);
+					}
 				}
 			}
 		}
