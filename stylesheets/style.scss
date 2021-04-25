@@ -765,19 +765,18 @@ sup {
 		background-repeat: no-repeat;
 
 		.games-list {
-			width: 132rem;
+			width: 140rem;
 			margin: 0 auto;
 			padding-top: 3rem;
 
 			&-header {
 				display: flex;
 				justify-content: space-between;
-				margin-bottom: 2rem;
-				padding: 0 2rem;
+				padding: 0 6.5rem;
 
 				h2 {
-					font-size: 4.5rem;
-					font-weight: 100;
+					font-size: 4.4rem;
+					font-weight: 400;
 					align-self: center;
 				}
 
@@ -796,7 +795,7 @@ sup {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
-				padding: 5rem;
+				padding: 2rem 5rem 5rem;
 
 				.games-list-item {
 					width: 24rem;

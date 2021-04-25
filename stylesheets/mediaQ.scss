@@ -20,13 +20,14 @@
 	.games-section {
 		&-content {
 			.games-list {
-				width: 118rem;
+				width: 120rem;
 
 				&-header {
-					padding: 0 4rem;
+					padding: 0 2.5rem;
 				}
 
 				&-items {
+					padding: 2rem 0rem 5rem;
 					.games-list-item {
 						width: 21.5rem;
 						height: 28rem;
@@ -144,6 +145,10 @@
 
 				&-header {
 					padding: 0 6rem;
+
+					h2 {
+						font-size: 4rem;
+					}
 				}
 
 				&-items {
@@ -403,6 +408,12 @@
 		&-content {
 			.games-list {
 				width: 50rem;
+
+				&-header {
+					h2 {
+						font-size: 3.2rem;
+					}
+				}
 
 				&-items {
 					&:last-of-type {
