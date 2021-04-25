@@ -782,7 +782,7 @@ sup {
 
 				a {
 					color: $primary-color;
-					font-size: 1.7rem;
+					font-size: 1.6rem;
 					align-self: flex-end;
 
 					&:hover {
@@ -875,7 +875,7 @@ sup {
 
 			h2 {
 				color: #fdfdfd;
-				font-size: 4.4rem;
+				font-size: 4rem;
 				font-weight: 500;
 				margin-bottom: 1rem;
 			}
@@ -898,7 +898,7 @@ sup {
 			}
 
 			p {
-				font-size: 1.7rem;
+				font-size: 1.6rem;
 				a {
 					border-bottom: 0.1rem solid #00acfc;
 					&:hover {
@@ -916,7 +916,7 @@ sup {
 					border: 0.1rem solid $primary-color;
 					padding: 1.2rem 1.5rem;
 					text-decoration: none;
-					font-size: 1.9rem;
+					font-size: 1.8rem;
 
 					&:hover {
 						filter: brightness(105%);
@@ -924,7 +924,7 @@ sup {
 
 					&:first-of-type {
 						margin-right: 2rem;
-						padding: 0.8rem 5rem;
+						padding: 0.9rem 5rem;
 						color: #f7fafd;
 						background-color: $secondary-color;
 
@@ -963,8 +963,9 @@ sup {
 			background-color: $secondary-color;
 			border: 0.1rem solid $primary-color;
 			width: 20rem;
-			padding: 1.2rem;
+			padding: 1rem;
 			align-self: center;
+			font-size: 1.8rem;
 		}
 	}
 }
