@@ -1,8 +1,7 @@
 // Variables
 $primary-color: rgb(0,174,255);
 $secondary-color: rgb(0,111,178);
-$light-color: rgb(154,154,156);
-
+$light-color: #f6f6f6;
 
 // Fonts
 @font-face {
@@ -105,6 +104,10 @@ sup {
 				width: 8rem;
 				height: 4rem;
 			}
+
+			&:hover {
+				filter: brightness(120%);
+			}
 		}
 
 		&-left,
@@ -123,8 +126,7 @@ sup {
 					display: flex;
 					align-items: center;
 					height: 100%;
-					// color: $light-color;
-					color: #f6f6f6;
+					color: $light-color;
 					filter: brightness(70%);
 
 					&:hover {
@@ -304,7 +306,8 @@ sup {
 		a {
 			display: flex;
 			align-items: center;
-			color: #a2a5aa;
+			color: $light-color;
+			filter: brightness(80%);
 
 			#main-nav-battlenet-logo {
 				width: 2rem;
@@ -314,6 +317,10 @@ sup {
 			i {
 				margin-right: 0.5rem;
 				color: $primary-color;
+			}
+
+			&:hover {
+				filter: brightness(100%);
 			}
 		}
 	}
@@ -387,11 +394,16 @@ sup {
 		opacity: 0;
 
 		a {
-			color: lightgrey;
+			color: $light-color;
+			filter: brightness(80%);
 
 			i {
 				color: $primary-color;
 				margin-right: 0.5rem;
+			}
+
+			&:hover {
+				filter: brightness(100%);
 			}
 		}
 	}
@@ -419,7 +431,7 @@ sup {
 				display: flex;
 
 				a {
-					color: #f6f6f6;
+					color: $light-color;
 					filter: brightness(80%);
 					font-size: 1.6rem;
 
@@ -494,8 +506,7 @@ sup {
 	z-index: 10;
 
 	a {
-		// color: $light-color;
-		color: #f6f6f6;
+		color: $light-color;
 	}
 
 	i {
@@ -597,7 +608,7 @@ sup {
 				border: 0.1rem solid $primary-color;
 				background-color: $secondary-color;
 				padding: 0.7rem 0;
-				color: #f6f6f6;
+				color: $light-color;
 				filter: brightness(100%);
 
 				&:hover {
