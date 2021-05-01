@@ -1039,9 +1039,9 @@ sup {
 	&-content {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		text-align: center;
 		height: 100%;
+		padding-top: 3rem;
 		color: #fff;
 		font-family: "Blizzard", Helvetica, sans-serif;
 
@@ -1050,19 +1050,76 @@ sup {
 			justify-content: center;
 			align-items: center;
 			margin-bottom: 2.5rem;
+			position: relative;
+			font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
-			svg {
-				height: 3rem;
+			&-svg {
+				height: 2.7rem;
 			}
 
-			form {
-				select {
-					width: 10rem;
-					background: none;
-					border: none;
-					color: #fff;
+			#location-selector {
+				font-size: 1.6rem;
+				color: rgba(255, 255, 255, 0.7);
+				display: flex;
+
+				&-svg {
+					height: 2rem;
+					width: 2rem;
+					fill: rgba(255, 255, 255, 0.5);
+					align-self: flex-end;
+				}
+			}
+
+			.location-options {
+				display: none;
+				position: absolute;
+				top: -26rem;
+				width: 40rem;
+				height: 25rem;
+				// display: grid;
+				grid-template-columns: 1fr 1fr;
+				border: 0.1rem solid #3d4047;
+				background: linear-gradient(
+					to bottom,
+					#283244 20%,
+					rgba(21, 26, 35, 0.95)
+				);
+				font-size: 1.5rem;
+				text-align: start;
+				padding: 2rem 3rem;
+
+				li {
+					color: $light-color;
+					filter: brightness(60%);
 					cursor: pointer;
-					outline: none;
+
+					&:hover {
+						filter: brightness(100%);
+					}
+				}
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					width: 0;
+					height: 0;
+				}
+
+				&::before {
+					bottom: -0.8rem;
+					right: 13.1rem;
+					border-left: 0.7rem solid transparent;
+					border-right: 0.7rem solid transparent;
+					border-top: 0.7rem solid #3d4047;
+				}
+
+				&::after {
+					bottom: -0.7rem;
+					right: 13rem;
+					border-left: 0.8rem solid transparent;
+					border-right: 0.8rem solid transparent;
+					border-top: 0.8rem solid rgba(21, 26, 35, 0.95);
 				}
 			}
 		}
