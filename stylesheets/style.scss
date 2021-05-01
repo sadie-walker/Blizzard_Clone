@@ -814,6 +814,7 @@ sup {
 					margin: 0 1rem 2rem;
 					position: relative;
 					box-shadow: 0.5rem 1rem 1rem #0000003b;
+					transition: transform ease 0.5s;
 
 					&:last-of-type {
 						margin-right: 79rem;
@@ -832,9 +833,9 @@ sup {
 					&:hover {
 						transform: scale(1.05);
 						filter: brightness(110%);
+						transition: none;
 
 						&:after {
-							// border: solid 0.1rem #00aeff8e;
 							border: solid 0.1rem rgba($primary-color, 0.6);
 						}
 					}
