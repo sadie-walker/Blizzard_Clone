@@ -818,10 +818,6 @@ sup {
 					box-shadow: 0.5rem 1rem 1rem #0000003b;
 					transition: transform ease 0.5s;
 
-					&:last-of-type {
-						margin-right: 79rem;
-					}
-
 					&:after {
 						content: " ";
 						position: absolute;

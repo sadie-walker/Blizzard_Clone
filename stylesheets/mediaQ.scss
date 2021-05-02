@@ -31,10 +31,6 @@
 					.games-list-item {
 						width: 21.5rem;
 						height: 28rem;
-
-						&:last-of-type {
-							margin-right: 71.5rem;
-						}
 					}
 				}
 			}
@@ -157,7 +153,7 @@
 						height: 24rem;
 
 						&:last-of-type {
-							margin-right: auto;
+							margin-right: 41rem;
 						}
 					}
 				}
@@ -420,8 +416,10 @@
 				}
 
 				&-items {
-					&:last-of-type {
-						margin-right: auto;
+					.games-list-item{
+						&:last-of-type {
+							margin-right: 21rem;
+						}
 					}
 				}
 			}
