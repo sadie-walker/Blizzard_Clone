@@ -21,6 +21,7 @@ let hamburgerBtn = document.getElementById("main-hamburger-button");
 let mobileAccBtn = document.getElementById("mobile-account-button");
 let hamburgerCloseBtn = document.getElementById("mobile-hamburger-close-button");
 let mobileAccCloseBtn = document.getElementById("mobile-account-close-button");
+let locationSelect = document.querySelector(".location-selector");
 
 // Lists & footers
 const gamesNavItems = document.querySelectorAll(".main-nav-games-item");
@@ -63,7 +64,8 @@ const setActiveLink = e => {
         // Make selected link active
         e.target.classList.toggle("active-link");
 
-    } else if(e.target.parentElement.id === "games-menu-button" || e.target.parentElement.id === "esports-menu-button" || e.target.parentElement.id === "account-menu-button"){
+    } else if(e.target.parentElement.id === "games-menu-button" || e.target.parentElement.id === "esports-menu-button" || e.target.parentElement.id === "account-menu-button")
+    {
         // Make selected link active
         e.target.parentElement.classList.toggle("active-link");
     }
@@ -206,7 +208,6 @@ const currentSlide = n => {
 const showSlideshow = (n, slideSelected) => {
     const slides = document.querySelectorAll(".main-hero-slide");
     const barItems = document.querySelectorAll(".transition-bar-item");
-    console.log(n, slideIndex, slideSelected);
 
     // Hide All Slides
     slides.forEach(slide => {
@@ -247,8 +248,6 @@ const showSlideshow = (n, slideSelected) => {
     // Display Active Slide & Add Animation
     slides[slideIndex].style.display = "block";
     slides[slideIndex].firstElementChild.classList.add("hero-img-animation");
-    console.log(barItems);
-    console.log(barItems[slideIndex]);
     barItems[slideIndex].classList.add("active-trans-bar");
 
     // Add Animation to Slide Text
@@ -257,6 +256,18 @@ const showSlideshow = (n, slideSelected) => {
         child.style.animation = `heroTextAnimation 6s ${index / 2.25}s forwards`;
         child.classList.add("hero-text-fade-out");
     })
+}
+
+const toggleLocationMenu = (e) => {
+    const locations = document.querySelectorAll(".location-options li span");
+    locations.forEach(location => {
+        if(location.innerHTML.indexOf(locationSelect.firstElementChild.innerHTML) != -1){
+            location.parentElement.classList.toggle("active-location");
+        }
+    })
+    document.querySelector(".location-options").classList.toggle("toggle-visibility");
+    locationSelect.classList.toggle("location-selection-active");
+    locationSelect.parentElement.classList.toggle("location-overlay");
 }
 
 window.onload = showSlideshow(slideIndex, false);
@@ -269,5 +280,6 @@ hamburgerBtn.addEventListener("click", toggleSideMenu);
 mobileAccBtn.addEventListener("click", toggleSideMenu);
 hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
 mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
+locationSelect.addEventListener("click", toggleLocationMenu)
 window.addEventListener("resize", closeSubMenus);
 

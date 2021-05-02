@@ -1,6 +1,6 @@
 // Variables
-$primary-color: rgb(0,174,255);
-$secondary-color: rgb(0,111,178);
+$primary-color: rgb(0, 174, 255);
+$secondary-color: rgb(0, 111, 178);
 $light-color: #f6f6f6;
 
 // Fonts
@@ -60,7 +60,9 @@ body {
 	height: 100%;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
 	font-family: "Blizzard", Helvetica, sans-serif;
 }
 
@@ -1022,6 +1024,7 @@ sup {
 			padding: 1rem;
 			font-size: 1.8rem;
 			border: 0.1rem solid $primary-color;
+			cursor: pointer;
 
 			&:hover {
 				filter: brightness(110%);
@@ -1044,85 +1047,7 @@ sup {
 		padding-top: 3rem;
 		color: #fff;
 		font-family: "Blizzard", Helvetica, sans-serif;
-
-		#location-selection {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-bottom: 2.5rem;
-			position: relative;
-			font-family: "Open Sans", Helvetica, Arial, sans-serif;
-
-			&-svg {
-				height: 2.7rem;
-			}
-
-			#location-selector {
-				font-size: 1.6rem;
-				color: rgba(255, 255, 255, 0.7);
-				display: flex;
-
-				&-svg {
-					height: 2rem;
-					width: 2rem;
-					fill: rgba(255, 255, 255, 0.5);
-					align-self: flex-end;
-				}
-			}
-
-			.location-options {
-				display: none;
-				position: absolute;
-				top: -26rem;
-				width: 40rem;
-				height: 25rem;
-				// display: grid;
-				grid-template-columns: 1fr 1fr;
-				border: 0.1rem solid #3d4047;
-				background: linear-gradient(
-					to bottom,
-					#283244 20%,
-					rgba(21, 26, 35, 0.95)
-				);
-				font-size: 1.5rem;
-				text-align: start;
-				padding: 2rem 3rem;
-
-				li {
-					color: $light-color;
-					filter: brightness(60%);
-					cursor: pointer;
-
-					&:hover {
-						filter: brightness(100%);
-					}
-				}
-
-				&::before,
-				&::after {
-					content: "";
-					position: absolute;
-					width: 0;
-					height: 0;
-				}
-
-				&::before {
-					bottom: -0.8rem;
-					right: 13.1rem;
-					border-left: 0.7rem solid transparent;
-					border-right: 0.7rem solid transparent;
-					border-top: 0.7rem solid #3d4047;
-				}
-
-				&::after {
-					bottom: -0.7rem;
-					right: 13rem;
-					border-left: 0.8rem solid transparent;
-					border-right: 0.8rem solid transparent;
-					border-top: 0.8rem solid rgba(21, 26, 35, 0.95);
-				}
-			}
-		}
+		position: relative;
 
 		#footer-logo {
 			display: flex;
@@ -1230,6 +1155,103 @@ sup {
 	}
 }
 
+.location-selection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2.5rem;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	position: relative;
+
+	&-svg {
+		height: 2.7rem;
+		position: relative;
+		z-index: 5;
+	}
+}
+
+.location-selector {
+	font-size: 1.6rem;
+	color: rgba(255, 255, 255, 0.7);
+	display: flex;
+	position: relative;
+	z-index: 3;
+
+	&-svg {
+		height: 2rem;
+		width: 2rem;
+		fill: rgba(255, 255, 255, 0.5);
+		align-self: flex-end;
+		position: relative;
+	}
+}
+
+.location-options {
+	visibility: hidden;
+	position: absolute;
+	top: -26rem;
+	width: 40rem;
+	height: 25rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	border: 0.1rem solid #3d4047;
+	background: linear-gradient(to bottom, #283244 20%, rgba(21, 26, 35, 0.95));
+	font-size: 1.5rem;
+	text-align: start;
+	padding: 2rem 1rem;
+	z-index: 3;
+
+	li {
+		color: $light-color;
+		cursor: pointer;
+		padding: 0.3rem 0;
+	}
+
+	svg {
+		height: 1rem;
+		width: 1.5rem;
+		visibility: hidden;
+	}
+
+	span {
+		filter: brightness(60%);
+
+		i {
+			margin-left: 0.5rem;
+			font-size: 1.3rem;
+		}
+
+		&:hover {
+			filter: brightness(100%);
+		}
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
+
+	&::before {
+		bottom: -0.8rem;
+		right: 13.1rem;
+		border-left: 0.7rem solid transparent;
+		border-right: 0.7rem solid transparent;
+		border-top: 0.7rem solid #3d4047;
+	}
+
+	&::after {
+		bottom: -0.7rem;
+		right: 13rem;
+		border-left: 0.8rem solid transparent;
+		border-right: 0.8rem solid transparent;
+		border-top: 0.8rem solid rgba(21, 26, 35, 0.95);
+	}
+}
+
 // DOM STYLES
 
 .toggle-visibility {
@@ -1270,6 +1292,34 @@ sup {
 
 .hero-text-fade-out {
 	animation: heroTextFadeOut ease-in 6s;
+}
+
+.active-location {
+	svg {
+		visibility: visible;
+	}
+
+	span {
+		filter: brightness(100%);
+	}
+}
+
+.location-selection-active {
+	color: #fff;
+}
+
+.location-overlay {
+	&::before {
+		content: " ";
+		background-color: rgba(0, 0, 0, 0.438);
+		position: fixed;
+		top: 0rem;
+		left: 0;
+		width: 100vw;
+		height: 100%;
+		cursor: auto;
+		z-index: 2;
+	}
 }
 
 // Animations
@@ -1347,4 +1397,4 @@ sup {
 	from {
 		height: 1rem;
 	}
-}}
+}
