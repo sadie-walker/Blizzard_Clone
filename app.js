@@ -175,23 +175,29 @@ function toggleSideMenu(e) {
     }
 }
 
-// const careerSlideshow = () => {
-//     console.log(slideshowCounter);
-//     const careerSection = document.querySelector(".careers-section");
-//     const careerImages = ["careers-1", "careers-2", "careers-3", "careers-4", "careers-5"];
+const careerSlideshow = () => {
+    const careerSlides = document.querySelectorAll(".careers-section-slide");
+    let careerSlideIndex = 0;
 
-//     careerSection.style.background = `url(/images/careers-banner/${careerImages[slideshowCounter]}.jpeg`;
-    
-//     if(slideshowCounter < (careerImages.length - 1)){
-//         slideshowCounter++;
-//     } else {
-//         slideshowCounter = 0;
-//     }
+    // careerSlides.forEach(slide, index => {
+    //     slide.style.animation = `careerSlideFade 48s ${index / 12.5}s infinite`; 
+    // })
 
-//     setTimeout("careerSlideshow()", 3000);
-// }
+    updateSlide();
+    setInterval(updateSlide, 4000);
+    function updateSlide(){
+        careerSlides.forEach(slide => {
+            slide.classList.remove("active-career-slide");
+        })
+        careerSlides[careerSlideIndex].classList.add("active-career-slide");
 
-// window.onload =  careerSlideshow;
+        if(careerSlideIndex < (careerSlides.length - 1)){
+            careerSlideIndex++;
+        } else {
+            careerSlideIndex = 0;
+        }
+    }
+}
 
 let slideIndex = 0;
 const barItems = document.querySelectorAll(".transition-bar-item");
@@ -261,7 +267,6 @@ const showSlideshow = (n, slideSelected) => {
         let width = 0;
         let barInterval = setInterval(frame, 60);
         function frame(){
-            // console.log(bar, width);
             if(width >= 100 || slideSelected){
                 clearInterval(barInterval);
                 bar.style.width = "0%";
@@ -306,7 +311,10 @@ const toggleLocationMenu = (e) => {
 }
 
 // Start hero slideshow on page load
-window.onload = showSlideshow(slideIndex, false);
+window.onload = function() {
+    showSlideshow(slideIndex, false);
+    careerSlideshow();
+}
 
 // Event Listeners
 mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
