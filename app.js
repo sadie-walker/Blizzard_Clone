@@ -194,20 +194,35 @@ function toggleSideMenu(e) {
 // window.onload =  careerSlideshow;
 
 let slideIndex = 0;
+const barItems = document.querySelectorAll(".transition-bar-item");
 
 const plusSlides = n => {
     showSlideshow(slideIndex+n, true);
     clearTimeout(slideshowTimeout);
+    
+    // Remove previous progession bar when slide selected
+    if(slideIndex === 0){
+        barItems[barItems.length-1].firstElementChild.style.display = "none";
+        barItems[slideIndex].nextElementSibling.firstElementChild.style.display = "none";
+    } else if (slideIndex === barItems.length-1) {
+        console.log(barItems[slideIndex]);
+        barItems[slideIndex].previousElementSibling.firstElementChild.style.display = "none";
+        barItems[0].firstElementChild.style.display = "none";
+    } else {
+        barItems[slideIndex].previousElementSibling.firstElementChild.style.display = "none";
+        barItems[slideIndex].nextElementSibling.firstElementChild.style.display = "none";
+    }
 }
 
 const currentSlide = n => {
     showSlideshow(slideIndex = n, true);
     clearTimeout(slideshowTimeout);
+    // Remove previous progession bar when slide selected
+    barItems[slideIndex].firstElementChild.style.display = "none";
 }
 
 const showSlideshow = (n, slideSelected) => {
     const slides = document.querySelectorAll(".main-hero-slide");
-    const barItems = document.querySelectorAll(".transition-bar-item");
 
     // Hide All Slides
     slides.forEach(slide => {
@@ -218,10 +233,6 @@ const showSlideshow = (n, slideSelected) => {
     barItems.forEach(bar => {
         if(bar.classList.contains("active-trans-bar")){
             bar.classList.remove("active-trans-bar");
-            bar.style.animation = "closeBar 0.5s"
-            setTimeout(function(){
-                bar.style.animation = "";
-            },1000)
         }
     })
 
@@ -245,10 +256,33 @@ const showSlideshow = (n, slideSelected) => {
         slideIndex = n;
     }
 
+    // Transition Bar Progress animation
+    const barProgression = (bar, slideSelected) => {
+        let width = 0;
+        let barInterval = setInterval(frame, 60);
+        function frame(){
+            // console.log(bar, width);
+            if(width >= 100 || slideSelected){
+                clearInterval(barInterval);
+                bar.style.width = "0%";
+            } else {
+                width++;
+                bar.style.width = `${width}%`;
+            }
+        }
+    }
+
     // Display Active Slide & Add Animation
     slides[slideIndex].style.display = "block";
     slides[slideIndex].firstElementChild.classList.add("hero-img-animation");
+
+    // Active Transition Bar
     barItems[slideIndex].classList.add("active-trans-bar");
+    if(!slideSelected){
+        barProgression(barItems[slideIndex].firstElementChild, false);
+    } else {
+        barProgression(barItems[slideIndex].firstElementChild, true);
+    }
 
     // Add Animation to Slide Text
     const childArry = Array.from(slides[slideIndex].lastElementChild.children)
@@ -258,6 +292,7 @@ const showSlideshow = (n, slideSelected) => {
     })
 }
 
+// Toggle location selection menu
 const toggleLocationMenu = (e) => {
     const locations = document.querySelectorAll(".location-options li span");
     locations.forEach(location => {
@@ -270,6 +305,7 @@ const toggleLocationMenu = (e) => {
     locationSelect.parentElement.classList.toggle("location-overlay");
 }
 
+// Start hero slideshow on page load
 window.onload = showSlideshow(slideIndex, false);
 
 // Event Listeners

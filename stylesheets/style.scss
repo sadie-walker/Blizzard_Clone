@@ -760,6 +760,13 @@ sup {
 	background-color: #858689;
 	margin-right: 1rem;
 	cursor: pointer;
+	transition: height 0.5s ease;
+
+	&-progress {
+		height: inherit;
+		width: 0;
+		background-color: $primary-color;
+	}
 
 	&:hover {
 		background-color: #cecfd0;
@@ -1249,7 +1256,6 @@ sup {
 }
 
 // DOM STYLES
-
 .toggle-visibility {
 	visibility: visible;
 }
@@ -1275,10 +1281,11 @@ sup {
 }
 
 .active-trans-bar {
-	background-color: $primary-color;
-	animation: openBar 0.5s ease-in-out forwards;
+	background-color: #0086ca;
+	height: +1rem;
+
 	&:hover {
-		background-color: $primary-color;
+		background-color: #0086ca;
 	}
 }
 
@@ -1380,17 +1387,5 @@ sup {
 
 	100% {
 		opacity: 0;
-	}
-}
-
-@keyframes openBar {
-	to {
-		height: 1rem;
-	}
-}
-
-@keyframes closeBar {
-	from {
-		height: 1rem;
 	}
 }
