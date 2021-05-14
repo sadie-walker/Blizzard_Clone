@@ -211,6 +211,7 @@ sup {
 	.main-nav-sub-menu-arrow {
 		left: 21.5rem;
 	}
+
 	&-content {
 		display: flex;
 		width: 160rem;
@@ -268,22 +269,27 @@ sup {
 				width: 6.6rem;
 				height: 11rem;
 				margin: 0 auto;
-				color: #a2a5aa;
+				color: #fff;
 				text-align: center;
 				line-height: 1.5rem;
 
 				img {
 					width: 6.4rem;
+					filter: brightness(90%);
+				}
+
+				span {
+					filter: brightness(70%);
 				}
 			}
 
 			&:hover {
 				img {
-					filter: brightness(115%);
+					filter: brightness(110%);
 				}
 
 				span {
-					filter: brightness(200%);
+					filter: brightness(100%);
 				}
 			}
 		}
@@ -365,23 +371,28 @@ sup {
 					flex-direction: column;
 					align-content: center;
 					text-align: center;
-					color: lightgrey;
+					color: #fff;
 					font-size: 1.3rem;
 					line-height: 1.8rem;
 					padding-bottom: 3rem;
-
+					
 					img {
 						width: 19rem;
 					}
+					
+					span {
+						filter: brightness(70%);
+					}
 
-					&:hover {
-						img {
-							filter: brightness(115%);
-						}
+				}
 
-						span {
-							filter: brightness(200%);
-						}
+				&:hover {
+					img {
+						filter: brightness(115%);
+					}
+
+					span {
+						filter: brightness(100%);
 					}
 				}
 			}
