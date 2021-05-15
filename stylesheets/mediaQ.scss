@@ -17,6 +17,29 @@
 		}
 	}
 
+	.main-hero {
+		&-slider {
+			.hero-arrow {
+				&.prev {
+					left: 1.5%;
+				}
+				&.next {
+					right: 1.5%;
+				}
+			}
+
+			.main-hero-slide {
+				&-content {
+					padding: 0 5.5%;
+
+					h2 {
+						margin-bottom: 2rem;
+					}
+				}
+			}
+		}
+	}
+
 	.games-section {
 		&-content {
 			.games-list {
@@ -102,16 +125,17 @@
 		&-slider {
 			.hero-arrow {
 				&.prev {
-					left: 2%;
+					left: 2rem;
 				}
 				&.next {
-					right: 2%;
+					right: 2rem;
 				}
 			}
 
 			.main-hero-slide {
 				&-content {
-					padding: 0 6%;
+					padding: 0 9rem;
+					
 					img {
 						width: 24rem;
 					}
