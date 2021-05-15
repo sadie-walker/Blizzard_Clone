@@ -1057,7 +1057,8 @@ sup {
 
 // FOOTER
 .main-footer {
-	height: 42rem;
+	// height: 42rem;
+	height: 56rem;
 	background: url(/images/backgrounds/footer-bg-lg.jpg);
 	background-position: center;
 
@@ -1116,7 +1117,7 @@ sup {
 		}
 
 		.primary-footer-links {
-			margin-bottom: 2rem;
+			margin-bottom: 4rem;
 			font-size: 1.7rem;
 		}
 
@@ -1130,7 +1131,7 @@ sup {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-bottom: 2rem;
+			margin-bottom: 4rem;
 			color: #c7c8c9;
 			font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
@@ -1159,18 +1160,43 @@ sup {
 			p {
 				color: #959697;
 
-				a {
-					font-weight: bold;
-					color: #fff;
-					filter: brightness(70%);
+				
+				&:first-of-type {
+					font-size: 1.2rem;
+				}
+			}
+			a {
+				font-weight: bold;
+				color: #fff;
+				filter: brightness(70%);
 
-					&:hover {
-						filter: brightness(100%);
-					}
+				&:hover {
+					filter: brightness(100%);
+				}
+			}
+		}
+
+		#certifications {
+			margin-top: 3rem;
+			display: flex;
+			justify-content: center;
+
+			a {
+				margin: 0 0.5rem;
+
+				img {
+					width: inherit;
+					height: inherit;
 				}
 
 				&:first-of-type {
-					font-size: 1.2rem;
+					width: 7.2rem;
+					height: 9.7rem;
+				}
+	
+				&:last-of-type {
+					width: 8.3rem;
+					height: 9.7rem;
 				}
 			}
 		}
