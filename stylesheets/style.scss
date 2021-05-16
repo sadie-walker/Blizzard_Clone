@@ -121,40 +121,13 @@ sup {
 			display: flex;
 			align-items: center;
 			height: 100%;
-
-			.main-nav-item {
-				height: 100%;
-				display: flex;
-				align-items: center;
-				margin-right: 3rem;
-
-				& > a {
-					display: flex;
-					align-items: center;
-					height: 100%;
-					color: $light-color;
-					filter: brightness(70%);
-
-					&:hover {
-						filter: brightness(100%);
-					}
-
-					i {
-						display: flex;
-						align-items: center;
-						margin-left: 0.5rem;
-						font-size: 1.4rem;
-						color: #6c6d70;
-					}
-				}
-			}
 		}
 
 		&-left {
 			width: 50%;
 			font-size: 2rem;
 
-			.main-nav-item > a {
+			.main-nav-item-link {
 				text-transform: uppercase;
 			}
 
@@ -170,6 +143,33 @@ sup {
 			flex: auto;
 			justify-content: flex-end;
 			font-size: 1.7rem;
+		}
+	}
+}
+
+.main-nav-item {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin-right: 3rem;
+
+	&-link {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		color: $light-color;
+		filter: brightness(70%);
+
+		&:hover {
+			filter: brightness(100%);
+		}
+
+		i {
+			display: flex;
+			align-items: center;
+			margin-left: 0.5rem;
+			font-size: 1.4rem;
+			color: #6c6d70;
 		}
 	}
 }
@@ -1323,7 +1323,7 @@ sup {
 }
 
 .nav-overlay {
-	filter: brightness(60%);
+	filter: brightness(30%);
 }
 
 .active-link {

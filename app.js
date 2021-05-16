@@ -2,7 +2,7 @@
 let body = document.querySelector("body");
 
 // Navbars
-let mainNavLinks = document.querySelectorAll(".main-nav li");
+let mainNavLinks = document.querySelectorAll(".main-nav-item-link");
 let mainNavGamesMenu = document.querySelector(".main-nav-games");
 let mainNavEsportsMenu = document.querySelector(".main-nav-esports");
 let mainNavAccMenu = document.querySelector(".main-nav-account");
@@ -78,25 +78,25 @@ const navOverlay = e => {
             if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
                 // Add BG overlay
                 menuBgOverlay.classList.add("toggle-visibility");
-                if(link.firstElementChild === e.target || link.firstElementChild === e.target.parentElement){
+                if(link === e.target || link === e.target.parentElement){
                     // Remove overlay from active link
-                    link.firstElementChild.classList.remove("nav-overlay");
+                    link.classList.remove("nav-overlay");
                 } else {
                     // Add overlay to all inactive links
-                    link.firstElementChild.classList.add("nav-overlay");
-                    link.firstElementChild.classList.remove("active-link");
+                    link.classList.add("nav-overlay");
+                    link.classList.remove("active-link");
                 }
             } else {
                     // Remove all overlays
                     menuBgOverlay.classList.remove("toggle-visibility");   
-                    link.firstElementChild.classList.remove("nav-overlay");
+                    link.classList.remove("nav-overlay");
             }
         });
     } else {
         menuBgOverlay.classList.remove("toggle-visibility"); 
         mainNavLinks.forEach(link => {
-            link.firstElementChild.classList.remove("active-link");
-            link.firstElementChild.classList.remove("nav-overlay");
+            link.classList.remove("active-link");
+            link.classList.remove("nav-overlay");
         })
     }
 }
