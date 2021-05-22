@@ -172,6 +172,10 @@ sup {
 			color: #6c6d70;
 		}
 	}
+
+	&:first-of-type{
+		display: none;
+	}
 }
 
 .main-nav-sub-menu-arrow {

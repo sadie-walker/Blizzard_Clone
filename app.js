@@ -320,10 +320,10 @@ window.onload = function() {
 mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
 mainNavEsportsBtn.addEventListener("click", toggleMainSubMenus);
 mainNavAccBtn.addEventListener("click", toggleMainSubMenus);
-hamburgerBtn.addEventListener("click", toggleSideMenu);
-mobileAccBtn.addEventListener("click", toggleSideMenu);
-hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
-mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
+// hamburgerBtn.addEventListener("click", toggleSideMenu);
+// mobileAccBtn.addEventListener("click", toggleSideMenu);
+// hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
+// mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
 locationSelect.addEventListener("click", toggleLocationMenu)
 window.addEventListener("resize", closeSubMenus);
 

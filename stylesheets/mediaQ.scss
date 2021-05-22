@@ -1,3 +1,8 @@
+// Variables
+$primary-color: rgb(0, 174, 255);
+$secondary-color: rgb(0, 111, 178);
+$light-color: #f6f6f6;
+
 // Laptops
 @media only screen and (max-width: 1600px) {
 	.main-nav {
@@ -353,11 +358,140 @@
 // Small Tablets
 @media only screen and (max-width: 760px) {
 	.main-nav {
-		display: none;
-	}
+		// display: none;
+		// visibility: hidden;
+		background: #151a23;
+		position: absolute;
+		top: 0;
+		width: 45%;
+		height: 100%;
+		z-index: 10;
+		padding: 0;
 
-	.mobile-main-nav {
-		display: block;
+		&-content {
+			flex-direction: column;
+			align-items: flex-start;
+			height: auto;
+	
+			ul {
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+	
+				li {
+					width: 100%;
+					margin: 0;
+					font-weight: 200;
+	
+					a {
+						padding: 1.2rem 2rem;
+						display: flex;
+						align-items: center;
+						color: $light-color;
+						font-size: 1.6rem;
+						font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	
+						i {
+							font-size: 1.5rem;
+							padding: 0 0.51rem;
+						}
+					}
+				}
+			}
+
+			#main-nav-logo {
+				align-self: center;
+				width: 12rem;
+				height: 6rem;
+				margin: 2rem 0 1rem;
+
+				svg {
+					width: 12rem;
+					height: 6rem;
+					fill: $primary-color;
+				}
+
+				&:hover {
+					filter: brightness(100%);
+				}
+			}
+ 
+			.main-nav-item {
+				border-bottom: 0.1rem solid #9a9a9c36;
+
+				&-link {
+					filter: brightness(80%);
+				}
+
+				&:first-of-type{
+					border-top: 0.1rem solid #9a9a9c36;
+					display: block;
+				}
+			}
+
+			&-left, &-right, &-mobile {
+				align-items: flex-start;
+				width: 100%;
+			}
+
+			&-mobile {
+				margin-top: 2rem;
+
+				a {
+					filter: brightness(70%);
+				}
+			}
+
+			&-right {
+				display: none;
+			}
+
+			.main-nav-account {
+				background: #151a23;
+				position:fixed;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 45%;
+				z-index: 10;
+				transition: right 0.15s ease-in;
+			
+				li {
+					border-top: 0.1rem solid #9a9a9c36;
+			
+					&:first-of-type {
+						border: none;
+						text-align: right;
+						padding: 1rem;
+					}
+			
+					&:nth-of-type(2) {
+						padding: 1.8rem 2.5rem;
+			
+						a {
+							display: flex;
+							justify-content: center;
+							border: 0.1rem solid $primary-color;
+							background-color: $secondary-color;
+							padding: 0.7rem 0;
+							color: $light-color;
+							filter: brightness(100%);
+			
+							&:hover {
+								filter: brightness(120%);
+							}
+						}
+					}
+			
+					a {
+						filter: brightness(80%);
+						i {
+							margin-right: 1rem;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.main-hero {
