@@ -140,7 +140,7 @@ $light-color: #f6f6f6;
 			.main-hero-slide {
 				&-content {
 					padding: 0 9rem;
-					
+
 					img {
 						width: 24rem;
 					}
@@ -357,32 +357,36 @@ $light-color: #f6f6f6;
 
 // Small Tablets
 @media only screen and (max-width: 760px) {
+	.mobile-main-nav {
+		display: block;
+	}
+
 	.main-nav {
-		// display: none;
-		// visibility: hidden;
+		display: none;
 		background: #151a23;
 		position: absolute;
 		top: 0;
 		width: 45%;
-		height: 100%;
+		height: 100vh;
 		z-index: 10;
 		padding: 0;
+		overflow: auto;
 
 		&-content {
 			flex-direction: column;
 			align-items: flex-start;
 			height: auto;
-	
+
 			ul {
 				display: flex;
 				flex-direction: column;
 				text-align: left;
-	
+
 				li {
 					width: 100%;
 					margin: 0;
 					font-weight: 200;
-	
+
 					a {
 						padding: 1.2rem 2rem;
 						display: flex;
@@ -390,13 +394,42 @@ $light-color: #f6f6f6;
 						color: $light-color;
 						font-size: 1.6rem;
 						font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	
+
 						i {
 							font-size: 1.5rem;
 							padding: 0 0.51rem;
 						}
 					}
 				}
+			}
+
+			&-left,
+			&-right,
+			&-mobile {
+				align-items: flex-start;
+				width: 100%;
+			}
+
+			&-mobile {
+				margin-top: 2rem;
+
+				a {
+					filter: brightness(70%);
+				}
+			}
+
+			&-right {
+				visibility: hidden;
+			}
+
+			#mobile-hamburger-close-button {
+				display: block;
+				position: absolute;
+				top: 1.5rem;
+				left: 1.5rem;
+				color: $primary-color;
+				font-size: 2.25rem;
+				cursor: pointer;
 			}
 
 			#main-nav-logo {
@@ -415,7 +448,7 @@ $light-color: #f6f6f6;
 					filter: brightness(100%);
 				}
 			}
- 
+
 			.main-nav-item {
 				border-bottom: 0.1rem solid #9a9a9c36;
 
@@ -423,52 +456,215 @@ $light-color: #f6f6f6;
 					filter: brightness(80%);
 				}
 
-				&:first-of-type{
+				&:first-of-type {
 					border-top: 0.1rem solid #9a9a9c36;
 					display: block;
 				}
 			}
 
-			&-left, &-right, &-mobile {
+			.sub-menu-nav-item {
+				flex-direction: column;
 				align-items: flex-start;
-				width: 100%;
-			}
+				height: auto;
 
-			&-mobile {
-				margin-top: 2rem;
+				.main-nav-games,
+				.main-nav-esports {
+					position: static;
+					flex-direction: column;
+					height: 0;
+					transition: height 0.25s ease-out;
 
-				a {
-					filter: brightness(70%);
+					.main-nav-sub-menu-arrow {
+						display: none;
+					}
+
+					&-content,
+					&-footer {
+						width: 100%;
+						flex-direction: column;
+						background-color: #0f1218;
+						height: 0;
+						padding: 0;
+						transition: height 0.25s ease-out;
+						a {
+							font-size: 1.4rem;
+						}
+					}
+
+					&-content {
+						&-blizzard,
+						&-activision,
+						&-competitions {
+							padding: 1rem 2rem;
+							width: 100%;
+							border: none;
+							height: 0;
+							transition: height 0.25s ease-out;
+
+							&-title {
+								font-size: 1.3rem;
+								font-family: "Open Sans", Helvetica, Arial,
+									sans-serif;
+							}
+
+							ul {
+								padding-top: 0;
+								width: 100%;
+								overflow: hidden;
+								flex-wrap: nowrap;
+							}
+
+							li {
+								flex-basis: auto;
+								margin: 0;
+
+								a {
+									width: 100%;
+									flex-direction: row;
+									height: auto;
+									padding: 1rem 0;
+									white-space: nowrap;
+
+									span {
+										text-align: left;
+									}
+
+									img {
+										width: 2.4rem;
+										margin-right: 0.5rem;
+									}
+								}
+							}
+						}
+
+						&-blizzard {
+							border-bottom: 0.1rem solid #363c469f;
+						}
+
+						&-competitions {
+							padding: 0 2rem;
+							justify-content: center;
+							li a img {
+								width: 2.4rem;
+							}
+						}
+					}
+
+					&-footer {
+						border: none;
+						ul {
+							width: 100%;
+
+							a {
+								font-size: 1.4rem;
+								padding: 1rem 2rem;
+
+								i {
+									font-size: 1.8rem;
+								}
+
+								#main-nav-battlenet-logo {
+									margin-right: 1.6rem;
+									svg {
+										width: 2.5rem;
+									}
+								}
+							}
+						}
+					}
 				}
-			}
 
-			&-right {
-				display: none;
+				.main-nav-esports {
+					&-content {
+						border: none;
+					}
+
+					&-footer {
+						a {
+							padding: 0 2rem;
+						}
+					}
+				}
+
+				// mobile games & esports sub menu open transition
+				.mobile-nav-submenu-open {
+					li,
+					.main-nav-esports-footer,
+					.main-nav-games-footer {
+						opacity: 1;
+					}
+				}
+
+				// mobile games sub menu open transition
+				.mobile-nav-submenu-open.main-nav-games {
+					height: 103.7rem;
+
+					.main-nav-games-content {
+						height: 87rem;
+
+						&-blizzard {
+							height: 61.1rem;
+						}
+
+						&-activision {
+							height: 28.8rem;
+						}
+					}
+
+					.main-nav-games-footer {
+						height: 16.6rem;
+					}
+				}
+
+				// mobile esports sub menu open transition
+				.mobile-nav-submenu-open.main-nav-esports {
+					height: 26.2rem;
+
+					.main-nav-esports-content {
+						height: 22rem;
+
+						&-competitions {
+							height: 22rem;
+						}
+					}
+
+					.main-nav-esports-footer {
+						height: 4rem;
+					}
+				}
 			}
 
 			.main-nav-account {
 				background: #151a23;
-				position:fixed;
+				position: fixed;
 				top: 0;
-				right: 0;
+				right: -10rem;
 				height: 100%;
 				width: 45%;
 				z-index: 10;
-				transition: right 0.15s ease-in;
-			
+				// transition: right 0.15s ease-in;
+				transition: right 0.5s 0.5s ease-in;
+				visibility: visible;
+
 				li {
-					border-top: 0.1rem solid #9a9a9c36;
-			
 					&:first-of-type {
+						display: flex;
 						border: none;
-						text-align: right;
-						padding: 1rem;
+						justify-content: flex-end;
+						padding: 1rem 1.5rem;
+
+						#mobile-account-close-button {
+							color: $primary-color;
+							font-size: 2.25rem;
+							cursor: pointer;
+						}
 					}
-			
+
 					&:nth-of-type(2) {
 						padding: 1.8rem 2.5rem;
-			
-						a {
+						border-top: 0.1rem solid #363c46;
+
+						#log-in-button {
 							display: flex;
 							justify-content: center;
 							border: 0.1rem solid $primary-color;
@@ -476,20 +672,44 @@ $light-color: #f6f6f6;
 							padding: 0.7rem 0;
 							color: $light-color;
 							filter: brightness(100%);
-			
+
 							&:hover {
 								filter: brightness(120%);
 							}
 						}
 					}
-			
+
 					a {
 						filter: brightness(80%);
+						padding: 0rem;
+
 						i {
+							font-size: 1.7rem;
 							margin-right: 1rem;
 						}
 					}
 				}
+			}
+		}
+	}
+
+	.hmbg-main-menu-open {
+		display: block;
+		left: 0;
+
+		.main-nav-account {
+			display: none;
+		}
+	}
+
+	.acc-main-menu-open {
+		display: block;
+		visibility: hidden;
+
+		.main-nav-content-right {
+			.main-nav-account {
+				right: 0;
+				visibility: visible;
 			}
 		}
 	}
@@ -572,7 +792,7 @@ $light-color: #f6f6f6;
 				}
 
 				&-items {
-					.games-list-item{
+					.games-list-item {
 						&:last-of-type {
 							margin-right: 21rem;
 						}

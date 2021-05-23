@@ -87,6 +87,7 @@ sup {
 	height: 6rem;
 	border-bottom: 0.1rem solid #2f3135;
 	padding: 1rem;
+	z-index: 9;
 
 	&-content {
 		max-width: 1600px;
@@ -95,6 +96,10 @@ sup {
 		display: flex;
 		align-items: center;
 		font-family: "Blizzard", Helvetica, sans-serif;
+
+		#mobile-hamburger-close-button {
+			display: none;
+		}
 
 		#main-nav-logo {
 			height: 100%;
@@ -126,6 +131,10 @@ sup {
 		&-left {
 			width: 50%;
 			font-size: 2rem;
+
+			& > .main-nav-item:first-of-type {
+				display: none;
+			}
 
 			.main-nav-item-link {
 				text-transform: uppercase;
@@ -172,10 +181,6 @@ sup {
 			color: #6c6d70;
 		}
 	}
-
-	&:first-of-type{
-		display: none;
-	}
 }
 
 .main-nav-sub-menu-arrow {
@@ -205,7 +210,11 @@ sup {
 	position: absolute;
 	top: 6rem;
 	left: 0;
-	background: radial-gradient(ellipse farthest-side at top, #283244, rgba(21,26,35,0.95));
+	background: radial-gradient(
+		ellipse farthest-side at top,
+		#283244,
+		rgba(21, 26, 35, 0.95)
+	);
 	display: flex;
 	width: 100%;
 	height: 38rem;
@@ -347,7 +356,11 @@ sup {
 	position: absolute;
 	top: 6rem;
 	left: 0;
-	background: radial-gradient(ellipse farthest-side at top, #283244, rgba(21,26,35,0.95));
+	background: radial-gradient(
+		ellipse farthest-side at top,
+		#283244,
+		rgba(21, 26, 35, 0.95)
+	);
 	width: 100%;
 	visibility: hidden;
 	border-top: 0.1rem solid #363c46;
@@ -383,15 +396,14 @@ sup {
 					font-size: 1.3rem;
 					line-height: 1.8rem;
 					padding-bottom: 3rem;
-					
+
 					img {
 						width: 19rem;
 					}
-					
+
 					span {
 						filter: brightness(70%);
 					}
-
 				}
 
 				&:hover {
@@ -436,7 +448,11 @@ sup {
 .main-nav-account {
 	position: absolute;
 	width: 32.5rem;
-	background: radial-gradient(ellipse farthest-side at top, #283244, rgba(21,26,35,0.95));
+	background: radial-gradient(
+		ellipse farthest-side at top,
+		#283244,
+		rgba(21, 26, 35, 0.95)
+	);
 	top: 6rem;
 	right: 2rem;
 	visibility: hidden;
@@ -450,7 +466,6 @@ sup {
 	&-content {
 		&-items {
 			li {
-				border-bottom: 0.1rem solid #363c46;
 				padding: 1rem 2rem;
 				display: flex;
 
@@ -470,7 +485,15 @@ sup {
 				}
 
 				&:first-of-type {
+					display: none;
+				}
+
+				&:nth-of-type(2) {
 					padding: 2rem;
+				}
+
+				&:nth-of-type(n + 3) {
+					border-top: 0.1rem solid #363c46;
 				}
 
 				#log-in-button {
@@ -884,7 +907,7 @@ sup {
 	border-bottom: 0.1rem solid #1b3b61;
 	position: relative;
 
-	&-slide{
+	&-slide {
 		display: none;
 		height: inherit;
 		width: 100%;
@@ -1039,7 +1062,6 @@ sup {
 			p {
 				color: #959697;
 
-				
 				&:first-of-type {
 					font-size: 1.2rem;
 				}
@@ -1072,7 +1094,7 @@ sup {
 					width: 7.2rem;
 					height: 9.7rem;
 				}
-	
+
 				&:last-of-type {
 					width: 8.3rem;
 					height: 9.7rem;
@@ -1184,17 +1206,11 @@ sup {
 	visibility: visible;
 }
 
-.hmbg-mobile-menu-open {
-	visibility: visible;
-	left: 0;
+.mobile-nav-overlay {
+	filter: brightness(50%);
 }
 
-.acc-mobile-menu-open {
-	visibility: visible;
-	right: 0;
-}
-
-.nav-overlay {
+.main-nav-overlay {
 	filter: brightness(30%);
 }
 
@@ -1221,7 +1237,7 @@ sup {
 	animation: heroTextFadeOut ease-in 6s;
 }
 
-.active-career-slide{
+.active-career-slide {
 	display: flex;
 	animation: careerSlideFade 5s 4s;
 }

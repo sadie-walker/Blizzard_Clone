@@ -2,13 +2,12 @@
 let body = document.querySelector("body");
 
 // Navbars
+let mainNav = document.querySelector(".main-nav");
 let mainNavLinks = document.querySelectorAll(".main-nav-item-link");
 let mainNavGamesMenu = document.querySelector(".main-nav-games");
 let mainNavEsportsMenu = document.querySelector(".main-nav-esports");
 let mainNavAccMenu = document.querySelector(".main-nav-account");
 let mobileMainNav = document.querySelector(".mobile-main-nav");
-let hamburgerMenu = document.querySelector(".mobile-hamburger-nav");
-let mobileAccMenu = document.querySelector(".mobile-account-nav");
 
 // Overlay
 let menuBgOverlay = document.querySelector(".background-overlay");
@@ -32,18 +31,30 @@ const esportsNavFooter = document.querySelector(".main-nav-esports-footer");
 // Variables
 const subMenus = [mainNavGamesMenu, mainNavEsportsMenu, mainNavAccMenu];
 let slideshowCounter = 0;
-
+let mobile;
 
 //Open or close games, esports or account menus 
 const toggleMainSubMenus = e => {
-    // Set selected link as active
-    setActiveLink(e);
-
     // Add overlay to inactive links
     navOverlay(e);
 
-    // Toggle animation for menu items
-    handleMenuAnimation(e);
+    // Check if mobile menu or desktop menu
+    if(!mobile){
+        // Set selected link as active
+        setActiveLink(e);
+    
+        // Toggle animation for menu items
+        handleMenuAnimation(e);
+    } else {
+        if(e.target.nextElementSibling.classList.contains("main-nav-games")){
+            mainNavGamesMenu.classList.toggle("mobile-nav-submenu-open");
+            mainNavEsportsMenu.classList.remove("mobile-nav-submenu-open");
+        } else{
+            mainNavEsportsMenu.classList.toggle("mobile-nav-submenu-open");
+            mainNavGamesMenu.classList.remove("mobile-nav-submenu-open");
+        }
+    }
+
 
     // Open Submenus
     if(e.target.id === "games-menu-button" || e.target.parentElement.id === "games-menu-button"){
@@ -80,23 +91,23 @@ const navOverlay = e => {
                 menuBgOverlay.classList.add("toggle-visibility");
                 if(link === e.target || link === e.target.parentElement){
                     // Remove overlay from active link
-                    link.classList.remove("nav-overlay");
+                    link.classList.remove("main-nav-overlay");
                 } else {
                     // Add overlay to all inactive links
-                    link.classList.add("nav-overlay");
+                    link.classList.add("main-nav-overlay");
                     link.classList.remove("active-link");
                 }
             } else {
                     // Remove all overlays
                     menuBgOverlay.classList.remove("toggle-visibility");   
-                    link.classList.remove("nav-overlay");
+                    link.classList.remove("main-nav-overlay");
             }
         });
     } else {
         menuBgOverlay.classList.remove("toggle-visibility"); 
         mainNavLinks.forEach(link => {
             link.classList.remove("active-link");
-            link.classList.remove("nav-overlay");
+            link.classList.remove("main-nav-overlay");
         })
     }
 }
@@ -158,17 +169,18 @@ function toggleSideMenu(e) {
     menuBgOverlay.classList.add("toggle-visibility");
 
     if(e.target.id === "main-hamburger-button"){
-        mobileMainNav.classList.add("nav-overlay");
-        hamburgerMenu.classList.add("hmbg-mobile-menu-open");
-        mobileAccMenu.classList.remove("acc-mobile-menu-open");
+        mobileMainNav.classList.add("mobile-nav-overlay");
+        mainNav.classList.add("hmbg-main-menu-open");
+        mainNav.classList.remove("acc-main-menu-open");
     } else if(e.target.id === "mobile-account-button"){
-        mobileMainNav.classList.add("nav-overlay");
-        mobileAccMenu.classList.add("acc-mobile-menu-open");
-        hamburgerMenu.classList.remove("hmbg-mobile-menu-open"); 
+        mobileMainNav.classList.add("mobile-nav-overlay");
+        mainNav.classList.add("acc-main-menu-open");
+        mainNav.classList.remove("hmbg-main-menu-open"); 
     } else {
-        hamburgerMenu.classList.remove("hmbg-mobile-menu-open");
-        mobileAccMenu.classList.remove("acc-mobile-menu-open");
-        mobileMainNav.classList.remove("nav-overlay");
+        // close buttons
+        mainNav.classList.remove("hmbg-main-menu-open");
+        mainNav.classList.remove("acc-main-menu-open");
+        mobileMainNav.classList.remove("mobile-nav-overlay");
         menuBgOverlay.classList.remove("toggle-visibility");
 
         body.style.overflowY = "visible";
@@ -314,16 +326,27 @@ const toggleLocationMenu = (e) => {
 window.onload = function() {
     showSlideshow(slideIndex, false);
     careerSlideshow();
+    setWindowSize();
+}
+
+const setWindowSize = () => {
+    if(window.innerWidth <= 760){
+        mobile = true;
+    } else {
+        mobile = false;
+    }
 }
 
 // Event Listeners
 mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
 mainNavEsportsBtn.addEventListener("click", toggleMainSubMenus);
 mainNavAccBtn.addEventListener("click", toggleMainSubMenus);
-// hamburgerBtn.addEventListener("click", toggleSideMenu);
-// mobileAccBtn.addEventListener("click", toggleSideMenu);
-// hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
-// mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
+hamburgerBtn.addEventListener("click", toggleSideMenu);
+mobileAccBtn.addEventListener("click", toggleSideMenu);
+hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
+mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
 locationSelect.addEventListener("click", toggleLocationMenu)
-window.addEventListener("resize", closeSubMenus);
-
+window.addEventListener("resize", function(){
+    closeSubMenus();
+    setWindowSize();
+});
