@@ -79,7 +79,10 @@ svg {
 }
 
 sup {
-	font-size: 0.8rem;
+	line-height: 0rem;
+	vertical-align: top;
+	position: relative;
+	top: 0.5rem;
 }
 
 .main-nav {
