@@ -35,25 +35,18 @@ let mobile;
 
 //Open or close games, esports or account menus 
 const toggleMainSubMenus = e => {
-    // Add overlay to inactive links
-    navOverlay(e);
-
+    
+    // Set selected link as active
+    setActiveLink(e);
+    
     // Check if mobile menu or desktop menu
     if(!mobile){
-        // Set selected link as active
-        setActiveLink(e);
-    
+        // Add overlay to inactive links
+        navOverlay(e);
+        
         // Toggle animation for menu items
         handleMenuAnimation(e);
-    } else {
-        if(e.target.nextElementSibling.classList.contains("main-nav-games")){
-            mainNavGamesMenu.classList.toggle("mobile-nav-submenu-open");
-            mainNavEsportsMenu.classList.remove("mobile-nav-submenu-open");
-        } else{
-            mainNavEsportsMenu.classList.toggle("mobile-nav-submenu-open");
-            mainNavGamesMenu.classList.remove("mobile-nav-submenu-open");
-        }
-    }
+    } 
 
 
     // Open Submenus
@@ -151,9 +144,15 @@ const handleMenuAnimation = e => {
 }
 
 const toggleMenuVisibility = (menuOn, menuOff1, menuOff2) => {
-    menuOn.classList.toggle("toggle-visibility");
-    menuOff1.classList.remove("toggle-visibility");
-    menuOff2.classList.remove("toggle-visibility");
+    if(!mobile){
+        menuOn.classList.toggle("toggle-visibility");
+        menuOff1.classList.remove("toggle-visibility");
+        menuOff2.classList.remove("toggle-visibility");
+    } else {
+        menuOn.classList.toggle("mobile-nav-submenu-open");
+        menuOff1.classList.remove("mobile-nav-submenu-open");
+        menuOff2.classList.remove("mobile-nav-submenu-open");
+    }
 }
 
 const closeSubMenus = () => {

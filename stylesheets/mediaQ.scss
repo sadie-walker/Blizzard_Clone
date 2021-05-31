@@ -362,15 +362,18 @@ $light-color: #f6f6f6;
 	}
 
 	.main-nav {
-		display: none;
+		// display: none;
 		background: #151a23;
 		position: absolute;
 		top: 0;
+		left: -35rem;
 		width: 45%;
 		height: 100vh;
 		z-index: 10;
 		padding: 0;
-		overflow: auto;
+		overflow-y: auto;
+		overflow-x: hidden;
+		transition: left 1s ease;
 
 		&-content {
 			flex-direction: column;
@@ -469,10 +472,14 @@ $light-color: #f6f6f6;
 
 				.main-nav-games,
 				.main-nav-esports {
+					visibility: visible;
+					overflow: hidden;
 					position: static;
 					flex-direction: column;
 					height: 0;
-					transition: height 0.25s ease-out;
+					transition: height 0.25s ease;
+					background: #0f1218;
+					border: none;
 
 					.main-nav-sub-menu-arrow {
 						display: none;
@@ -482,24 +489,49 @@ $light-color: #f6f6f6;
 					&-footer {
 						width: 100%;
 						flex-direction: column;
-						background-color: #0f1218;
 						height: 0;
-						padding: 0;
-						transition: height 0.25s ease-out;
+						transition: height 0.24s ease;
+						opacity: 1;
+
+						li {
+							opacity: 1;
+						}
+
 						a {
 							font-size: 1.4rem;
+							padding: 0;
+
+							span {
+								filter: brightness(70%);
+							}
+
+							img {
+								filter: brightness(100%);
+							}
+
+							&:hover {
+								span {
+									filter: brightness(70%);
+								}
+
+								img {
+									filter: brightness(100%);
+								}
+							}
 						}
 					}
 
 					&-content {
+						padding: 0;
+						border-bottom: none;
+
 						&-blizzard,
 						&-activision,
 						&-competitions {
-							padding: 1rem 2rem;
 							width: 100%;
-							border: none;
 							height: 0;
-							transition: height 0.25s ease-out;
+							transition: height 0.24s ease;
+							border-left: 0.5rem solid rgba($primary-color, 0.1);
 
 							&-title {
 								font-size: 1.3rem;
@@ -512,6 +544,7 @@ $light-color: #f6f6f6;
 								width: 100%;
 								overflow: hidden;
 								flex-wrap: nowrap;
+								transition: height 0.24s ease;
 							}
 
 							li {
@@ -537,13 +570,17 @@ $light-color: #f6f6f6;
 							}
 						}
 
-						&-blizzard {
+						&-blizzard,
+						&-activision {
+							padding: 1rem 2rem;
 							border-bottom: 0.1rem solid #363c469f;
 						}
 
 						&-competitions {
-							padding: 0 2rem;
 							justify-content: center;
+							padding: 0 2rem;
+							overflow: hidden;
+
 							li a img {
 								width: 2.4rem;
 							}
@@ -552,12 +589,15 @@ $light-color: #f6f6f6;
 
 					&-footer {
 						border: none;
+						padding: 0 2rem;
+						border-left: 0.5rem solid rgba($primary-color, 0.1);
+
 						ul {
 							width: 100%;
 
 							a {
-								font-size: 1.4rem;
-								padding: 1rem 2rem;
+								padding: 1rem 0;
+								filter: brightness(100%);
 
 								i {
 									font-size: 1.8rem;
@@ -577,21 +617,14 @@ $light-color: #f6f6f6;
 				.main-nav-esports {
 					&-content {
 						border: none;
-					}
 
-					&-footer {
-						a {
-							padding: 0 2rem;
+						&-competitions {
+							li {
+								a {
+									padding: 0.75rem 0;
+								}
+							}
 						}
-					}
-				}
-
-				// mobile games & esports sub menu open transition
-				.mobile-nav-submenu-open {
-					li,
-					.main-nav-esports-footer,
-					.main-nav-games-footer {
-						opacity: 1;
 					}
 				}
 
@@ -618,18 +651,31 @@ $light-color: #f6f6f6;
 
 				// mobile esports sub menu open transition
 				.mobile-nav-submenu-open.main-nav-esports {
-					height: 26.2rem;
+					height: 23.5rem;
 
 					.main-nav-esports-content {
-						height: 22rem;
+						height: 20rem;
 
 						&-competitions {
-							height: 22rem;
+							height: 20rem;
 						}
 					}
 
 					.main-nav-esports-footer {
-						height: 4rem;
+						height: 3.3rem;
+					}
+				}
+
+				.active-link {
+					filter: brightness(100%);
+
+					&::before {
+						content: "";
+						width: 0.5rem;
+						height: 4.7rem;
+						position: absolute;
+						left: 0;
+						background-color: $primary-color;
 					}
 				}
 			}
@@ -638,13 +684,13 @@ $light-color: #f6f6f6;
 				background: #151a23;
 				position: fixed;
 				top: 0;
-				right: -10rem;
+				right: -35rem;
 				height: 100%;
 				width: 45%;
 				z-index: 10;
-				// transition: right 0.15s ease-in;
-				transition: right 0.5s 0.5s ease-in;
+				transition: right 0.5s;
 				visibility: visible;
+				opacity: 0;
 
 				li {
 					&:first-of-type {
@@ -694,7 +740,7 @@ $light-color: #f6f6f6;
 	}
 
 	.hmbg-main-menu-open {
-		display: block;
+		// display: block;
 		left: 0;
 
 		.main-nav-account {
@@ -703,13 +749,10 @@ $light-color: #f6f6f6;
 	}
 
 	.acc-main-menu-open {
-		display: block;
-		visibility: hidden;
-
 		.main-nav-content-right {
 			.main-nav-account {
 				right: 0;
-				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}
