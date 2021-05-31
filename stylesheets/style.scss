@@ -290,11 +290,10 @@ sup {
 
 				img {
 					width: 6.4rem;
-					filter: brightness(90%);
 				}
 
 				span {
-					filter: brightness(70%);
+					filter: brightness(80%);
 				}
 			}
 
@@ -330,22 +329,32 @@ sup {
 			display: flex;
 			align-items: center;
 			color: $light-color;
-			filter: brightness(80%);
 			font-size: 1.5rem;
-
+			
 			#main-nav-battlenet-logo {
 				width: 2rem;
 				margin-right: 0.5rem;
 			}
-
+			
 			i {
 				margin-right: 0.75rem;
 				color: $primary-color;
 				font-size: 1.8rem;
+				filter: brightness(95%);
+			}
+
+			span {
+				filter: brightness(80%);
 			}
 
 			&:hover {
-				filter: brightness(100%);
+				i,svg {
+					filter: brightness(120%);
+				}
+				
+				span {
+					filter: brightness(100%);
+				}
 			}
 		}
 	}
