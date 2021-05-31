@@ -901,12 +901,8 @@ sup {
 	height: 40rem;
 	border-bottom: 0.1rem solid #1b3b61;
 	position: relative;
-
-	&-slide {
-		display: none;
-		height: inherit;
-		width: 100%;
-	}
+	background-image: url(/images/careers-banner/careers-1.jpeg);
+	transition: background-image 4s ease;
 
 	&-content {
 		display: flex;
@@ -1258,11 +1254,6 @@ sup {
 	animation: heroTextFadeOut ease-in 6s;
 }
 
-.active-career-slide {
-	display: flex;
-	animation: careerSlideFade 5s 4s;
-}
-
 .active-location {
 	svg {
 		visibility: visible;
@@ -1348,16 +1339,6 @@ sup {
 
 @keyframes heroTextFadeOut {
 	95% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-	}
-}
-
-@keyframes careerSlideFade {
-	0% {
 		opacity: 1;
 	}
 

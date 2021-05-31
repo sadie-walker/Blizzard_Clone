@@ -187,27 +187,14 @@ function toggleSideMenu(e) {
 }
 
 const careerSlideshow = () => {
-    const careerSlides = document.querySelectorAll(".careers-section-slide");
-    let careerSlideIndex = 0;
-
-    // careerSlides.forEach(slide, index => {
-    //     slide.style.animation = `careerSlideFade 48s ${index / 12.5}s infinite`; 
-    // })
-
-    updateSlide();
-    setInterval(updateSlide, 4000);
-    function updateSlide(){
-        careerSlides.forEach(slide => {
-            slide.classList.remove("active-career-slide");
-        })
-        careerSlides[careerSlideIndex].classList.add("active-career-slide");
-
-        if(careerSlideIndex < (careerSlides.length - 1)){
-            careerSlideIndex++;
-        } else {
-            careerSlideIndex = 0;
-        }
-    }
+    const careerSlides = ["/images/careers-banner/careers-1.jpeg","/images/careers-banner/careers-2.jpeg","/images/careers-banner/careers-3.jpeg","/images/careers-banner/careers-4.jpeg","/images/careers-banner/careers-5.jpeg"];
+    const careerSection = document.querySelector(".careers-section");
+   
+    careerSlides.forEach((slide, index) => {
+        setTimeout(() => {
+            careerSection.style.backgroundImage = `url('${slide}')`;
+        }, index * 6000);
+    })
 }
 
 let slideIndex = 0;
@@ -324,8 +311,9 @@ const toggleLocationMenu = (e) => {
 // Start hero slideshow on page load
 window.onload = function() {
     showSlideshow(slideIndex, false);
-    careerSlideshow();
     setWindowSize();
+    careerSlideshow();
+    setInterval(careerSlideshow, 30500);
 }
 
 const setWindowSize = () => {
