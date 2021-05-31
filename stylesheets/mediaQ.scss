@@ -237,7 +237,6 @@ $light-color: #f6f6f6;
 		height: 30rem;
 
 		&-content {
-			padding: 5rem;
 
 			h2 {
 				font-size: 4rem;
@@ -864,18 +863,18 @@ $light-color: #f6f6f6;
 		height: 50rem;
 		display: flex;
 		justify-content: center;
-		align-items: flex-end;
-		background: linear-gradient(rgba(0, 0, 0, 0) 48%, rgb(29, 22, 14) 65%),
-			url(/images/careers-banner/careers-1.jpeg);
-		background-size: 120rem;
-		background-repeat: no-repeat;
-		background-position: top center;
+
+		// img {
+			
+		// }
 
 		&-content {
 			height: 18rem;
 			width: 100%;
 			padding: 0 2rem;
 			align-items: center;
+			bottom: 0;
+			top: auto;
 
 			h2 {
 				font-size: 3.2rem;
