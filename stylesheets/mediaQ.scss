@@ -362,12 +362,11 @@ $light-color: #f6f6f6;
 	}
 
 	.main-nav {
-		// display: none;
 		background: #151a23;
 		position: absolute;
 		top: 0;
 		left: -35rem;
-		width: 45%;
+		width: 32rem;
 		height: 100vh;
 		z-index: 10;
 		padding: 0;
@@ -686,11 +685,11 @@ $light-color: #f6f6f6;
 				top: 0;
 				right: -35rem;
 				height: 100%;
-				width: 45%;
+				width: 32rem;
 				z-index: 10;
-				transition: right 0.5s;
 				visibility: visible;
-				opacity: 0;
+				transition: transform 0.5s;
+				
 
 				li {
 					&:first-of-type {
@@ -751,8 +750,7 @@ $light-color: #f6f6f6;
 	.acc-main-menu-open {
 		.main-nav-content-right {
 			.main-nav-account {
-				right: 0;
-				opacity: 1;
+				transform: translateX(-35rem);
 			}
 		}
 	}
