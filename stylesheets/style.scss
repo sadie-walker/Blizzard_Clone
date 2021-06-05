@@ -170,11 +170,12 @@ sup {
 		align-items: center;
 		height: 100%;
 		color: $light-color;
-		
-		span, i{
+
+		span,
+		i {
 			filter: brightness(70%);
 		}
-		
+
 		i {
 			display: flex;
 			align-items: center;
@@ -184,7 +185,8 @@ sup {
 		}
 
 		&:hover {
-			span,i{
+			span,
+			i {
 				filter: brightness(100%);
 			}
 		}
@@ -208,10 +210,6 @@ sup {
 	visibility: hidden;
 	z-index: 10;
 	border-top: 0.1rem solid #363c46;
-
-	.main-nav-sub-menu-arrow {
-		left: 21.5rem;
-	}
 
 	&-content {
 		display: flex;
@@ -316,12 +314,12 @@ sup {
 			align-items: center;
 			color: $light-color;
 			font-size: 1.5rem;
-			
+
 			#main-nav-battlenet-logo {
 				width: 2rem;
 				margin-right: 0.5rem;
 			}
-			
+
 			i {
 				margin-right: 0.75rem;
 				color: $primary-color;
@@ -334,10 +332,11 @@ sup {
 			}
 
 			&:hover {
-				i,svg {
+				i,
+				svg {
 					filter: brightness(120%);
 				}
-				
+
 				span {
 					filter: brightness(100%);
 				}
@@ -360,10 +359,6 @@ sup {
 	visibility: hidden;
 	border-top: 0.1rem solid #363c46;
 	z-index: 10;
-
-	.main-nav-sub-menu-arrow {
-		left: 53.5rem;
-	}
 
 	&-content {
 		padding: 1rem;
@@ -453,10 +448,6 @@ sup {
 	visibility: hidden;
 	z-index: 10;
 	border: 0.1rem solid #363c469f;
-
-	.main-nav-sub-menu-arrow {
-		right: 3.8rem;
-	}
 
 	&-content {
 		&-items {
@@ -1210,29 +1201,29 @@ sup {
 		transform: rotate(180deg);
 	}
 
-	&::after{
+	&::after {
 		content: "";
 		position: absolute;
-		top: 5.2rem;
+		top: 5.5rem;
 		right: -0.2rem;
+		width: 0;
+		height: 0;
+		border-left: 0.6rem solid transparent;
+		border-right: 0.6rem solid transparent;
+		border-bottom: 0.6rem solid #283244;
+		z-index: 11;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 5.3rem;
+		right: -0.3rem;
 		width: 0;
 		height: 0;
 		border-left: 0.7rem solid transparent;
 		border-right: 0.7rem solid transparent;
 		border-bottom: 0.7rem solid #363c46;
-		z-index: 11;
-	}
-
-	&::before{
-		content: "";
-		position: absolute;
-		top: 5.1rem;
-		right: -0.3rem;
-		width: 0;
-		height: 0;
-		border-left: 0.8rem solid transparent;
-		border-right: 0.8rem solid transparent;
-		border-bottom: 0.8rem solid #363c46;
 		z-index: 11;
 	}
 }
