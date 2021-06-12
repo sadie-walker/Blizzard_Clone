@@ -645,8 +645,10 @@ $light-color: #f6f6f6;
 						width: 0.5rem;
 						height: 4.7rem;
 						position: absolute;
+						top:0;
 						left: 0;
 						background-color: $primary-color;
+						border: none;
 					}
 				}
 			}
