@@ -544,6 +544,20 @@ sup {
 
 	&-slider {
 		height: 51rem;
+		overflow: hidden;
+		background-color: rgb(0, 0, 0);
+		position: relative;
+
+		.hero-btns-container {
+			max-width: 170rem;
+			height: 51rem;
+			position: absolute;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
 
 		&:hover {
 			.hero-arrow {
@@ -557,7 +571,7 @@ sup {
 			color: $primary-color;
 			border: 0.1rem solid #263945;
 			position: absolute;
-			top: 29rem;
+			top: 20rem;
 			padding: 2.5rem 1rem;
 			z-index: 5;
 
@@ -566,11 +580,11 @@ sup {
 			}
 
 			&.prev {
-				left: 6%;
+				left: 2rem;
 			}
 
 			&.next {
-				right: 6%;
+				right: 2rem;
 			}
 
 			&:hover {
@@ -582,24 +596,76 @@ sup {
 
 		.main-hero-slide {
 			height: inherit;
-			background-color: black;
+			position: relative;
+
+			.hero-img-container {
+				margin: 0 auto;
+				height: 100%;
+				width: 250rem;
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -125rem;
+				z-index: 2;
+
+				&::before {
+					content: "";
+					height: inherit;
+					width: 38rem;
+					position: absolute;
+					top: 0;
+					left: 0rem;
+					z-index: 2;
+					background: linear-gradient(
+						to right,
+						rgb(0, 0, 0),
+						rgb(0, 0, 0) 20%,
+						transparent 100%
+					);
+				}
+
+				&::after {
+					content: "";
+					height: inherit;
+					width: 38rem;
+					position: absolute;
+					top: 0;
+					right: 0;
+					z-index: 2;
+					background: linear-gradient(
+						to left,
+						rgb(0, 0, 0),
+						rgb(0, 0, 0) 20%,
+						transparent 100%
+					);
+				}
+			}
 
 			.hero-banner-bg-img {
 				max-height: 100%;
-				object-fit: none;
-				object-position: -30rem bottom;
+			}
+
+			.content-container {
+				width: 160rem;
+				height: 51rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				z-index: 3;
 			}
 
 			&-content {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
-				height: 45rem;
-				padding: 0 10%;
-				margin: 1rem 0 5rem;
-				position: absolute;
-				top: 6rem;
+				width: 100%;
+				margin: 0 auto;
+				padding: 0 8rem 5rem;
 				visibility: hidden;
+				z-index: 3;
 
 				* {
 					cursor: pointer;
@@ -617,7 +683,7 @@ sup {
 					color: #fff;
 					text-shadow: 0.5rem 2rem 2rem #1e120e;
 					text-transform: uppercase;
-					margin-bottom: 3rem;
+					margin-bottom: 2rem;
 				}
 
 				a {

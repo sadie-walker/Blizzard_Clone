@@ -24,21 +24,16 @@ $light-color: #f6f6f6;
 
 	.main-hero {
 		&-slider {
-			.hero-arrow {
-				&.prev {
-					left: 1.5%;
-				}
-				&.next {
-					right: 1.5%;
-				}
-			}
-
 			.main-hero-slide {
-				&-content {
-					padding: 0 5.5%;
+				.content-container {
+					width: 100vw;
 
-					h2 {
-						margin-bottom: 2rem;
+					&-content {
+						// padding: 0 5.5%;
+
+						h2 {
+							margin-bottom: 2rem;
+						}
 					}
 				}
 			}
@@ -128,15 +123,6 @@ $light-color: #f6f6f6;
 
 	.main-hero {
 		&-slider {
-			.hero-arrow {
-				&.prev {
-					left: 2rem;
-				}
-				&.next {
-					right: 2rem;
-				}
-			}
-
 			.main-hero-slide {
 				&-content {
 					padding: 0 9rem;
@@ -237,7 +223,6 @@ $light-color: #f6f6f6;
 		height: 30rem;
 
 		&-content {
-
 			h2 {
 				font-size: 4rem;
 			}
@@ -262,10 +247,6 @@ $light-color: #f6f6f6;
 	}
 
 	.main-nav-games {
-		.main-nav-sub-menu-arrow {
-			left: 17rem;
-		}
-
 		.main-nav-games-content {
 			.main-nav-games-item {
 				margin-right: 0;
@@ -274,10 +255,6 @@ $light-color: #f6f6f6;
 	}
 
 	.main-nav-esports {
-		.main-nav-sub-menu-arrow {
-			left: 40.3rem;
-		}
-
 		&-content {
 			&-competitions {
 				width: 75rem;
@@ -478,10 +455,6 @@ $light-color: #f6f6f6;
 					transition: height 0.25s ease;
 					background: #0f1218;
 					border: none;
-
-					.main-nav-sub-menu-arrow {
-						display: none;
-					}
 
 					&-content,
 					&-footer {
@@ -688,7 +661,6 @@ $light-color: #f6f6f6;
 				z-index: 10;
 				visibility: visible;
 				transition: transform 0.5s;
-				
 
 				li {
 					&:first-of-type {
@@ -760,19 +732,7 @@ $light-color: #f6f6f6;
 		&-slider {
 			height: 40rem;
 
-			.hero-arrow {
-				top: 19rem;
-				padding: 2.25rem 0.8rem;
-
-				i {
-					font-size: 2.4rem;
-				}
-			}
-
 			.main-hero-slide {
-				// .hero-banner-bg-img {
-				// }
-
 				&-content {
 					height: 38.5rem;
 					width: 100%;
@@ -865,7 +825,7 @@ $light-color: #f6f6f6;
 		justify-content: center;
 
 		// img {
-			
+
 		// }
 
 		&-content {
