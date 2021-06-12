@@ -430,7 +430,8 @@ $light-color: #f6f6f6;
 			.main-nav-item {
 				border-bottom: 0.1rem solid #9a9a9c36;
 
-				&-link {
+				&-link,
+				span, i {
 					filter: brightness(80%);
 				}
 
@@ -580,6 +581,10 @@ $light-color: #f6f6f6;
 										width: 2.5rem;
 									}
 								}
+							}
+
+							a, i, svg{
+								filter: brightness(100%);
 							}
 						}
 					}
