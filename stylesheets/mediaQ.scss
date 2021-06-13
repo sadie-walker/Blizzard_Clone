@@ -927,13 +927,23 @@ $light-color: #f6f6f6;
 // Mobile Phones
 @media only screen and (max-width: 480px) {
 	.main-hero {
-		&-slider-content {
-			img {
-				width: 18rem;
-			}
+		&-slider {
+			.main-hero-slide{
 
-			h2 {
-				font-size: 4.5rem;
+				&-content{
+					img {
+						width: 18rem;
+					}
+		
+					h2 {
+						font-size: 2.8rem;
+					}
+
+					a {
+						font-size: 1.8rem;
+					}
+				}
+
 			}
 		}
 	}
@@ -957,6 +967,50 @@ $light-color: #f6f6f6;
 						margin-right: 15.5rem;
 					}
 				}
+			}
+		}
+	}
+
+	.app-connectivity{
+		&-content{
+			.battle-net-download{
+				h2 {
+					font-size: 2.4rem;
+				}
+
+				ul li, 
+				ul li i {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	.main-footer{
+		padding: 0;
+
+		&-content{
+			padding-top: 2rem;
+
+			.primary-footer-links,
+			.secondary-footer-links{
+				width: 30rem;
+			}
+
+			#trademark{
+				line-height: 1.4rem;
+
+				p, a, p:first-of-type {
+					font-size: 1.1rem;
+				}
+			}
+
+			#footer-battlenet {
+				flex-direction: column;
+			}
+
+			.secondary-footer-links{
+				flex-wrap: wrap;
 			}
 		}
 	}
