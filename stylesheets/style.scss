@@ -1379,7 +1379,7 @@ sup {
 
 @keyframes heroImgAnimation {
 	0% {
-		object-position: 0rem bottom;
+		transform: translateX(10rem);
 		opacity: 0;
 	}
 
@@ -1388,7 +1388,7 @@ sup {
 	}
 
 	10% {
-		object-position: -25rem bottom;
+		transform: translateX(5rem);
 	}
 
 	95% {
@@ -1396,7 +1396,7 @@ sup {
 	}
 
 	100% {
-		object-position: -30rem bottom;
+		transform: translateX(0);
 	}
 }
 

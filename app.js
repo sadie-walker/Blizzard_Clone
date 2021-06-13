@@ -277,7 +277,7 @@ const showSlideshow = (n, slideSelected) => {
 
     // Display Active Slide & Add Animation
     slides[slideIndex].style.display = "block";
-    slides[slideIndex].firstElementChild.classList.add("hero-img-animation");
+    slides[slideIndex].firstElementChild.firstElementChild.classList.add("hero-img-animation");
 
     // Active Transition Bar
     barItems[slideIndex].classList.add("active-trans-bar");
@@ -288,7 +288,7 @@ const showSlideshow = (n, slideSelected) => {
     }
 
     // Add Animation to Slide Text
-    const childArry = Array.from(slides[slideIndex].lastElementChild.children)
+    const childArry = Array.from(slides[slideIndex].lastElementChild.firstElementChild.children)
     childArry.forEach((child, index) => {
         child.style.animation = `heroTextAnimation 6s ${index / 2.25}s forwards`;
         child.classList.add("hero-text-fade-out");
