@@ -702,6 +702,11 @@ $light-color: #f6f6f6;
 						}
 					}
 
+					&:nth-of-type(3){
+						display: block;
+						border-top: 0.1rem solid #363c46;
+					}
+
 					a {
 						filter: brightness(80%);
 						padding: 0rem;

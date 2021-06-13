@@ -470,7 +470,8 @@ sup {
 					}
 				}
 
-				&:first-of-type {
+				&:first-of-type,
+				&:nth-of-type(3) {
 					display: none;
 				}
 
@@ -478,7 +479,7 @@ sup {
 					padding: 2rem;
 				}
 
-				&:nth-of-type(n + 3) {
+				&:nth-of-type(n + 4) {
 					border-top: 0.1rem solid #363c46;
 				}
 
