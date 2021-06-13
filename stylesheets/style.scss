@@ -605,50 +605,6 @@ sup {
 			height: inherit;
 			position: relative;
 
-			.hero-img-container {
-				margin: 0 auto;
-				height: 100%;
-				width: 250rem;
-				overflow: hidden;
-				position: absolute;
-				top: 0;
-				left: 50%;
-				margin-left: -125rem;
-				z-index: 2;
-
-				&::before {
-					content: "";
-					height: inherit;
-					width: 38rem;
-					position: absolute;
-					top: 0;
-					left: 0rem;
-					z-index: 2;
-					background: linear-gradient(
-						to right,
-						rgb(0, 0, 0),
-						rgb(0, 0, 0) 20%,
-						transparent 100%
-					);
-				}
-
-				&::after {
-					content: "";
-					height: inherit;
-					width: 38rem;
-					position: absolute;
-					top: 0;
-					right: 0;
-					z-index: 2;
-					background: linear-gradient(
-						to left,
-						rgb(0, 0, 0),
-						rgb(0, 0, 0) 20%,
-						transparent 100%
-					);
-				}
-			}
-
 			.hero-banner-bg-img {
 				max-height: 100%;
 			}
@@ -722,6 +678,51 @@ sup {
 			height: 100%;
 			margin: 0 auto;
 		}
+	}
+}
+
+
+.img-gradient-container {
+	margin: 0 auto;
+	height: 100%;
+	width: 250rem;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -125rem;
+	z-index: 2;
+
+	&::before {
+		content: "";
+		height: inherit;
+		width: 38rem;
+		position: absolute;
+		top: 0;
+		left: 0rem;
+		z-index: 2;
+		background: linear-gradient(
+			to right,
+			rgb(0, 0, 0),
+			rgb(0, 0, 0) 20%,
+			transparent 100%
+		);
+	}
+
+	&::after {
+		content: "";
+		height: inherit;
+		width: 38rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		background: linear-gradient(
+			to left,
+			rgb(0, 0, 0),
+			rgb(0, 0, 0) 20%,
+			transparent 100%
+		);
 	}
 }
 
@@ -964,17 +965,37 @@ sup {
 	border-bottom: 0.1rem solid #1b3b61;
 	position: relative;
 	background-image: url(/images/careers-banner/careers-1.jpeg);
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: center;
 	transition: background-image 4s ease;
+	overflow: hidden;
+
+	.img-gradient-container{
+		max-width: 195rem;
+		left: 0;
+		right: 0;
+		margin: auto;
+
+		&::before,
+		&::after{
+			width: 30rem;
+		}
+	}
 
 	&-content {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		height: 100%;
-		padding: 5rem 18rem 5rem;
 		color: #fff;
 		position: absolute;
 		top: 0;
+		left:0;
+		right: 0;
+		margin: auto;
+		max-width: 160rem;
+		z-index: 2;
 
 		h2,
 		h3 {

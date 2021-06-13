@@ -3,6 +3,15 @@ $primary-color: rgb(0, 174, 255);
 $secondary-color: rgb(0, 111, 178);
 $light-color: #f6f6f6;
 
+// Large Screens
+@media only screen and (max-width: 1900px) {
+	.careers-section {
+		.img-gradient-container{
+			width: 100vw;
+		}
+	}
+}
+
 // Laptops
 @media only screen and (max-width: 1600px) {
 	.main-nav {
@@ -29,7 +38,6 @@ $light-color: #f6f6f6;
 					width: 100vw;
 
 					&-content {
-						// padding: 0 5.5%;
 
 						h2 {
 							margin-bottom: 2rem;
@@ -79,6 +87,7 @@ $light-color: #f6f6f6;
 			}
 		}
 	}
+
 	.main-nav-games {
 		height: 36.5rem;
 
@@ -220,7 +229,17 @@ $light-color: #f6f6f6;
 	}
 
 	.careers-section {
-		height: 30rem;
+		height: 36rem;
+		
+		.img-gradient-container{
+			&::before{
+				width: 76rem;
+			}
+
+			&::after{
+				width: 0rem;
+			}
+		}
 
 		&-content {
 			h2 {
@@ -722,7 +741,6 @@ $light-color: #f6f6f6;
 	}
 
 	.hmbg-main-menu-open {
-		// display: block;
 		left: 0;
 
 		.main-nav-account {
@@ -833,12 +851,27 @@ $light-color: #f6f6f6;
 
 	.careers-section {
 		height: 50rem;
+		background-size: auto 41.25rem;
+		background-position: top center;
 		display: flex;
 		justify-content: center;
 
-		// img {
+		.img-gradient-container{
+			height: 45rem;
 
-		// }
+			&::before{
+				bottom: 0;
+				top: auto;
+				width: 100vw;
+				height: 20rem;
+				background: linear-gradient(
+					to top,
+					rgb(0, 0, 0),
+					rgb(0, 0, 0) 20%,
+					transparent 100%
+				);
+			}
+		}
 
 		&-content {
 			height: 18rem;
