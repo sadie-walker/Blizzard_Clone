@@ -957,6 +957,10 @@ $light-color: #f6f6f6;
 					width: 15rem;
 					height: 20rem;
 					margin: 0 0.25rem 0.5rem;
+
+					&:last-of-type{
+						margin-right: 15.5rem;
+					}
 				}
 			}
 		}
