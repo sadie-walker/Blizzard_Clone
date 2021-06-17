@@ -24,9 +24,9 @@ let locationSelect = document.querySelector(".location-selector");
 
 // Lists & footers
 const gamesNavItems = document.querySelectorAll(".main-nav-games-item");
-const gamesNavFooter = document.querySelector(".main-nav-games-footer"); 
+const gamesNavFooter = document.querySelector(".main-nav-games-footer ul"); 
 const esportsNavItems = document.querySelectorAll(".main-nav-esports-content-competitions li");
-const esportsNavFooter = document.querySelector(".main-nav-esports-footer"); 
+const esportsNavFooter = document.querySelector(".main-nav-esports-footer a"); 
 
 // Variables
 const subMenus = [mainNavGamesMenu, mainNavEsportsMenu, mainNavAccMenu];
