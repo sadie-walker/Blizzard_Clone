@@ -312,7 +312,8 @@ hamburgerBtn.addEventListener("click", toggleSideMenu);
 mobileAccBtn.addEventListener("click", toggleSideMenu);
 hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
 mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
-locationSelect.addEventListener("click", toggleLocationMenu)
+locationSelect.addEventListener("click", toggleLocationMenu);
+
 window.addEventListener("resize", function(){
     closeSubMenus();
     setWindowSize();
