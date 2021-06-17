@@ -260,32 +260,12 @@ const showSlideshow = (n, slideSelected) => {
         slideIndex = n;
     }
 
-    // Transition Bar Progress animation
-    const barProgression = (bar, slideSelected) => {
-        let width = 0;
-        let barInterval = setInterval(frame, 60);
-        function frame(){
-            if(width >= 100 || slideSelected){
-                clearInterval(barInterval);
-                bar.style.width = "0%";
-            } else {
-                width++;
-                bar.style.width = `${width}%`;
-            }
-        }
-    }
-
     // Display Active Slide & Add Animation
     slides[slideIndex].style.display = "block";
     slides[slideIndex].firstElementChild.firstElementChild.classList.add("hero-img-animation");
 
     // Active Transition Bar
     barItems[slideIndex].classList.add("active-trans-bar");
-    if(!slideSelected){
-        barProgression(barItems[slideIndex].firstElementChild, false);
-    } else {
-        barProgression(barItems[slideIndex].firstElementChild, true);
-    }
 
     // Add Animation to Slide Text
     const childArry = Array.from(slides[slideIndex].lastElementChild.firstElementChild.children)

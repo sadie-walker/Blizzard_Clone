@@ -1325,6 +1325,10 @@ sup {
 	background-color: #0086ca;
 	height: +1rem;
 
+	.transition-bar-item-progress {
+		animation: progressBarWidth 6s linear;
+	}
+
 	&:hover {
 		background-color: #0086ca;
 	}
@@ -1428,5 +1432,15 @@ sup {
 
 	100% {
 		opacity: 0;
+	}
+}
+
+@keyframes progressBarWidth {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
 	}
 }
