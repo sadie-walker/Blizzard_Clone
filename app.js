@@ -1,189 +1,182 @@
-// Body
-let body = document.querySelector("body");
-
-// Navbars
-let mainNav = document.querySelector(".main-nav");
+// Links
+const mainNavGamesBtn = document.getElementById("games-menu-button");
+const mainNavEsportsBtn = document.getElementById("esports-menu-button");
+const mainNavAccBtn = document.getElementById("account-menu-button");
+const hamburgerBtn = document.getElementById("main-hamburger-button");
+const mobileAccBtn = document.getElementById("mobile-account-button");
+const hamburgerCloseBtn = document.getElementById("mobile-hamburger-close-button");
+const mobileAccCloseBtn = document.getElementById("mobile-account-close-button");
+const locationSelect = document.querySelector(".location-selector");
+let bgOverlay = document.querySelector(".background-overlay");
 let mainNavLinks = document.querySelectorAll(".main-nav-item-link");
-let mainNavGamesMenu = document.querySelector(".main-nav-games");
-let mainNavEsportsMenu = document.querySelector(".main-nav-esports");
-let mainNavAccMenu = document.querySelector(".main-nav-account");
-let mobileMainNav = document.querySelector(".mobile-main-nav");
 
-// Overlay
-let menuBgOverlay = document.querySelector(".background-overlay");
 
-// Buttons
-let mainNavGamesBtn = document.getElementById("games-menu-button");
-let mainNavEsportsBtn = document.getElementById("esports-menu-button");
-let mainNavAccBtn = document.getElementById("account-menu-button");
-let hamburgerBtn = document.getElementById("main-hamburger-button");
-let mobileAccBtn = document.getElementById("mobile-account-button");
-let hamburgerCloseBtn = document.getElementById("mobile-hamburger-close-button");
-let mobileAccCloseBtn = document.getElementById("mobile-account-close-button");
-let locationSelect = document.querySelector(".location-selector");
-
-// Lists & footers
-const gamesNavItems = document.querySelectorAll(".main-nav-games-item");
-const gamesNavFooter = document.querySelector(".main-nav-games-footer ul"); 
-const esportsNavItems = document.querySelectorAll(".main-nav-esports-content-competitions li");
-const esportsNavFooter = document.querySelector(".main-nav-esports-footer a"); 
+// Transition Bars
+const barItems = document.querySelectorAll(".transition-bar-item");
 
 // Variables
-const subMenus = [mainNavGamesMenu, mainNavEsportsMenu, mainNavAccMenu];
-let slideshowCounter = 0;
+let slideIndex = 0;
 let mobile;
 
-//Open or close games, esports or account menus 
-const toggleMainSubMenus = e => {
-    
-    // Set selected link as active
-    setActiveLink(e);
-    
-    // Check if mobile menu or desktop menu
-    if(!mobile){
-        // Add overlay to inactive links
-        navOverlay(e);
-        
-        // Toggle animation for menu items
-        handleMenuAnimation(e);
-    } 
-
-
-    // Open Submenus
-    if(e.target.id === "games-menu-button" || e.target.parentElement.id === "games-menu-button"){
-        // Toggle visibility of games menu
-        toggleMenuVisibility(mainNavGamesMenu, mainNavEsportsMenu, mainNavAccMenu);
-    } else if (e.target.id === "esports-menu-button"|| e.target.parentElement.id === "esports-menu-button"){
-        // Toggle visibility of esports menu
-        toggleMenuVisibility(mainNavEsportsMenu, mainNavGamesMenu, mainNavAccMenu);
+// Add BG Overlay
+const toggleBgOverlay = (e) => {
+    if(e && (e.target.classList.contains("active") || e.target.closest("a").classList.toString().indexOf("active") !== -1)){
+        bgOverlay.classList.add("toggle-visibility");
     } else {
-        toggleMenuVisibility(mainNavAccMenu, mainNavEsportsMenu, mainNavGamesMenu);
+        bgOverlay.classList.remove("toggle-visibility");
     }
 }
 
-// Set selected link as active
-const setActiveLink = e => {
-    // Check for text or arrow selection
-    if(e.target.id === "games-menu-button" || e.target.id === "esports-menu-button" || e.target.id === "account-menu-button"){
-        // Make selected link active
-        e.target.classList.toggle("active-link");
+// Open desktop sub menus (games/esports/acc)
+const toggleSubMenus = (e) => {
 
-    } else if(e.target.parentElement.id === "games-menu-button" || e.target.parentElement.id === "esports-menu-button" || e.target.parentElement.id === "account-menu-button")
-    {
-        // Make selected link active
-        e.target.parentElement.classList.toggle("active-link");
+    // Set selected link as active
+    const setActiveLink = e => {
+        e.target.closest("a").classList.toggle("active-link");
+        e.target.closest("a").classList.remove("inactive-link");
     }
-}
 
-// Add or remove incative link overlay
-const navOverlay = e => {
-    if(e){
+    // Set unselected links a inactive
+    const setInactiveLinks = (e) => {
         mainNavLinks.forEach(link => {
-            if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
-                // Add BG overlay
-                menuBgOverlay.classList.add("toggle-visibility");
-                if(link === e.target || link === e.target.parentElement){
-                    // Remove overlay from active link
-                    link.classList.remove("main-nav-overlay");
-                } else {
-                    // Add overlay to all inactive links
-                    link.classList.add("main-nav-overlay");
+            if(e && e.target.closest("a").classList.contains("active-link")){
+                if(link === e.target.closest("a")){
+                    // Remove inactive class from active link
+                    link.classList.remove("inactive-link");
+                } else{
+                    // Remove active link from previous active link
+                    link.classList.add("inactive-link");
                     link.classList.remove("active-link");
                 }
             } else {
-                    // Remove all overlays
-                    menuBgOverlay.classList.remove("toggle-visibility");   
-                    link.classList.remove("main-nav-overlay");
+                // Remove all classes  
+                link.classList.remove("inactive-link");
+                link.classList.remove("active-link");
             }
-        });
-    } else {
-        menuBgOverlay.classList.remove("toggle-visibility"); 
-        mainNavLinks.forEach(link => {
-            link.classList.remove("active-link");
-            link.classList.remove("main-nav-overlay");
         })
     }
-}
 
-const handleMenuAnimation = e => {
-    // games & esport nav item animation
-    const navItemAnimation = e => {
-        if(e.target.id === "games-menu-button" || e.target.parentElement.id === "games-menu-button"){
-            gamesNavItems.forEach((item, index) => {
-                item.style.animation = `navImageFade 0.2s ease-out ${index / 20}s forwards`;
-            })
-            gamesNavFooter.style.animation = `navImageFade 0.2s ease-out 0.9s forwards`;
-        } else {
-            esportsNavItems.forEach((item, index) => {
-                item.style.animation = `navImageFade 0.2s ease-out ${index / 12.5}s forwards`;
-            })
-            esportsNavFooter.style.animation = `navImageFade 0.2s ease-out 0.5s forwards`;
+    const handleMenuAnimation = e => {
+        // Lists & footers
+        const gamesNavItems = document.querySelectorAll(".main-nav-games-item");
+        const gamesNavFooter = document.querySelector(".main-nav-games-footer ul"); 
+        const esportsNavItems = document.querySelectorAll(".main-nav-esports-content-competitions li");
+        const esportsNavFooter = document.querySelector(".main-nav-esports-footer a"); 
+
+        // games & esport nav item animation
+        const navItemAnimation = e => {
+            if(e.target.closest("#games-menu-button")){
+                gamesNavItems.forEach((item, index) => {
+                    item.style.animation = `navImageFade 0.2s ease-out ${index / 20}s forwards`;
+                })
+                gamesNavFooter.style.animation = `navImageFade 0.2s ease-out 0.9s forwards`;
+            } else {
+                esportsNavItems.forEach((item, index) => {
+                    item.style.animation = `navImageFade 0.2s ease-out ${index / 12.5}s forwards`;
+                })
+                esportsNavFooter.style.animation = `navImageFade 0.2s ease-out 0.5s forwards`;
+            }
         }
-    }
+        
+        // Remove item animation
+        const removeAnimation = (itemList, footer) => { 
+            itemList.forEach(item => {
+                item.style.animation = null;
+            })
+            footer.style.animation = null;
+        }
     
-    // Remove item animation
-    const removeAnimation = (itemList, footer) => { 
-        itemList.forEach(item => {
-            item.style.animation = null;
-        })
-        footer.style.animation = null;
-    }
-
-    // Check for active menu
-    if(e.target.classList.contains("active-link") || e.target.parentElement.classList.contains("active-link")){
-        navItemAnimation(e);
-        if(e.target.id === "games-menu-button" || e.target.parentElement.id === "games-menu-button"){
-            removeAnimation(esportsNavItems, esportsNavFooter);
+        // Check for active menu
+        if(e.target.closest("a").classList.contains("active-link")){
+            navItemAnimation(e);
+            if(e.target.closest("#games-menu-button")){
+                removeAnimation(esportsNavItems, esportsNavFooter);
+            } else {
+                removeAnimation(gamesNavItems, gamesNavFooter);
+            }
         } else {
             removeAnimation(gamesNavItems, gamesNavFooter);
+            removeAnimation(esportsNavItems, esportsNavFooter);
         }
-    } else {
-        removeAnimation(gamesNavItems, gamesNavFooter);
-        removeAnimation(esportsNavItems, esportsNavFooter);
     }
-}
 
-const toggleMenuVisibility = (menuOn, menuOff1, menuOff2) => {
+    // Open Submenus
+    const openCloseMenus = (e) => {
+        const subMenus = document.querySelectorAll(".sub-menu-nav-item nav");
+
+        subMenus.forEach(menu => {
+            if(e && menu === e.target.closest("a").nextElementSibling){
+                if(!mobile){
+                    menu.classList.toggle("toggle-visibility");
+                } else{
+                    menu.classList.toggle("mobile-nav-submenu-open");
+                }
+            } else{
+                if(!mobile){
+                    menu.classList.remove("toggle-visibility");
+                } else {
+                    menu.classList.remove("mobile-nav-submenu-open");
+                }
+            }
+        })
+    }
+
+    if(e){    
+        // Set selected link as active
+        setActiveLink(e);
+
+        if(!mobile){
+            // Toggle animation for menu items
+            handleMenuAnimation(e);
+        }
+
+    } else{       
+        // Remove bg overlay if screen resized
+        toggleBgOverlay(false);
+    }
+
+    // Set non-selected links as inactive
+    setInactiveLinks(e);
+
     if(!mobile){
-        menuOn.classList.toggle("toggle-visibility");
-        menuOff1.classList.remove("toggle-visibility");
-        menuOff2.classList.remove("toggle-visibility");
-    } else {
-        menuOn.classList.toggle("mobile-nav-submenu-open");
-        menuOff1.classList.remove("mobile-nav-submenu-open");
-        menuOff2.classList.remove("mobile-nav-submenu-open");
+        // Add bg overlay
+        toggleBgOverlay(e);
     }
+
+    // Open submenu
+    openCloseMenus(e);
 }
 
-const closeSubMenus = () => {
-    subMenus.forEach(menu => {
-        menu.classList.remove("toggle-visibility");
-    })
-    navOverlay();
-}
+const toggleMobileMenus = (e) => {
+    let body = document.querySelector("body");
+    let mainNav = document.querySelector(".main-nav");
+    let mobileMainNav = document.querySelector(".mobile-main-nav");
 
-// Open mobile modal menus (hamburger or account menu)
-function toggleSideMenu(e) {
-    body.style.overflowY = "hidden";
-    menuBgOverlay.classList.add("toggle-visibility");
+    // Open mobile modal menus (hamburger / account menu)
+        body.style.overflowY = "hidden";
+        mobileMainNav.classList.add("mobile-navbar-overlay");
 
-    if(e.target.id === "main-hamburger-button"){
-        mobileMainNav.classList.add("mobile-nav-overlay");
-        mainNav.classList.add("hmbg-main-menu-open");
-        mainNav.classList.remove("acc-main-menu-open");
-    } else if(e.target.id === "mobile-account-button"){
-        mobileMainNav.classList.add("mobile-nav-overlay");
-        mainNav.classList.add("acc-main-menu-open");
-        mainNav.classList.remove("hmbg-main-menu-open"); 
-    } else {
-        // close buttons
-        mainNav.classList.remove("hmbg-main-menu-open");
-        mainNav.classList.remove("acc-main-menu-open");
-        mobileMainNav.classList.remove("mobile-nav-overlay");
-        menuBgOverlay.classList.remove("toggle-visibility");
+        if(e && e.target.id === "main-hamburger-button"){
+            mainNav.classList.add("hmbg-main-menu-open");
+            mainNav.classList.remove("acc-main-menu-open");
+            hamburgerBtn.classList.add("active");
+            toggleBgOverlay(e);
+        } else if(e && e.target.id === "mobile-account-button"){
+            mainNav.classList.add("acc-main-menu-open");
+            mainNav.classList.remove("hmbg-main-menu-open"); 
+            mobileAccBtn.classList.add("active");
+            toggleBgOverlay(e);
+        } else {
+            // close buttons
+            mainNav.classList.remove("hmbg-main-menu-open");
+            mainNav.classList.remove("acc-main-menu-open");
+            mobileMainNav.classList.remove("mobile-navbar-overlay");
+            hamburgerBtn.classList.remove("active");
+            mobileAccBtn.classList.remove("active");
+            toggleBgOverlay(false);
 
-        body.style.overflowY = "visible";
-    }
+            body.style.overflowY = "visible";
+        }
 }
 
 const careerSlideshow = () => {
@@ -197,9 +190,6 @@ const careerSlideshow = () => {
     })
 }
 
-let slideIndex = 0;
-const barItems = document.querySelectorAll(".transition-bar-item");
-
 const plusSlides = n => {
     showSlideshow(slideIndex+n, true);
     clearTimeout(slideshowTimeout);
@@ -209,7 +199,6 @@ const plusSlides = n => {
         barItems[barItems.length-1].firstElementChild.style.display = "none";
         barItems[slideIndex].nextElementSibling.firstElementChild.style.display = "none";
     } else if (slideIndex === barItems.length-1) {
-        console.log(barItems[slideIndex]);
         barItems[slideIndex].previousElementSibling.firstElementChild.style.display = "none";
         barItems[0].firstElementChild.style.display = "none";
     } else {
@@ -260,7 +249,7 @@ const showSlideshow = (n, slideSelected) => {
         slideIndex = n;
     }
 
-    // Display Active Slide & Add Animation
+    // Display Active Slide & Add Img Animation
     slides[slideIndex].style.display = "block";
     slides[slideIndex].firstElementChild.firstElementChild.classList.add("hero-img-animation");
 
@@ -278,22 +267,18 @@ const showSlideshow = (n, slideSelected) => {
 // Toggle location selection menu
 const toggleLocationMenu = (e) => {
     const locations = document.querySelectorAll(".location-options li span");
+
+    // Set active location
     locations.forEach(location => {
         if(location.innerHTML.indexOf(locationSelect.firstElementChild.innerHTML) != -1){
             location.parentElement.classList.toggle("active-location");
         }
     })
+
+    // Open and close menu
     document.querySelector(".location-options").classList.toggle("toggle-visibility");
     locationSelect.classList.toggle("location-selection-active");
-    locationSelect.parentElement.classList.toggle("location-overlay");
-}
-
-// Start hero slideshow on page load
-window.onload = function() {
-    showSlideshow(slideIndex, false);
-    setWindowSize();
-    careerSlideshow();
-    setInterval(careerSlideshow, 30500);
+    toggleBgOverlay(e);
 }
 
 const setWindowSize = () => {
@@ -304,17 +289,45 @@ const setWindowSize = () => {
     }
 }
 
-// Event Listeners
-mainNavGamesBtn.addEventListener("click", toggleMainSubMenus);
-mainNavEsportsBtn.addEventListener("click", toggleMainSubMenus);
-mainNavAccBtn.addEventListener("click", toggleMainSubMenus);
-hamburgerBtn.addEventListener("click", toggleSideMenu);
-mobileAccBtn.addEventListener("click", toggleSideMenu);
-hamburgerCloseBtn.addEventListener("click", toggleSideMenu);
-mobileAccCloseBtn.addEventListener("click", toggleSideMenu);
-locationSelect.addEventListener("click", toggleLocationMenu);
+
+// Start hero slideshow on page load
+window.onload = function() {
+    showSlideshow(slideIndex, false);
+    setWindowSize();
+    careerSlideshow();
+    setInterval(careerSlideshow, 30500);
+}
 
 window.addEventListener("resize", function(){
-    closeSubMenus();
+    toggleSubMenus();
     setWindowSize();
-});
+
+    if(mobile){
+        toggleMobileMenus();
+    }
+})
+
+// Event Listeners
+mainNavGamesBtn.addEventListener("click", toggleSubMenus);
+mainNavEsportsBtn.addEventListener("click", toggleSubMenus);
+mainNavAccBtn.addEventListener("click", toggleSubMenus);
+hamburgerBtn.addEventListener("click", toggleMobileMenus);
+mobileAccBtn.addEventListener("click", toggleMobileMenus);
+hamburgerCloseBtn.addEventListener("click", toggleMobileMenus);
+mobileAccCloseBtn.addEventListener("click", toggleMobileMenus);
+locationSelect.addEventListener("click", toggleLocationMenu);
+bgOverlay.addEventListener("click", function(e){
+    if(mobile){
+        toggleMobileMenus();
+    }
+
+    mainNavLinks.forEach(link => {
+        if(link.classList.contains("active-link")){
+            toggleSubMenus();
+        }
+    })
+
+    if(locationSelect.classList.contains("location-selection-active")){
+        toggleLocationMenu();
+    }
+})
