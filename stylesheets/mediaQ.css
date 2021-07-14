@@ -1,0 +1,879 @@
+@media only screen and (max-width: 1900px) {
+  .careers-section .img-gradient-container {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .main-nav {
+    padding: 0 3rem;
+  }
+  .main-nav-esports-content-competitions li {
+    width: 18rem;
+  }
+  .main-nav-esports-content-competitions li a img {
+    width: 18rem;
+  }
+  .main-hero-slider .main-hero-slide .content-container {
+    width: 100%;
+  }
+  .main-hero-slider .main-hero-slide .content-container-content h2 {
+    margin-bottom: 2rem;
+  }
+  .games-section-content .games-list {
+    width: 120rem;
+  }
+  .games-section-content .games-list-header {
+    padding: 0 2.5rem;
+  }
+  .games-section-content .games-list-items {
+    padding: 2rem 0rem 5rem;
+  }
+  .games-section-content .games-list-items .games-list-item {
+    width: 21.5rem;
+    height: 28rem;
+  }
+  .careers-section-content {
+    padding: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main-nav-content-left {
+    font-size: 1.7rem;
+  }
+  .main-nav-content-right {
+    font-size: 1.6rem;
+  }
+  .main-nav-games {
+    height: 36.5rem;
+  }
+  .main-nav-games-content {
+    height: 31rem;
+  }
+  .main-nav-games-content-blizzard {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+  .main-nav-games-content-blizzard .main-nav-games-item {
+    -ms-flex-preferred-size: 14%;
+        flex-basis: 14%;
+  }
+  .main-nav-games-content-activision {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .main-nav-esports-content {
+    padding: 0;
+  }
+  .main-nav-esports-content-competitions {
+    width: 85rem;
+    padding: 0;
+  }
+  .main-nav-esports-content-competitions li {
+    width: 14rem;
+  }
+  .main-nav-esports-content-competitions li a {
+    padding-bottom: 1rem;
+  }
+  .main-nav-esports-content-competitions li a img {
+    width: 14rem;
+  }
+  .main-hero-slider .main-hero-slide-content img {
+    width: 23rem;
+    margin-bottom: 2.5rem;
+  }
+  .main-hero-slider .main-hero-slide-content h2 {
+    font-size: 6.4rem;
+  }
+  .main-hero .transition-bar-items {
+    width: 50rem;
+  }
+  .main-hero .transition-bar-items .transition-bar-item {
+    width: 6rem;
+  }
+  .games-section-content .games-list {
+    width: 70rem;
+  }
+  .games-section-content .games-list-header {
+    padding: 0 6rem;
+  }
+  .games-section-content .games-list-header h2 {
+    font-size: 4rem;
+  }
+  .games-section-content .games-list-items .games-list-item {
+    width: 18rem;
+    height: 24rem;
+  }
+  .games-section-content .games-list-items .games-list-item:last-of-type {
+    margin-right: 41rem;
+  }
+  .app-connectivity {
+    height: 78rem;
+    background-position: top;
+    padding: 4rem;
+  }
+  .app-connectivity #battle-net-logo-bg {
+    display: none;
+  }
+  .app-connectivity-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .app-connectivity-content h2 {
+    margin-bottom: -1.5rem;
+  }
+  .app-connectivity-content ul {
+    margin-top: -2rem;
+  }
+  .app-connectivity-content .battle-net-download-links {
+    display: none;
+  }
+  .app-connectivity-content #battle-net-screen-shot {
+    display: none;
+  }
+  .app-connectivity-content #battle-net-screen-shot-mobile {
+    display: block;
+  }
+  .app-connectivity-content #app-connectivity-mobile-btn {
+    display: block;
+  }
+  .careers-section {
+    height: 36rem;
+  }
+  .careers-section .img-gradient-container::before {
+    width: 76rem;
+  }
+  .careers-section .img-gradient-container::after {
+    width: 0rem;
+  }
+  .careers-section-content h2 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .main-nav-content li {
+    margin-right: 1.5rem;
+  }
+  .main-nav-content #main-nav-logo {
+    width: 6.5rem;
+    height: 3rem;
+    margin-right: 1.5rem;
+  }
+  .main-nav-games .main-nav-games-content .main-nav-games-item {
+    margin-right: 0;
+  }
+  .main-nav-esports-content-competitions {
+    width: 75rem;
+  }
+  .main-nav-esports-content-competitions li {
+    width: 13rem;
+  }
+  .main-nav-esports-content-competitions li a img {
+    width: 13rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .main-nav-games {
+    height: 48rem;
+  }
+  .main-nav-games-content {
+    height: 43rem;
+  }
+  .main-nav-games-content-blizzard {
+    -ms-flex-preferred-size: 63%;
+        flex-basis: 63%;
+  }
+  .main-nav-games-content-blizzard .main-nav-games-item {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  .main-nav-games-content-blizzard .main-nav-games-item:nth-of-type(n + 10) {
+    -ms-flex-preferred-size: 21%;
+        flex-basis: 21%;
+  }
+  .main-nav-games-content-activision {
+    -ms-flex-preferred-size: 37%;
+        flex-basis: 37%;
+  }
+  .main-nav-games-content-activision ul {
+    height: auto;
+  }
+  .main-nav-games-content-activision ul .main-nav-games-item {
+    margin-bottom: 1.5rem;
+  }
+  .main-nav-esports-content-competitions {
+    width: 62rem;
+  }
+  .main-nav-esports-content-competitions li a img {
+    width: 11rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .background-overlay {
+    top: 4.8rem;
+  }
+  .mobile-navbar-overlay {
+    -webkit-filter: brightness(50%);
+            filter: brightness(50%);
+  }
+  .mobile-main-nav {
+    display: block;
+  }
+  .main-nav {
+    background: #151a23;
+    position: absolute;
+    top: 0;
+    left: -35rem;
+    width: 32rem;
+    height: 100vh;
+    z-index: 10;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-transition: left 1s ease;
+    transition: left 1s ease;
+  }
+  .main-nav-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+  }
+  .main-nav-content ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
+  .main-nav-content ul li {
+    width: 100%;
+    margin: 0;
+    font-weight: 200;
+  }
+  .main-nav-content ul li a {
+    padding: 1.2rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #f6f6f6;
+    font-size: 1.6rem;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  }
+  .main-nav-content ul li a i {
+    font-size: 1.5rem;
+    padding: 0 0.51rem;
+  }
+  .main-nav-content-left, .main-nav-content-right, .main-nav-content-mobile {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  .main-nav-content-mobile {
+    margin-top: 2rem;
+  }
+  .main-nav-content-mobile a {
+    -webkit-filter: brightness(60%);
+            filter: brightness(60%);
+  }
+  .main-nav-content-right {
+    visibility: hidden;
+  }
+  .main-nav-content #mobile-hamburger-close-button {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    color: #00aeff;
+    font-size: 2.25rem;
+    cursor: pointer;
+  }
+  .main-nav-content #main-nav-logo {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 12rem;
+    height: 6rem;
+    margin: 2rem 0 1rem;
+  }
+  .main-nav-content #main-nav-logo svg {
+    width: 12rem;
+    height: 6rem;
+    fill: #00aeff;
+  }
+  .main-nav-content #main-nav-logo:hover {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .main-nav-content .main-nav-item {
+    border-bottom: 0.1rem solid #9a9a9c36;
+  }
+  .main-nav-content .main-nav-item-link,
+  .main-nav-content .main-nav-item span,
+  .main-nav-content .main-nav-item i {
+    -webkit-filter: brightness(85%);
+            filter: brightness(85%);
+  }
+  .main-nav-content .main-nav-item:first-of-type {
+    border-top: 0.1rem solid #9a9a9c36;
+    display: block;
+  }
+  .main-nav-content .sub-menu-nav-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports {
+    visibility: visible;
+    overflow: hidden;
+    position: static;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 0;
+    -webkit-transition: height 0.25s ease;
+    transition: height 0.25s ease;
+    background: #0f1218;
+    border: none;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content, .main-nav-content .sub-menu-nav-item .main-nav-games-footer,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 0;
+    -webkit-transition: height 0.24s ease;
+    transition: height 0.24s ease;
+    opacity: 1;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content ul, .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content ul,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul {
+    opacity: 1;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content li, .main-nav-content .sub-menu-nav-item .main-nav-games-footer li,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content li,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer li {
+    opacity: 1;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content a, .main-nav-content .sub-menu-nav-item .main-nav-games-footer a,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content a,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer a {
+    font-size: 1.4rem;
+    padding: 0;
+    opacity: 1;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content a span, .main-nav-content .sub-menu-nav-item .main-nav-games-footer a span,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content a span,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer a span {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content a img, .main-nav-content .sub-menu-nav-item .main-nav-games-footer a img,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content a img,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer a img {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content a:hover span, .main-nav-content .sub-menu-nav-item .main-nav-games-footer a:hover span,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content a:hover span,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer a:hover span {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content a:hover img, .main-nav-content .sub-menu-nav-item .main-nav-games-footer a:hover img,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content a:hover img,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer a:hover img {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content {
+    padding: 0;
+    border-bottom: none;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-blizzard, .main-nav-content .sub-menu-nav-item .main-nav-games-content-activision, .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-blizzard,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-activision,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions {
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 0.24s ease;
+    transition: height 0.24s ease;
+    border-left: 0.5rem solid rgba(0, 174, 255, 0.1);
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-blizzard-title, .main-nav-content .sub-menu-nav-item .main-nav-games-content-activision-title, .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions-title,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-blizzard-title,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-activision-title,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions-title {
+    font-size: 1.3rem;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-blizzard ul, .main-nav-content .sub-menu-nav-item .main-nav-games-content-activision ul, .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions ul,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-blizzard ul,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-activision ul,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions ul {
+    padding-top: 0;
+    width: 100%;
+    overflow: hidden;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-transition: height 0.24s ease;
+    transition: height 0.24s ease;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-blizzard li, .main-nav-content .sub-menu-nav-item .main-nav-games-content-activision li, .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions li,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-blizzard li,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-activision li,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions li {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    margin: 0;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-blizzard li a, .main-nav-content .sub-menu-nav-item .main-nav-games-content-activision li a, .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions li a,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-blizzard li a,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-activision li a,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions li a {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: auto;
+    padding: 1rem 0;
+    white-space: nowrap;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-blizzard li a span, .main-nav-content .sub-menu-nav-item .main-nav-games-content-activision li a span, .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions li a span,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-blizzard li a span,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-activision li a span,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions li a span {
+    text-align: left;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-blizzard li a img, .main-nav-content .sub-menu-nav-item .main-nav-games-content-activision li a img, .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions li a img,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-blizzard li a img,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-activision li a img,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions li a img {
+    width: 2.4rem;
+    margin-right: 0.5rem;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-blizzard, .main-nav-content .sub-menu-nav-item .main-nav-games-content-activision,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-blizzard,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-activision {
+    padding: 1rem 2rem;
+    border-bottom: 0.1rem solid #363c469f;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 2rem;
+    overflow: hidden;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-content-competitions li a img,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions li a img {
+    width: 2.4rem;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer {
+    border: none;
+    padding: 0 2rem;
+    border-left: 0.5rem solid rgba(0, 174, 255, 0.1);
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul {
+    width: 100%;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul a,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul a {
+    padding: 1rem 0;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul a i,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul a i {
+    font-size: 1.8rem;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul a #main-nav-battlenet-logo,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul a #main-nav-battlenet-logo {
+    margin-right: 1.6rem;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul a #main-nav-battlenet-logo svg,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul a #main-nav-battlenet-logo svg {
+    width: 2.5rem;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul a,
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul i,
+  .main-nav-content .sub-menu-nav-item .main-nav-games-footer ul svg,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul a,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul i,
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-footer ul svg {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content {
+    border: none;
+  }
+  .main-nav-content .sub-menu-nav-item .main-nav-esports-content-competitions li a {
+    padding: 0.75rem 0;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-games {
+    height: 103.7rem;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-games .main-nav-games-content {
+    height: 87rem;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-games .main-nav-games-content-blizzard {
+    height: 61.1rem;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-games .main-nav-games-content-activision {
+    height: 28.8rem;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-games .main-nav-games-footer {
+    height: 16.6rem;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-esports {
+    height: 23.5rem;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-esports .main-nav-esports-content {
+    height: 20rem;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-esports .main-nav-esports-content-competitions {
+    height: 20rem;
+  }
+  .main-nav-content .sub-menu-nav-item .mobile-nav-submenu-open.main-nav-esports .main-nav-esports-footer {
+    height: 3.3rem;
+  }
+  .main-nav-content .sub-menu-nav-item .active-link {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .main-nav-content .sub-menu-nav-item .active-link::before {
+    content: "";
+    width: 0.5rem;
+    height: 4.7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00aeff;
+    border: none;
+  }
+  .main-nav-content .sub-menu-nav-item .active-link::after {
+    content: none;
+  }
+  .main-nav-content .main-nav-account {
+    background: #151a23;
+    position: fixed;
+    top: 0;
+    right: -35rem;
+    height: 100%;
+    width: 32rem;
+    z-index: 10;
+    visibility: visible;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  .main-nav-content .main-nav-account li:first-of-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: none;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 1rem 1.5rem;
+  }
+  .main-nav-content .main-nav-account li:first-of-type #mobile-account-close-button {
+    color: #00aeff;
+    font-size: 2.25rem;
+    cursor: pointer;
+  }
+  .main-nav-content .main-nav-account li:nth-of-type(2) {
+    padding: 1.8rem 2.5rem;
+    border-top: 0.1rem solid #363c46;
+  }
+  .main-nav-content .main-nav-account li:nth-of-type(2) #log-in-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 0.1rem solid #00aeff;
+    background-color: #006fb2;
+    padding: 0.7rem 0;
+    color: #f6f6f6;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .main-nav-content .main-nav-account li:nth-of-type(2) #log-in-button:hover {
+    -webkit-filter: brightness(120%);
+            filter: brightness(120%);
+  }
+  .main-nav-content .main-nav-account li:nth-of-type(3) {
+    display: block;
+    border-top: 0.1rem solid #363c46;
+  }
+  .main-nav-content .main-nav-account li a {
+    -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+    padding: 0rem;
+  }
+  .main-nav-content .main-nav-account li a i {
+    font-size: 1.7rem;
+    margin-right: 1rem;
+  }
+  .hmbg-main-menu-open {
+    left: 0;
+  }
+  .hmbg-main-menu-open .main-nav-account {
+    display: none;
+  }
+  .acc-main-menu-open .main-nav-content-right .main-nav-account {
+    -webkit-transform: translateX(-35rem);
+            transform: translateX(-35rem);
+  }
+  .main-hero {
+    height: 41.5rem;
+  }
+  .main-hero-slider {
+    height: 40rem;
+  }
+  .main-hero-slider .main-hero-slide-content {
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  .main-hero-slider .main-hero-slide-content img {
+    width: 18rem;
+    margin-bottom: 1rem;
+  }
+  .main-hero-slider .main-hero-slide-content h2 {
+    text-align: center;
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+  }
+  .main-hero-slider .main-hero-slide-content a {
+    font-size: 1.8rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .main-hero .transition-bar {
+    height: 1.5rem;
+  }
+  .main-hero .transition-bar-items {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin: 0;
+  }
+  .main-hero .transition-bar-items .transition-bar-item {
+    width: auto;
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+    height: 0.3rem;
+    margin: 0 0.25rem;
+  }
+  .games-section-content .games-list {
+    width: 50rem;
+  }
+  .games-section-content .games-list-header h2 {
+    font-size: 3.2rem;
+  }
+  .games-section-content .games-list-items .games-list-item:last-of-type {
+    margin-right: 21rem;
+  }
+  .app-connectivity {
+    height: 60rem;
+    background-position: center;
+  }
+  .app-connectivity-content .battle-net-download h2 {
+    font-size: 3rem;
+  }
+  .app-connectivity #battle-net-screen-shot-mobile {
+    width: 33rem;
+    height: 18rem;
+  }
+  .careers-section {
+    height: 50rem;
+    background-size: auto 41.25rem;
+    background-position: top center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .careers-section .img-gradient-container {
+    height: 45rem;
+  }
+  .careers-section .img-gradient-container::before {
+    bottom: 0;
+    top: auto;
+    width: 100vw;
+    height: 20rem;
+    background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(20%, black), to(transparent));
+    background: linear-gradient(to top, black, black 20%, transparent 100%);
+  }
+  .careers-section-content {
+    height: 18rem;
+    width: 100%;
+    padding: 0 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 0;
+    top: auto;
+  }
+  .careers-section-content h2 {
+    font-size: 3.2rem;
+  }
+  .careers-section-content h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .main-footer {
+    padding: 2rem;
+  }
+  .main-footer-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-footer-content #footer-logo {
+    width: 15rem;
+  }
+  .main-footer-content .primary-footer-links {
+    width: 35rem;
+    font-size: 1.5rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    line-height: 2.2rem;
+    border-right: none;
+  }
+  .main-footer-content .primary-footer-links .footer-link:nth-of-type(4)::before {
+    content: none;
+  }
+  @-webkit-keyframes openBar {
+    to {
+      height: 0.5rem;
+    }
+  }
+  @keyframes openBar {
+    to {
+      height: 0.5rem;
+    }
+  }
+  @-webkit-keyframes closeBar {
+    from {
+      height: 0.5rem;
+    }
+  }
+  @keyframes closeBar {
+    from {
+      height: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-hero-slider .main-hero-slide-content img {
+    width: 18rem;
+  }
+  .main-hero-slider .main-hero-slide-content h2 {
+    font-size: 2.8rem;
+  }
+  .main-hero-slider .main-hero-slide-content a {
+    font-size: 1.8rem;
+  }
+  .games-section .games-list {
+    width: 35rem;
+  }
+  .games-section .games-list-header {
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+  }
+  .games-section .games-list-items .games-list-item {
+    width: 15rem;
+    height: 20rem;
+    margin: 0 0.25rem 0.5rem;
+  }
+  .games-section .games-list-items .games-list-item:last-of-type {
+    margin-right: 15.5rem;
+  }
+  .app-connectivity-content .battle-net-download h2 {
+    font-size: 2.4rem;
+  }
+  .app-connectivity-content .battle-net-download ul li,
+  .app-connectivity-content .battle-net-download ul li i {
+    font-size: 2rem;
+  }
+  .main-footer {
+    padding: 0;
+  }
+  .main-footer-content {
+    padding-top: 2rem;
+  }
+  .main-footer-content .primary-footer-links,
+  .main-footer-content .secondary-footer-links {
+    width: 30rem;
+  }
+  .main-footer-content #trademark {
+    line-height: 1.4rem;
+  }
+  .main-footer-content #trademark p,
+  .main-footer-content #trademark a,
+  .main-footer-content #trademark p:first-of-type {
+    font-size: 1.1rem;
+  }
+  .main-footer-content #footer-battlenet {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-footer-content .secondary-footer-links {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=mediaQ.css.map */

@@ -1,0 +1,1670 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/open-sans.regular.21437303dbf7e1b4a100b97f955a0f90.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blizzard";
+  src: url("/fonts/blizzard.regular.6374a0ee3086c5564095947a6f8c475d.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blizzard";
+  src: url("/fonts/blizzard.bold.8cc5a1ab5901a473ebcbd4d4391a1d2a.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blizzard";
+  src: url("/fonts/blizzard.light.5d1ab6b16926061ac39ebf53561f2f31.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Blizzard", Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  fill: #009ae4;
+}
+
+sup {
+  line-height: 0rem;
+  vertical-align: top;
+  position: relative;
+  top: 0.5rem;
+}
+
+.main-nav {
+  background-color: #0b0d12;
+  height: 6rem;
+  border-bottom: 0.1rem solid #2f3135;
+  z-index: 9;
+}
+
+.main-nav-content {
+  max-width: 1600px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Blizzard", Helvetica, sans-serif;
+}
+
+.main-nav-content #mobile-hamburger-close-button {
+  display: none;
+}
+
+.main-nav-content #main-nav-logo {
+  height: 100%;
+  margin-right: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-nav-content #main-nav-logo svg {
+  width: 8rem;
+  height: 4rem;
+}
+
+.main-nav-content #main-nav-logo:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.main-nav-content-mobile {
+  display: none;
+}
+
+.main-nav-content-left, .main-nav-content-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.main-nav-content-left {
+  width: 50%;
+  font-size: 2rem;
+}
+
+.main-nav-content-left > .main-nav-item:first-of-type {
+  display: none;
+}
+
+.main-nav-content-left .main-nav-item-link {
+  text-transform: uppercase;
+}
+
+.main-nav-content-left #main-nav-logo-svg {
+  width: 10rem;
+  height: 4rem;
+}
+
+.main-nav-content-right {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.7rem;
+}
+
+.main-nav-content-right > .main-nav-item:last-of-type {
+  position: relative;
+}
+
+.main-nav-item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 3rem;
+}
+
+.main-nav-item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  color: #f6f6f6;
+}
+
+.main-nav-item-link span,
+.main-nav-item-link i {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.main-nav-item-link i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0.5rem;
+  font-size: 1.4rem;
+  color: #6c6d70;
+}
+
+.main-nav-item-link:hover span,
+.main-nav-item-link:hover i {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main-nav-games,
+.main-nav-esports,
+.main-nav-account {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.main-nav-games {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  background: radial-gradient(ellipse farthest-side at top, #283244, rgba(21, 26, 35, 0.95));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 38rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  visibility: hidden;
+  z-index: 10;
+  border-top: 0.1rem solid #363c46;
+}
+
+.main-nav-games-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 160rem;
+  height: 33rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.main-nav-games-content-blizzard, .main-nav-games-content-activision {
+  padding: 0 2rem;
+}
+
+.main-nav-games-content-blizzard ul, .main-nav-games-content-activision ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2rem;
+  height: 100%;
+}
+
+.main-nav-games-content-blizzard {
+  -ms-flex-preferred-size: 82%;
+      flex-basis: 82%;
+  border-right: 0.1rem solid #a2a5aa3a;
+}
+
+.main-nav-games-content-blizzard .main-nav-games-item {
+  -ms-flex-preferred-size: 11.1%;
+      flex-basis: 11.1%;
+}
+
+.main-nav-games-content-activision {
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
+}
+
+.main-nav-games-content-activision .main-nav-games-item {
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+}
+
+.main-nav-games-content .main-nav-games-title {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #a2a5aa;
+}
+
+.main-nav-games-content .main-nav-games-item {
+  opacity: 0;
+}
+
+.main-nav-games-content .main-nav-games-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.1rem;
+  width: 6.6rem;
+  height: 11rem;
+  margin: 0 auto;
+  color: #f6f6f6;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.main-nav-games-content .main-nav-games-item a img {
+  width: 6.4rem;
+}
+
+.main-nav-games-content .main-nav-games-item a span {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.main-nav-games-content .main-nav-games-item:hover img {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.main-nav-games-content .main-nav-games-item:hover span {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main-nav-games-footer {
+  border-bottom: 0.1rem solid #363c46;
+  border-top: 0.1rem solid #363c469f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 5rem;
+}
+
+.main-nav-games-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60rem;
+  opacity: 0;
+}
+
+.main-nav-games-footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f6f6f6;
+  font-size: 1.5rem;
+}
+
+.main-nav-games-footer a #main-nav-battlenet-logo {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.main-nav-games-footer a i {
+  margin-right: 0.75rem;
+  color: #00aeff;
+  font-size: 1.8rem;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+.main-nav-games-footer a span {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.main-nav-games-footer a:hover i,
+.main-nav-games-footer a:hover svg {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.main-nav-games-footer a:hover span {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main-nav-esports {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  background: radial-gradient(ellipse farthest-side at top, #283244, rgba(21, 26, 35, 0.95));
+  width: 100%;
+  visibility: hidden;
+  border-top: 0.1rem solid #363c46;
+  z-index: 10;
+}
+
+.main-nav-esports-content {
+  padding: 1rem;
+  border-bottom: 0.1rem solid #363c469f;
+}
+
+.main-nav-esports-content-competitions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.main-nav-esports-content-competitions li {
+  width: 19rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+}
+
+.main-nav-esports-content-competitions li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  padding-bottom: 3rem;
+}
+
+.main-nav-esports-content-competitions li a img {
+  width: 19rem;
+}
+
+.main-nav-esports-content-competitions li a span {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.main-nav-esports-content-competitions li:hover img {
+  -webkit-filter: brightness(115%);
+          filter: brightness(115%);
+}
+
+.main-nav-esports-content-competitions li:hover span {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main-nav-esports-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid #363c46;
+}
+
+.main-nav-esports-footer a {
+  color: #f6f6f6;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.main-nav-esports-footer a i {
+  color: #00aeff;
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.main-nav-esports-footer a:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main-nav-account {
+  position: absolute;
+  width: 32.5rem;
+  background: radial-gradient(ellipse farthest-side at top, #283244, rgba(21, 26, 35, 0.95));
+  top: 6rem;
+  right: -2rem;
+  visibility: hidden;
+  z-index: 10;
+  border: 0.1rem solid #363c469f;
+}
+
+.main-nav-account-content-items li {
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-nav-account-content-items li a {
+  color: #f6f6f6;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  font-size: 1.6rem;
+}
+
+.main-nav-account-content-items li a i {
+  color: #00aeff;
+  margin-right: 0.5rem;
+}
+
+.main-nav-account-content-items li a:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main-nav-account-content-items li:first-of-type, .main-nav-account-content-items li:nth-of-type(3) {
+  display: none;
+}
+
+.main-nav-account-content-items li:nth-of-type(2) {
+  padding: 2rem;
+}
+
+.main-nav-account-content-items li:nth-of-type(n + 4) {
+  border-top: 0.1rem solid #363c46;
+}
+
+.main-nav-account-content-items li #log-in-button {
+  border: 0.1rem solid #00aeff;
+  background-color: #006fb2;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.main-nav-account-content-items li #log-in-button:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.mobile-main-nav {
+  display: none;
+  background-color: #0b0d12;
+  height: 4.8rem;
+}
+
+.mobile-main-nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+.mobile-main-nav-content i {
+  color: #00aeff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.mobile-main-nav-content #mobile-main-nav-logo {
+  width: 6.5rem;
+}
+
+.background-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  width: 100vw;
+  bottom: 0;
+  z-index: 8;
+  visibility: hidden;
+}
+
+.main-hero {
+  width: 100%;
+}
+
+.main-hero-slider {
+  height: 51rem;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.main-hero-slider .hero-btns-container {
+  max-width: 170rem;
+  height: 51rem;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.main-hero-slider:hover .hero-arrow {
+  visibility: visible;
+}
+
+.main-hero-slider .hero-arrow {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #00aeff;
+  border: 0.1rem solid #263945;
+  position: absolute;
+  top: 20rem;
+  padding: 2.5rem 1rem;
+  z-index: 5;
+}
+
+.main-hero-slider .hero-arrow i {
+  font-size: 2.8rem;
+}
+
+.main-hero-slider .hero-arrow.prev {
+  left: 2rem;
+}
+
+.main-hero-slider .hero-arrow.next {
+  right: 2rem;
+}
+
+.main-hero-slider .hero-arrow:hover i {
+  color: #fff;
+}
+
+.main-hero-slider .main-hero-slide {
+  height: inherit;
+  position: relative;
+}
+
+.main-hero-slider .main-hero-slide .hero-banner-bg-img {
+  max-height: 100%;
+}
+
+.main-hero-slider .main-hero-slide .content-container {
+  width: 160rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 3;
+}
+
+.main-hero-slider .main-hero-slide-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 8rem 5rem;
+  visibility: hidden;
+  z-index: 3;
+}
+
+.main-hero-slider .main-hero-slide-content * {
+  cursor: pointer;
+}
+
+.main-hero-slider .main-hero-slide-content img {
+  width: 26rem;
+  margin-bottom: 3rem;
+}
+
+.main-hero-slider .main-hero-slide-content h2 {
+  font-size: 6.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0.5rem 2rem 2rem #1e120e;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.main-hero-slider .main-hero-slide-content a {
+  background-color: #006fb2;
+  border: 0.1rem solid #00aeff;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 5rem;
+  font-size: 1.8rem;
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.main-hero .transition-bar {
+  height: 2.5rem;
+  background-color: #0b0d12;
+  border-bottom: 0.1rem solid #2f3135;
+}
+
+.main-hero .transition-bar-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.img-gradient-container {
+  margin: 0 auto;
+  height: 100%;
+  width: 250rem;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -125rem;
+  z-index: 2;
+}
+
+.img-gradient-container::before {
+  content: "";
+  height: inherit;
+  width: 38rem;
+  position: absolute;
+  top: 0;
+  left: 0rem;
+  z-index: 2;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(20%, black), to(transparent));
+  background: linear-gradient(to right, black, black 20%, transparent 100%);
+}
+
+.img-gradient-container::after {
+  content: "";
+  height: inherit;
+  width: 38rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background: -webkit-gradient(linear, right top, left top, from(black), color-stop(20%, black), to(transparent));
+  background: linear-gradient(to left, black, black 20%, transparent 100%);
+}
+
+.transition-bar-item {
+  width: 10rem;
+  height: 0.6rem;
+  background-color: #858689;
+  margin-right: 1rem;
+  cursor: pointer;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+}
+
+.transition-bar-item-progress {
+  height: inherit;
+  width: 0;
+  background-color: #00aeff;
+}
+
+.transition-bar-item:hover {
+  background-color: #cecfd0;
+}
+
+.games-section {
+  background-color: #002650;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+.games-section-content {
+  background: url(/images/backgrounds/background-generic-landscape-short.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.games-section-content .games-list {
+  width: 140rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.games-section-content .games-list-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 6.5rem;
+}
+
+.games-section-content .games-list-header h2 {
+  font-size: 4.4rem;
+  font-weight: 400;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.games-section-content .games-list-header a {
+  color: #00aeff;
+  font-size: 1.6rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.games-section-content .games-list-header a:hover {
+  color: #fff;
+}
+
+.games-section-content .games-list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 5rem 5rem;
+}
+
+.games-section-content .games-list-items .games-list-item {
+  width: 24rem;
+  height: 32rem;
+  margin: 0 1rem 2rem;
+  position: relative;
+  -webkit-box-shadow: 0.5rem 1rem 1rem #0000003b;
+          box-shadow: 0.5rem 1rem 1rem #0000003b;
+  -webkit-transition: -webkit-transform ease 0.5s;
+  transition: -webkit-transform ease 0.5s;
+  transition: transform ease 0.5s;
+  transition: transform ease 0.5s, -webkit-transform ease 0.5s;
+}
+
+.games-section-content .games-list-items .games-list-item:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: solid 0.1rem rgba(255, 255, 255, 0.15);
+}
+
+.games-section-content .games-list-items .games-list-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-transition: none;
+  transition: none;
+}
+
+.games-section-content .games-list-items .games-list-item:hover:after {
+  border: solid 0.1rem rgba(0, 174, 255, 0.6);
+}
+
+.games-section-content .games-list-items .games-list-item img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.app-connectivity {
+  background-image: url(/images/backgrounds/DesktopBG_Image.webp);
+  background-size: cover;
+  height: 45rem;
+  border-top: 0.1rem solid #00aeff4d;
+  border-bottom: 0.1rem solid #00aeff4d;
+  padding: 5rem;
+  color: #d0d0d2;
+  position: relative;
+}
+
+.app-connectivity #battle-net-logo-bg {
+  position: absolute;
+  top: 28%;
+  left: 52%;
+  height: 25rem;
+  opacity: 40%;
+  z-index: 1;
+}
+
+.app-connectivity-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 160rem;
+  margin: 0 auto;
+}
+
+.app-connectivity-content .battle-net-download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.app-connectivity-content .battle-net-download h2 {
+  color: #fdfdfd;
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.app-connectivity-content .battle-net-download ul {
+  font-family: "Blizzard", Helvetica, sans-serif;
+}
+
+.app-connectivity-content .battle-net-download ul li {
+  line-height: 4rem;
+  font-size: 2.4rem;
+}
+
+.app-connectivity-content .battle-net-download ul li i {
+  margin-right: 1rem;
+  color: #0099ff;
+  font-size: 2.4rem;
+}
+
+.app-connectivity-content .battle-net-download a {
+  color: #00acfc;
+}
+
+.app-connectivity-content .battle-net-download p {
+  font-size: 1.6rem;
+}
+
+.app-connectivity-content .battle-net-download p a {
+  border-bottom: 0.1rem solid #00acfc;
+}
+
+.app-connectivity-content .battle-net-download p a:hover {
+  color: #f7fafd;
+  border-bottom: 0.1rem solid #f7fafd;
+}
+
+.app-connectivity-content .battle-net-download-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.app-connectivity-content .battle-net-download-links a {
+  border: 0.1rem solid #00aeff;
+  padding: 1.2rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.app-connectivity-content .battle-net-download-links a:hover {
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+}
+
+.app-connectivity-content .battle-net-download-links a:first-of-type {
+  margin-right: 2rem;
+  padding: 0.9rem 5rem;
+  color: #f7fafd;
+  background-color: #006fb2;
+}
+
+.app-connectivity-content .battle-net-download-links a:first-of-type i {
+  color: #f7fafd;
+  margin-left: 1rem;
+  font-size: 2.5rem;
+}
+
+.app-connectivity-content .battle-net-download-links a:last-of-type:hover {
+  color: #f7fafd;
+  background-color: #006fb2;
+}
+
+.app-connectivity-content #battle-net-screen-shot,
+.app-connectivity-content #battle-net-screen-shot-mobile {
+  z-index: 2;
+  width: 59rem;
+  height: 33rem;
+}
+
+.app-connectivity-content #battle-net-screen-shot-mobile {
+  display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.app-connectivity-content #app-connectivity-mobile-btn {
+  display: none;
+  color: #fff;
+  background-color: #006fb2;
+  border: 0.1rem solid #00aeff;
+  width: 20rem;
+  padding: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.8rem;
+}
+
+.careers-section {
+  height: 40rem;
+  border-bottom: 0.1rem solid #1b3b61;
+  position: relative;
+  background-image: url(/images/careers-banner/careers-1.jpeg);
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: background-image 4s ease;
+  transition: background-image 4s ease;
+  overflow: hidden;
+}
+
+.careers-section .img-gradient-container {
+  max-width: 195rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.careers-section .img-gradient-container::before, .careers-section .img-gradient-container::after {
+  width: 30rem;
+}
+
+.careers-section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 160rem;
+  z-index: 2;
+}
+
+.careers-section-content h2,
+.careers-section-content h3 {
+  font-weight: 500;
+}
+
+.careers-section-content h2 {
+  font-size: 4.4rem;
+  margin-bottom: 1rem;
+}
+
+.careers-section-content h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #d8d6d5;
+}
+
+.careers-section-content a {
+  background-color: #006fb2;
+  width: 23rem;
+  height: 4.5rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #00aeff;
+  cursor: pointer;
+}
+
+.careers-section-content a:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.main-footer {
+  height: 60rem;
+  background-color: #082454;
+}
+
+.main-footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 100%;
+  padding-top: 3rem;
+  color: #fff;
+  font-family: "Blizzard", Helvetica, sans-serif;
+  position: relative;
+}
+
+.main-footer-content #footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.main-footer-content #footer-logo-blizz {
+  height: 7rem;
+  fill: #00aeff;
+}
+
+.main-footer-content #footer-logo-enter {
+  height: 2.5rem;
+  fill: #fff;
+}
+
+.main-footer-content .footer-link {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.main-footer-content .footer-link a {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.main-footer-content .footer-link + li::before {
+  content: " ";
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 1rem;
+  border-right: 0.1rem solid #fff;
+}
+
+.main-footer-content .footer-link:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main-footer-content .primary-footer-links,
+.main-footer-content .secondary-footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-footer-content .primary-footer-links {
+  margin-bottom: 4rem;
+  font-size: 1.7rem;
+}
+
+.main-footer-content .secondary-footer-links a {
+  font-size: 1.3rem;
+}
+
+.main-footer-content #footer-battlenet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 4rem;
+  color: #c7c8c9;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.main-footer-content #footer-battlenet a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #00aeff;
+}
+
+.main-footer-content #footer-battlenet a svg {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.25rem;
+}
+
+.main-footer-content #footer-battlenet a:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.main-footer-content #trademark {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.main-footer-content #trademark p {
+  color: #959697;
+}
+
+.main-footer-content #trademark p:first-of-type {
+  font-size: 1.2rem;
+}
+
+.main-footer-content #trademark a {
+  font-weight: bold;
+  color: #fff;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.main-footer-content #trademark a:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main-footer-content #certifications {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-footer-content #certifications a {
+  margin: 0 0.5rem;
+}
+
+.main-footer-content #certifications a img {
+  width: inherit;
+  height: inherit;
+}
+
+.main-footer-content #certifications a:first-of-type {
+  width: 7.2rem;
+  height: 9.7rem;
+}
+
+.main-footer-content #certifications a:last-of-type {
+  width: 8.3rem;
+  height: 9.7rem;
+}
+
+.location-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+.location-selection-svg {
+  height: 2.7rem;
+  position: relative;
+  z-index: 5;
+}
+
+.location-selector {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 3;
+}
+
+.location-selector-svg {
+  height: 2rem;
+  width: 2rem;
+  fill: rgba(255, 255, 255, 0.5);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+}
+
+.location-options {
+  visibility: hidden;
+  position: absolute;
+  top: -26rem;
+  width: 40rem;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 0.1rem solid #3d4047;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #283244), to(rgba(21, 26, 35, 0.95)));
+  background: linear-gradient(to bottom, #283244 20%, rgba(21, 26, 35, 0.95));
+  font-size: 1.5rem;
+  text-align: start;
+  padding: 2rem 1rem;
+  z-index: 3;
+}
+
+.location-options li {
+  color: #f6f6f6;
+  cursor: pointer;
+  padding: 0.3rem 0;
+}
+
+.location-options svg {
+  height: 1rem;
+  width: 1.5rem;
+  visibility: hidden;
+}
+
+.location-options span {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+
+.location-options span i {
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.location-options span:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.location-options::before, .location-options::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.location-options::before {
+  bottom: -0.8rem;
+  right: 13.1rem;
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+  border-top: 0.7rem solid #3d4047;
+}
+
+.location-options::after {
+  bottom: -0.7rem;
+  right: 13rem;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-top: 0.8rem solid rgba(21, 26, 35, 0.95);
+}
+
+.toggle-visibility {
+  visibility: visible;
+}
+
+.mobile-nav-overlay {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.inactive-link {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.active-link {
+  position: relative;
+}
+
+.active-link i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  top: 5.5rem;
+  right: -0.2rem;
+  width: 0;
+  height: 0;
+  border-left: 0.6rem solid transparent;
+  border-right: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid #232d3c;
+  z-index: 11;
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  top: 5.3rem;
+  right: -0.3rem;
+  width: 0;
+  height: 0;
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+  border-bottom: 0.7rem solid #363c46;
+  z-index: 11;
+}
+
+.active-trans-bar {
+  background-color: #0086ca;
+  height: +1rem;
+}
+
+.active-trans-bar .transition-bar-item-progress {
+  -webkit-animation: progressBarWidth 6s linear;
+          animation: progressBarWidth 6s linear;
+}
+
+.active-trans-bar:hover {
+  background-color: #0086ca;
+}
+
+.hero-img-animation {
+  -webkit-animation: heroImgAnimation ease-out 6s;
+          animation: heroImgAnimation ease-out 6s;
+}
+
+.hero-text-fade-out {
+  -webkit-animation: heroTextFadeOut ease-in 6s;
+          animation: heroTextFadeOut ease-in 6s;
+}
+
+.active-location svg {
+  visibility: visible;
+}
+
+.active-location span {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.location-selection-active {
+  color: #fff;
+}
+
+@-webkit-keyframes navImageFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes navImageFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes heroImgAnimation {
+  0% {
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes heroImgAnimation {
+  0% {
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes heroTextAnimation {
+  0% {
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes heroTextAnimation {
+  0% {
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes heroTextFadeOut {
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heroTextFadeOut {
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes progressBarWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progressBarWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
